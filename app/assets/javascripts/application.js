@@ -19,4 +19,5 @@
 //= require ./default/infobox.js
 //= require ./default/jquery.visible.js
 //= require ./default/home.js
+//= require ./default/signin.js
 //= require jquery_ujs
