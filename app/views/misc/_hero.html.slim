@@ -1,0 +1,9 @@
+div id='hero-container'
+  ul class='cb-slideshow'
+    - (1...6).each do
+      li
+        span
+
+  = render partial: 'misc/home_header'
+  = render partial: 'misc/home_caption'
+  = render partial: 'misc/search_panel'

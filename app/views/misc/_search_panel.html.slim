@@ -1,0 +1,84 @@
+div class="search-panel"
+  /form class="form-inline" role="form"
+    div class="form-group"
+      input type="text" class="form-control" id="city" placeholder="City" autocomplete="off"
+
+    div class="form-group hidden-xs adv"
+      a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
+        span class="dropdown-label" Rooms
+        span class="caret"
+
+      ul class="dropdown-menu dropdown-select"
+        - (1...4).each do |index|
+          li
+            input type="radio" name="bedno"
+            a href="#" = index
+
+    div class="form-group hidden-xs adv"
+      a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
+        span class="dropdown-label" Bedrooms
+        span class="caret"
+      ul class="dropdown-menu dropdown-select" placeholder="Bedrooms"
+        - (1...4).each do |index|
+          li
+            input type="radio" name="bedno"
+            a href="#" = index
+    div class="form-group hidden-xs adv"
+      a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
+        span class="dropdown-label" Bathrooms
+        span class="caret"
+      ul class="dropdown-menu dropdown-select" placeholder="Bathrooms"
+        - (1...4).each do |index|
+          li
+            input type="radio" name="bathno"
+            a href="#" = index
+    div class="form-group hidden-xs adv"
+      div class="checkbox custom-checkbox"
+        label
+          input type="checkbox"
+            span class="fa fa-check"
+          | For Rent
+    div class="form-group hidden-xs adv"
+      div class="checkbox custom-checkbox"
+      label
+        input type="checkbox"
+        span class="fa fa-check"
+        | Sublet
+    div class="form-group hidden-xs adv"
+      div class="checkbox custom-checkbox"
+      label
+        input type="checkbox"
+        span class="fa fa-check"
+        | For Sale
+    br
+    div class="form-group hidden-xs adv"
+      a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
+        span class="dropdown-label" Type
+        span class="caret"
+      ul class="dropdown-menu dropdown-select"
+        - %w(House Apartment Loft Room Office).each do |type|
+        li class="active"
+          input type="radio" name="bedno" checked="checked"
+          a href="#" = type
+
+    div class="form-group hidden-xs adv"
+      div class="input-group"
+        div class="input-group-addon" $
+        input class="form-control price" type="text" placeholder="Minimum"
+    div class="form-group hidden-xs adv"
+      div class="input-group"
+        div class="input-group-addon" $
+        input class="form-control price" type="text" placeholder="Maximum"
+    div class="form-group hidden-xs adv"
+      a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
+        span class="dropdown-label" Show More Filters
+        span class="caret"
+      ul class="dropdown-menu dropdown-select"
+        - (1...4).each do |index|
+          li
+            input type="radio" name="bathno"
+            a href="#" = index
+    div class="form-group">
+      a href="explore.html" class="btn btn-green" Search
+      a href="#" class="btn btn-o btn-white pull-right visible-xs" id="advanced" Advanced Search
+      | span class="fa fa-angle-up"
