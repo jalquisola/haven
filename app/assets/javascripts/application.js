@@ -20,4 +20,5 @@
 //= require ./default/jquery.visible.js
 //= require ./default/home.js
 //= require ./default/signin.js
+//= require ./default/signup.js
 //= require jquery_ujs

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: "users/sessions"  }
+  devise_for :users, controllers: {
+    sessions: "users/sessions",
+    registrations: "users/registrations"
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   get 'users/profile' => 'users#profile'
   # You can have the root of your site routed with "root"
+  get 'pages/explore' => 'pages#explore'
   root 'pages#home'
 
   # Example of regular route:
