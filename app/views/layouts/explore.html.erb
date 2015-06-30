@@ -27,16 +27,18 @@
                 </a>
             </div>
             <a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
+            <!--
             <div class="search">
                 <span class="searchIcon icon-magnifier"></span>
                 <input type="text" placeholder="Search for houses, apartments...">
             </div>
+            -->
             <div class="headerUserWraper">
                 <a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span><span class="counter">5</span></a>
                 <a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown">
                     <%= image_tag("avatar-1.png", {alt: 'avatar', class:"avatar headerAvatar pull-left"}) %>
                     <div class="userTop pull-left">
-                        <span class="headerUserName">John Smith</span> <span class="fa fa-angle-down"></span>
+                        <span class="headerUserName"><%= current_user.name || current_user.email%></span> <span class="fa fa-angle-down"></span>
                     </div>
 
                     <div class="clearfix"></div>
@@ -46,7 +48,7 @@
                 <div class="dropdown-menu pull-right userMenu" role="menu">
                     <div class="mobAvatar">
                         <%= image_tag("avatar-1.png", {alt: 'avatar', class:"avatar mobAvatarImg"}) %>
-                        <div class="mobAvatarName">John Smith</div>
+                        <div class="mobAvatarName"><%= current_user.name || current_user.email%></div>
                     </div>
                     <ul>
                         <li><a href="#"><span class="icon-settings"></span>Settings</a></li>
