@@ -9,3 +9,4 @@
 //= require ./default/jquery.tagsinput.min.js
 //= require ./default/bootstrap-datepicker.js
 //= require ./default/app.js
+//= require jquery_ujs

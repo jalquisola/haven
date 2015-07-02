@@ -21,18 +21,12 @@
 
         <div id="header">
             <div class="logo">
-                <a href="index.html">
+                <a href="<%= root_url %>">
                     <span class="fa fa-home marker"></span>
                     <span class="logoText">reales</span>
                 </a>
             </div>
             <a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
-            <!--
-            <div class="search">
-                <span class="searchIcon icon-magnifier"></span>
-                <input type="text" placeholder="Search for houses, apartments...">
-            </div>
-            -->
             <div class="headerUserWraper">
                 <a href="#" class="userHandler dropdown-toggle" data-toggle="dropdown"><span class="icon-user"></span><span class="counter">5</span></a>
                 <a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown">
@@ -55,7 +49,10 @@
                         <li><a href="profile.html"><span class="icon-user"></span>Profile</a></li>
                         <li><a href="#"><span class="icon-bell"></span>Notifications <span class="badge pull-right bg-red">5</span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#"><span class="icon-power"></span>Logout</a></li>
+                        <li>
+                            <a href="<%= destroy_user_session_url%>" data-method='delete' rel='nofollow'>
+                            <span class="icon-power"></span>Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -152,15 +149,10 @@
                 </div>
                 <ul>
                     <li><a href="explore.html" class="iconhighlight"><span class="navIcon fa icon-magnifier"></span><span class="navLabel">Explore</span></a></li>
-                    <li><a href="single.html"><span class="navIcon fa icon-user"></span><span class="navLabel">Single</span></a></li>
                     <li><a href="favourites.html"><span class="navIcon fa icon-heart"></span><span class="navLabel">Favorites</span></a></li>
                     <li><a href="agency_dashboard.html"><span class="navIcon fa icon-home"></span><span class="navLabel">Dashboard</span></a></li>
                     <li><a href="#"><span class="navIcon fa icon-envelope"></span><span class="navLabel">Inbox</span></a></li>                        
                     <li><a href="add.html"><span class="navIcon icon-plus"></span><span class="navLabel">List</span><span class="fa fa-angle-left arrowRight"></span></a></li>
-                    <li><a href="#"><span class="navIcon icon-settings"></span><span class="navLabel">Settings</span><span class="fa fa-angle-left arrowRight"></span></a></li>
-                      <li>
-                        <a href="about.html"><span class="navIcon icon-question"></span><span class="navLabel">About</span><span class="fa fa-angle-left arrowRight"></span></a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -365,359 +357,129 @@
 
                 <div class="resultsList">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag("prop/1-1.png", alt: 'image')%>
-                                    <div class="figCaption">
-                                        <div>$1,550,000</div>
-                                        <span class="icon-eye"> 200</span>
-                                        <span class="icon-heart"> 54</span>
-                                        <span class="icon-bubble"> 13</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">FOR SALE</div>
-                                </div>
-                                <h2>Modern Residence in New York</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (146)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 3</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag("prop/2-1.png", alt: 'image')%>
-                                    <div class="figCaption">
-                                        <div>$1,750,000</div>
-                                        <span class="icon-eye"> 175</span>
-                                        <span class="icon-heart"> 67</span>
-                                        <span class="icon-bubble"> 9</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Hauntingly Beautiful Estate</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 169 Warren St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    (123)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 4430 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag("prop/3-1.png", alt: 'image')%>
-                                    <div class="figCaption">
-                                        <div>$1,340,000</div>
-                                        <span class="icon-eye"> 180</span>
-                                        <span class="icon-heart"> 87</span>
-                                        <span class="icon-bubble"> 12</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Sophisticated Residence</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 38-62 Water St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    (120)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 3</li>
-                                    <li><span class="icon-frame"></span> 2640 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/3-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,930,000</div>
-                                        <span class="icon-eye"> 145</span>
-                                        <span class="icon-heart"> 99</span>
-                                        <span class="icon-bubble"> 25</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Sale</div>
-                                </div>
-                                <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (170)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 3</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/3-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,930,000</div>
-                                        <span class="icon-eye"> 145</span>
-                                        <span class="icon-heart"> 99</span>
-                                        <span class="icon-bubble"> 25</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Sale</div>
-                                </div>
-                                <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (170)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 3</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/5-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$2,350,000</div>
-                                        <span class="icon-eye"> 184</span>
-                                        <span class="icon-heart"> 120</span>
-                                        <span class="icon-bubble"> 18</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Luxury Mansion</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 95 Butler St, Brooklyn, NY 11231, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (257)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 2750 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/1-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,550,000</div>
-                                        <span class="icon-eye"> 200</span>
-                                        <span class="icon-heart"> 54</span>
-                                        <span class="icon-bubble"> 13</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">FOR SALE</div>
-                                </div>
-                                <h2>Modern Residence in New York</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    (146)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 3</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/2-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,750,000</div>
-                                        <span class="icon-eye"> 175</span>
-                                        <span class="icon-heart"> 67</span>
-                                        <span class="icon-bubble"> 9</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Hauntingly Beautiful Estate</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 169 Warren St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (123)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 4430 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/3-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,340,000</div>
-                                        <span class="icon-eye"> 180</span>
-                                        <span class="icon-heart"> 87</span>
-                                        <span class="icon-bubble"> 12</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Sophisticated Residence</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 38-62 Water St, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (120)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 3</li>
-                                    <li><span class="icon-frame"></span> 2640 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/4-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$1,930,000</div>
-                                        <span class="icon-eye"> 145</span>
-                                        <span class="icon-heart"> 99</span>
-                                        <span class="icon-bubble"> 25</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Sale</div>
-                                </div>
-                                <h2>House With a Lovely Glass-Roofed Pergola</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> Wunsch Bldg, Brooklyn, NY 11201, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (170)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 3</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 2800 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <a href="single.html" class="card">
-                                <div class="figure">
-                                    <%= image_tag "prop/5-1.png", alt: "image"%>
-                                    <div class="figCaption">
-                                        <div>$2,350,000</div>
-                                        <span class="icon-eye"> 184</span>
-                                        <span class="icon-heart"> 120</span>
-                                        <span class="icon-bubble"> 18</span>
-                                    </div>
-                                    <div class="figView"><span class="icon-heart"></span></div>
-                                    <div class="figType">For Rent</div>
-                                </div>
-                                <h2>Luxury Mansion</h2>
-                                <div class="cardAddress"><span class="icon-pointer"></span> 95 Butler St, Brooklyn, NY 11231, USA</div>
-                                <div class="cardRating">
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star-o"></span>
-                                    (257)
-                                </div>
-                                <ul class="cardFeat">
-                                    <li><span class="fa fa-moon-o"></span> 2</li>
-                                    <li><span class="icon-drop"></span> 2</li>
-                                    <li><span class="icon-frame"></span> 2750 Sq Ft</li>
-                                    <li><span></span> $1,550,000</li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </a>
-                        </div>
-                    </div>
+                        <% properties = [
+                            {title: 'Modern Residence',
+                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
+                            price: "$1,550,000",
+                            image_url: asset_path("grand_residences.jpg"),
+                            views: 200,
+                            likes: 54,
+                            comments: 13,
+                            stars: 4,
+                            rating: 146
+                            },
+                            {title: 'Hauntingly Beautiful Estate',
+                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_residences.jpg"),
+                            price: "$2,550,000",
+                            views: 175,
+                            likes: 67,
+                            comments: 9,
+                            stars: 5,
+                            rating: 123
+                            },
+                            {title: 'Sophisticated Residence',
+                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_residences.jpg"),
+                            price: "$1,340,000",
+                            views: 180,
+                            likes: 87,
+                            comments: 12,
+                            stars: 5,
+                            rating: 120
+                            },
+                            {title: 'House With a Lovely Glass-Roofed Pergola',
+                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_residences.jpg"),
+                            price: "$1,930,000",
+                            views: 145,
+                            likes: 99,
+                            comments: 25,
+                            stars: 5,
+                            rating: 170
+                            },
+                            {title: 'Modern Residence',
+                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_residences.jpg"),
+                            price: "$1,550,000",
+                            views: 200,
+                            likes: 54,
+                            comments: 13,
+                            stars: 4,
+                            rating: 146
+                            },
+                            {title: 'Hauntingly Beautiful Estate',
+                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_residences.jpg"),
+                            price: "$2,550,000",
+                            views: 175,
+                            likes: 67,
+                            comments: 9,
+                            stars: 5,
+                            rating: 123
+                            },
+                            {title: 'Sophisticated Residence',
+                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_tower.png"),
+                            price: "$1,340,000",
+                            views: 180,
+                            likes: 87,
+                            comments: 12,
+                            stars: 5,
+                            rating: 120
+                            },
+                            {title: 'House With a Lovely Glass-Roofed Pergola',
+                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
+                            image_url: asset_path("grand_amani_intro.jpg"),
+                            price: "$1,930,000",
+                            views: 145,
+                            likes: 99,
+                            comments: 25,
+                            stars: 5,
+                            rating: 170
+                            },
+                            ]
+                        %>
+                        <% properties.each do |property|%>
+                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                              <a href="single.html" class="card">
+                                  <div class="figure">
+                                      <!--<%#= image_tag("prop/1-1.png", alt: 'image')%> -->
+                                      <img src='<%= property[:image_url]%>' alt='image' />
+                                      <div class="figCaption">
+                                          <div><%=property[:price]%></div>
+                                          <span class="icon-eye"> <%= property[:views]%></span>
+                                          <span class="icon-heart"> <%= property[:likes]%></span>
+                                          <span class="icon-bubble"> <%= property[:comments]%></span>
+                                      </div>
+                                      <div class="figView"><span class="icon-heart"></span></div>
+                                      <div class="figType">FOR SALE</div>
+                                  </div>
+                                  <h2><%= property[:title] %></h2>
+                                  <div class="cardAddress">
+                                      <span class="icon-pointer"></span>
+                                      <%= property[:address]%>
+                                  </div>
+                                  <div class="cardRating">
+                                      <% empty_stars = 5 - property[:stars] %>
+                                      <% (1..property[:stars]).each do |i| %>
+                                        <span class="fa fa-star"></span>
+                                      <% end %>
+                                      <% (1..empty_stars).each do |i| %>
+                                        <span class="fa fa-star-o"></span>
+                                      <% end %>
+                                      (<%= property[:rating]%>)
+                                  </div>
+                                  <ul class="cardFeat">
+                                      <li><span class="fa fa-moon-o"></span> 3</li>
+                                      <li><span class="icon-drop"></span> 2</li>
+                                      <li><span class="icon-frame"></span> 3430 Sq Ft</li>
+                                      <li><span></span> <%= property[:price]%></li>
+                                  </ul>
+                                  <div class="clearfix"></div>
+                              </a>
+                          </div>
+                        <% end %>
                     <ul class="pagination">
                         <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
                         <li class="active"><a href="#">1</a></li>

@@ -7,15 +7,15 @@ div class="home-wrapper"
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
           a href="single.html" class="propWidget-2"
             div class="fig"
-              img src="images/grand_tower_thumb.png" alt="Grand Tower in Cebu"
-              img class="blur" src="images/grand_tower_thumb.png" alt="Grand Tower in Cebu"
+              = image_tag "grand_tower_thumb.png", alt: "Hotel in Cebu"
+              = image_tag "grand_tower_thumb.png", alt: "Hotel in Cebu", class: 'blur'
               div class="opac"
               div class="priceCap osLight"
                 span $730/month
               div class="figType" PRE-SELLING
               h3 class="osLight" Grand Tower in Cebu
               div class="address"
-              |  North Reclamation Area, Mabolo, Cebu City
+                |  North Reclamation Area, Mabolo, Cebu City
               ul class="rating"
                 - (1...5).each do |index|
                   li
