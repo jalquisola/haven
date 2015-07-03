@@ -120,20 +120,6 @@
                 </div>
             </div>
 
-            <div class="home-nav">
-                    <ul>
-                    	<!--Language Drop down-->
-                    	<li>
-                    		<select class="selectpicker btn btn-green">
-							<option>EN</option>
-						    <option>FR</option>
-						    <option>GR</option>
-						 </select>
-                    	</li>
-               			<!--End of language drop down-->
-               		</ul>
-            </div>
-
             <a href="#" class="mapHandler"><span class="icon-map"></span></a>
             <div class="clearfix"></div>
         </div>
@@ -149,10 +135,8 @@
                 </div>
                 <ul>
                     <li><a href="explore.html" class="iconhighlight"><span class="navIcon fa icon-magnifier"></span><span class="navLabel">Explore</span></a></li>
-                    <li><a href="favourites.html"><span class="navIcon fa icon-heart"></span><span class="navLabel">Favorites</span></a></li>
                     <li><a href="agency_dashboard.html"><span class="navIcon fa icon-home"></span><span class="navLabel">Dashboard</span></a></li>
                     <li><a href="#"><span class="navIcon fa icon-envelope"></span><span class="navLabel">Inbox</span></a></li>                        
-                    <li><a href="add.html"><span class="navIcon icon-plus"></span><span class="navLabel">List</span><span class="fa fa-angle-left arrowRight"></span></a></li>
                 </ul>
             </nav>
         </div>
@@ -164,197 +148,6 @@
                 <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div>
             </div>
             <div id="content">
-                <div class="filter">
-                    <h1 class="osLight">Filter your results</h1>
-                    <a href="#" class="handleFilter"><span class="icon-equalizer"></span></a>
-                    <div class="clearfix"></div>
-                    <form class="filterForm">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="formField">
-                                    <label>City</label>
-                                    <a href="#" data-toggle="dropdown" class="btn btn-gray dropdown-btn dropdown-toggle propTypeSelect">
-                                        <span class="dropdown-label">City</span>
-                                        <span class="fa fa-angle-down dsArrow"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-select full" role="menu">
-                                        <li class="active"><input type="radio" name="pType" checked="checked"><a href="#">All</a></li>
-                                        <li><input type="radio" name="pType"><a href="#">City1</a></li>
-                                        <li><input type="radio" name="pType"><a href="#">City2</a></li>
-                                        <li><input type="radio" name="pType"><a href="#">City3</a></li>
-                                        <li><input type="radio" name="pType"><a href="#">City4</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="formField">
-                                <div class="btn-group">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> For Rent</label></div>
-                                    </div>
-                                    <div class="form-group hidden-xs adv">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Sublet</label></div>
-                                    </div>
-                                    <div class="form-group hidden-xs adv">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> For Sale</label></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                            <div class="formField">
-                            <label>Type</label>
-                            <div class="btn-group">
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Type<span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!--second group-->
-
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="formField">
-                                <label>Rooms</label>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Rooms<span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Bed <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Bath <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                                    
-                            </div>
-                        </div>
-
-<!--End of second row-->
-                           
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="formField">
-                                    <label>Minumum Price</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">$</div>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                    <label>Minimum Sqm</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">m²</div>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="formField">
-                                    <label>Maximum Price</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">$</div>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                    <label>Maximum Sqm</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">m²</div>
-                                        <input class="form-control" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                        <div class="panel panel-default dd">
-                                <a href="#ddPanel" class="btn btn-o btn-default btn-block btn-lg align-left" data-toggle="collapse">Show More Options<span class="fa fa-angle-down pull-right"></span></a>
-                                <div id="ddPanel" class="panel-collapse collapse">
-                                    <div class="panel-body">
-
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="col-sm-6">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem">
-                                <div class="col-sm-6">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                    <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span>Unchecked</label></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                        <div class="row">
-                            <a href="#" class="btn btn-green btn-block"><span></span>Search</a>
-                        </div>
-                    </form>
-                </div>
-
-<!--End of serach options-->
-
                 <div class="resultsList">
                     <div class="row">
                         <% properties = [
@@ -480,34 +273,11 @@
                               </a>
                           </div>
                         <% end %>
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-                    </ul>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
-        <!--
-        <script src="js/jquery-2.1.1.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/jquery-ui-touch-punch.js"></script>
-        <script src="js/jquery.placeholder.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/jquery.touchSwipe.min.js"></script>
-        <script src="js/jquery.slimscroll.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
-        <script src="js/infobox.js"></script>
-        <script src="js/jquery.tagsinput.min.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/app.js" type="text/javascript"></script>
-        -->
         <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
         <%= javascript_include_tag 'explore'%>
     </body>
