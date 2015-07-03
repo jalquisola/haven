@@ -235,7 +235,7 @@
                         %>
                         <% properties.each do |property|%>
                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <a href="single.html" class="card">
+                              <a href="<%= pages_single_path%>" class="card">
                                   <div class="figure">
                                       <!--<%#= image_tag("prop/1-1.png", alt: 'image')%> -->
                                       <img src='<%= property[:image_url]%>' alt='image' />

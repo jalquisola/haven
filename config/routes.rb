@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'users/profile' => 'users#profile'
   # You can have the root of your site routed with "root"
   get 'pages/explore' => 'pages#explore'
+  get 'pages/single' => 'pages#single'
   root 'pages#home'
 
   # Example of regular route:

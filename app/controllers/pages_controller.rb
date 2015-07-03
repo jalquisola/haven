@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def explore
     render :explore, layout: 'explore'
   end
+
+  def single
+    render :single, layout: 'single'
+  end
 end
