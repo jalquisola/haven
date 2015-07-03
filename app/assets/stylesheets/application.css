@@ -14,6 +14,6 @@
  *= require ./default/simple-line-icons
  *= require ./default/fullscreen-slider
  *= require ./default/bootstrap
- *= require ./default/app
+ *= require ./default/app-blue
  *= require_self
  */
