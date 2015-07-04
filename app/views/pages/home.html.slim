@@ -5,7 +5,7 @@ div class="home-wrapper"
     div class="row pb40"
       - (1..3).each do
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
-          a href="single.html" class="propWidget-2"
+          a href=pages_single_url class="propWidget-2"
             div class="fig"
               = image_tag "grand_tower_thumb.png", alt: "Hotel in Cebu"
               = image_tag "grand_tower_thumb.png", alt: "Hotel in Cebu", class: 'blur'
@@ -20,3 +20,13 @@ div class="home-wrapper"
                 - (1...5).each do |index|
                   li
                     span class="fa fa-star star-#{index}"
+
+    h2 class="osLight" Our Services
+    div class="row pb40"
+      - [{title: "Find places anywhere in the Philippines", icon:'icon-pointer'}, {title: "We have agents with experience",icon: 'icon-users'}, {title: "Buy or rent beautiful places", icon: 'icon-home'}].each do |obj|
+        div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 s-menu-item"
+          a href="#"
+            span class="#{obj[:icon]} s-icon"
+            div class="s-content"
+               h2 class="s-main osLight" =obj[:title]
+               h3 class="s-sub osLight"
