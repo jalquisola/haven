@@ -192,18 +192,27 @@
           Morris.Bar({
             element: 'comments-graph',
             data: [
-              { real_estate: 'Air  ', a: 100 },
-              { real_estate: 'Shore  ', a: 75  },
-              { real_estate: 'Fame  ', a: 50  },
-              { real_estate: 'Sea  ', a: 75  },
-              { real_estate: 'Shine  ', a: 50  },
-              { real_estate: 'Sun  ', a: 75  },
-              { real_estate: 'Wind  ', a: 100 }
+              { real_estate: 'Air', a: 100 },
+              { real_estate: 'Shore', a: 75  },
+              { real_estate: 'Fame', a: 50  },
+              { real_estate: 'Sea', a: 75  },
+              { real_estate: 'Shine', a: 50  },
+              { real_estate: 'Sun', a: 75  },
+              { real_estate: 'Wind', a: 100 }
             ],
             xkey: 'real_estate',
             ykeys: ['a'],
             xLabelAngle: 35,
-            labels: ['Comments']
+            labels: ['Comments'],
+            barColors: function (row, series, type) {
+              if(row.label == "Air") return "#FF0F00";
+              else if(row.label == "Shore") return "#FF6600";
+              else if(row.label == "Fame") return "#FF9E01";
+              else if(row.label == "Sea") return "#FCD202";
+              else if(row.label == "Shine") return "#F8FF01";
+              else if(row.label == "Sun") return "#04d215";
+              else if(row.label == "Wind") return "#0d8ecf";
+              }
           });
           Morris.Bar({
             element: 'view-graph',
@@ -219,7 +228,16 @@
             xkey: 'real_estate',
             ykeys: ['a'],
             xLabelAngle: 35,
-            labels: ['Views']
+            labels: ['Views'],
+            barColors: function (row, series, type) {
+              if(row.label == "Air") return "#FF0F00";
+              else if(row.label == "Shore") return "#FF6600";
+              else if(row.label == "Fame") return "#FF9E01";
+              else if(row.label == "Sea") return "#FCD202";
+              else if(row.label == "Shine") return "#F8FF01";
+              else if(row.label == "Sun") return "#04d215";
+              else if(row.label == "Wind") return "#0d8ecf";
+              }
           });
           Morris.Bar({
             element: 'likes-graph',
@@ -235,7 +253,16 @@
             xkey: 'real_estate',
             ykeys: ['a'],
             xLabelAngle: 35,
-            labels: ['Views']
+            labels: ['Views'],
+            barColors: function (row, series, type) {
+              if(row.label == "Air") return "#FF0F00";
+              else if(row.label == "Shore") return "#FF6600";
+              else if(row.label == "Fame") return "#FF9E01";
+              else if(row.label == "Sea") return "#FCD202";
+              else if(row.label == "Shine") return "#F8FF01";
+              else if(row.label == "Sun") return "#04d215";
+              else if(row.label == "Wind") return "#0d8ecf";
+              }
           });
         </script>
     </body>
