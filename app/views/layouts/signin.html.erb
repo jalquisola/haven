@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Realproperty</title>
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
@@ -17,6 +16,7 @@
 <body class='black no-touch modal-open'>
 
 <%= render partial: 'misc/page_container' %>
+
 <div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="signLogo osLight"><span class="fa fa-home"></span> RealProperty</div>
@@ -26,6 +26,6 @@
 </div>
 <div class="modal-backdrop fade in"></div>
 
-<%= javascript_include_tag 'application'%>
+<%= javascript_include_tag 'sign_in'%>
 </body>
 </html>
