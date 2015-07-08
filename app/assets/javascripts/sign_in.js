@@ -8,3 +8,4 @@
 //= require ./default/signin.js
 //= require ./default/signup.js
 //= require jquery_ujs
+
