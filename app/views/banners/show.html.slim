@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Image url:
+  = @banner.image_url
+p
+  strong Banner url:
+  = @banner.banner_url
+p
+  strong Position:
+  = @banner.position
+
+= link_to 'Edit', edit_banner_path(@banner)
+'|
+= link_to 'Back', banners_path
