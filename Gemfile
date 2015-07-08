@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 #
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'slim-rails'
