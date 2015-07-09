@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708111314) do
+ActiveRecord::Schema.define(version: 20150709110708) do
 
   create_table "banners", force: :cascade do |t|
     t.string   "image_url",  limit: 255
@@ -30,6 +30,24 @@ ActiveRecord::Schema.define(version: 20150708111314) do
   end
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "url",         limit: 255
+    t.integer  "position",    limit: 4
+    t.integer  "property_id", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "images", ["property_id"], name: "index_images_on_property_id", using: :btree
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "location",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -51,4 +69,5 @@ ActiveRecord::Schema.define(version: 20150708111314) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "identities", "users"
+  add_foreign_key "images", "properties"
 end

@@ -1,0 +1,19 @@
+div id="carouselFull" class="carousel slide" data-ride="carousel"
+  ol class="carousel-indicators"
+    li data-target="#carouselFull" data-slide-to="0" class="active"
+    li data-target="#carouselFull" data-slide-to="1"
+    li data-target="#carouselFull" data-slide-to="2"
+    li data-target="#carouselFull" data-slide-to="3"
+
+  div class="carousel-inner"
+    - @property.images.each_with_index do |image, index|
+      - sClass = index == 1 ? 'active' : ''
+      div class="item #{sClass}"
+        img src=image.url alt="First slide"
+        div class="container"
+          div class="carousel-caption"
+
+  a class="left carousel-control" href="#carouselFull" role="button" data-slide="prev"
+    span class="fa fa-chevron-left"
+  a class="right carousel-control" href="#carouselFull" role="button" data-slide="next"
+    span class="fa fa-chevron-right"

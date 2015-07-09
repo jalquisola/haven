@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Property:
+  = @property.name
+p
+  strong Name:
+  = @image.name
+p
+  strong Url:
+  = @image.url
+
+= link_to 'Edit', edit_property_image_path(id: @image.id, property_id: @property.id)
+'|
+= link_to 'Back', property_images_path

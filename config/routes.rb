@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :properties do
+    resources :images
+  end
+
   resources :banners
   devise_for :users, controllers: {
     sessions: "users/sessions",

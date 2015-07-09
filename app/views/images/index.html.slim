@@ -1,0 +1,26 @@
+h1= "Listing images for #{@property.name}"
+
+table
+  thead
+    tr
+      th Name
+      th Url
+      th Property
+      th
+      th
+      th
+
+  tbody
+    - @images.each do |image|
+      tr
+        td = image.name
+        td = image.url
+        td = image.property.name
+        td = link_to 'Show', property_image_path(property_id: @property.id, id: image.id)
+        td = link_to 'Edit', edit_property_image_path(id: image.id, property_id: @property.id)
+        td = link_to 'Destroy', property_image_path(id: image.id, property_id: @property.id), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Image', new_property_image_path
+= link_to 'Property Listing', properties_path

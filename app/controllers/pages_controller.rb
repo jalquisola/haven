@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     end
 
     @banners = Banner.all
+    @properties = Property.all
   end
 
   def explore
@@ -12,6 +13,9 @@ class PagesController < ApplicationController
   end
 
   def single
+    @property = Property.where(id: params[:property_id]).first
+    return redirect_to root_url  unless @property
+
     render :single, layout: 'single'
   end
 

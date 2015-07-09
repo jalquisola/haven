@@ -1,0 +1,14 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @property.name
+p
+  strong Location:
+  = @property.location
+
+= link_to 'Edit', edit_property_path(@property)
+'|
+= link_to 'Back', properties_path
+'|
+= link_to 'Add Images', new_property_image_path(@property)
