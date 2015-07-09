@@ -4,7 +4,7 @@
     <div class="logo">
         <a href="<%= root_url %>">
             <span class="fa fa-home marker"></span>
-            <span class="logoText">reales</span>
+            <span class="logoText"><%= ENV['WEBSITE_NAME']%></span>
         </a>
     </div>
     <a href="#" class="navHandler"><span class="fa fa-bars"></span></a>
@@ -14,7 +14,8 @@
         <a href="#" class="headerUser dropdown-toggle" data-toggle="dropdown">
             <%= image_tag("avatar-1.png", {alt: 'avatar', class:"avatar headerAvatar pull-left"}) %>
             <div class="userTop pull-left">
-                <span class="headerUserName"><%= current_user.name || current_user.email%></span> <span class="fa fa-angle-down"></span>
+                <% name = current_user ? (current_user.name || current_user.email) : 'Hi, Guest' %>
+                <span class="headerUserName"><%=name%></span> <span class="fa fa-angle-down"></span>
             </div>
 
             <div class="clearfix"></div>
@@ -24,7 +25,7 @@
         <div class="dropdown-menu pull-right userMenu" role="menu">
             <div class="mobAvatar">
                 <%= image_tag("avatar-1.png", {alt: 'avatar', class:"avatar mobAvatarImg"}) %>
-                <div class="mobAvatarName"><%= current_user.name || current_user.email%></div>
+                <div class="mobAvatarName"><%= name%></div>
             </div>
             <ul>
                 <li><a href="#"><span class="icon-settings"></span>Settings</a></li>

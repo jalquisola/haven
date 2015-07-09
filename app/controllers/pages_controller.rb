@@ -12,11 +12,7 @@ class PagesController < ApplicationController
   end
 
   def single
-    if user_signed_in?
-      render :single, layout: 'single'
-    else
-      redirect_to new_user_session_url
-    end
+    render :single, layout: 'single'
   end
 
   def dashboard
