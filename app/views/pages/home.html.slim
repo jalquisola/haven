@@ -6,16 +6,16 @@ div class="home-wrapper"
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
           a href=pages_single_url(property_id: property.id) class="propWidget-2"
             div class="fig"
-              - image = property.images.first
-              img src=image.url alt='Hotel in Cebu'
-              img src=image.url alt='Hotel in Cebu' class='blur'
+              - image = property.images.where(position: 1).first
+              - if image
+                img src=image.url alt=property.name
+                img src=image.url alt=property.name class='blur'
               div class="opac"
               div class="priceCap osLight"
                 span $730/month
               div class="figType" PRE-SELLING
-              h3 class="osLight" Grand Tower in Cebu
-              div class="address"
-                |  North Reclamation Area, Mabolo, Cebu City
+              h3 class="osLight" =property.name
+              div class="address" =property.location
               ul class="rating"
                 - (1...5).each do |index|
                   li

@@ -6,8 +6,8 @@ div id="carouselFull" class="carousel slide" data-ride="carousel"
     li data-target="#carouselFull" data-slide-to="3"
 
   div class="carousel-inner"
-    - @property.images.each_with_index do |image, index|
-      - sClass = index == 1 ? 'active' : ''
+    - @property.images.each do |image|
+      - sClass = image.position == 1 ? 'active' : ''
       div class="item #{sClass}"
         img src=image.url alt="First slide"
         div class="container"

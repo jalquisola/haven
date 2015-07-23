@@ -4,9 +4,11 @@ class CreateImages < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.integer :position
-      t.references :property, index: true, foreign_key: true
+      t.integer :property_id
 
       t.timestamps null: false
     end
+
+    add_index :images, [:property_id, :position]
   end
 end

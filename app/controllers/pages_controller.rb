@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     end
 
     @banners = Banner.all
-    @properties = Property.all
+    @properties = Property.limit(4)
   end
 
   def explore

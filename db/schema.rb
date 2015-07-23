@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709110708) do
+ActiveRecord::Schema.define(version: 20150721142349) do
+
+  create_table "amenities", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "amenities", ["name"], name: "index_amenities_on_name", using: :btree
 
   create_table "banners", force: :cascade do |t|
     t.string   "image_url",  limit: 255
@@ -20,6 +28,17 @@ ActiveRecord::Schema.define(version: 20150709110708) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "descriptions", force: :cascade do |t|
+    t.text     "title",       limit: 65535
+    t.text     "subtitle",    limit: 65535
+    t.text     "info",        limit: 65535
+    t.integer  "property_id", limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "descriptions", ["property_id"], name: "index_descriptions_on_property_id", using: :btree
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -40,7 +59,7 @@ ActiveRecord::Schema.define(version: 20150709110708) do
     t.datetime "updated_at",              null: false
   end
 
-  add_index "images", ["property_id"], name: "index_images_on_property_id", using: :btree
+  add_index "images", ["property_id", "position"], name: "index_images_on_property_id_and_position", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -48,6 +67,30 @@ ActiveRecord::Schema.define(version: 20150709110708) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "properties_amenities", id: false, force: :cascade do |t|
+    t.integer "property_id", limit: 4
+    t.integer "amenity_id",  limit: 4
+  end
+
+  add_index "properties_amenities", ["amenity_id"], name: "index_properties_amenities_on_amenity_id", using: :btree
+  add_index "properties_amenities", ["property_id"], name: "index_properties_amenities_on_property_id", using: :btree
+
+  create_table "unit_types", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.decimal  "floor_area",                    precision: 10
+    t.integer  "cost",            limit: 4
+    t.integer  "amortization",    limit: 4
+    t.integer  "reservation_fee", limit: 4
+    t.integer  "bathrooms",       limit: 4
+    t.integer  "bedrooms",        limit: 4
+    t.text     "info",            limit: 65535
+    t.integer  "property_id",     limit: 4
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+  end
+
+  add_index "unit_types", ["property_id"], name: "index_unit_types_on_property_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -69,5 +112,4 @@ ActiveRecord::Schema.define(version: 20150709110708) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "identities", "users"
-  add_foreign_key "images", "properties"
 end
