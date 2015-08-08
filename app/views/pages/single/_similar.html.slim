@@ -1,0 +1,129 @@
+div class='similar'
+  h3 Similar Properties
+  div id="carouselSimilar-1" class="carousel slide visible-lg carousel-col"
+    ol class="carousel-indicators"
+      li data-target="#carouselSimilar-1" data-slide-to="0" class="active"
+      li data-target="#carouselSimilar-1" data-slide-to="1"
+    div class='carousel-inner'
+      - (0..1).each do |m|
+        div class="item #{m == 0 ? 'active' : ''}"
+          div class='row'
+            - (0..2).each do |index|
+              div class='col-xs-4'
+                div data-linkto="/pages/single?property_id=#{index}" class="card"
+                  div class='figure'
+                    img src=asset_path('shore_1.jpg') alt="image"
+                    div class="figCaption"
+                       div $1,550,000
+                       span class="icon-eye" 200
+                       span class="icon-heart" 54
+                       span class="icon-bubble" 13
+                    div class="figView"
+                      span class="icon-eye"
+                    div class="figType" FOR SALE
+                  h2 Modern Residence in New York
+                  div class="cardAddress"
+                    span class="icon-pointer"
+                    | 39 Remsen St, Brooklyn, NY 11201, USA
+                  ul class="cardFeat"
+                    li
+                      span class="fa fa-moon-o"
+                      | 3
+                    li
+                      span class="icon-drop"
+                      | 2
+                    li
+                      span class="icon-frame"
+                      | 3430 Sq Ft
+                  div class="clearfix"
+    a class="left carousel-control" href="#carouselSimilar-1" role="button" data-slide="prev"
+      span class="fa fa-chevron-left"
+    a class="right carousel-control" href="#carouselSimilar-1" role="button" data-slide="next"
+      span class="fa fa-chevron-right"
+
+  div id="carouselSimilar-2" class="carousel slide visible-md carousel-col"
+    ol class="carousel-indicators"
+      li data-target="#carouselSimilar-2" data-slide-to="0" class="active"
+      li data-target="#carouselSimilar-2" data-slide-to="1"
+      li data-target="#carouselSimilar-2" data-slide-to="2"
+    div class='carousel-inner'
+      - (0..1).each do |m|
+        div class="item #{m == 0 ? 'active' : ''}"
+          div class='row'
+            - (0..2).each do |index|
+              div class='col-xs-6'
+                div data-linkto="/pages/single?property_id=#{index}" class="card"
+                  div class='figure'
+                    img src=asset_path('shore_1.jpg') alt="image"
+                    div class="figCaption"
+                       div $1,550,000
+                       span class="icon-eye" 200
+                       span class="icon-heart" 54
+                       span class="icon-bubble" 13
+                    div class="figView"
+                      span class="icon-eye"
+                    div class="figType" FOR SALE
+                  h2 Modern Residence in New York
+                  div class="cardAddress"
+                    span class="icon-pointer"
+                    | 39 Remsen St, Brooklyn, NY 11201, USA
+                  ul class="cardFeat"
+                    li
+                      span class="fa fa-moon-o"
+                      | 3
+                    li
+                      span class="icon-drop"
+                      | 2
+                    li
+                      span class="icon-frame"
+                      | 3430 Sq Ft
+                  div class="clearfix"
+    a class="left carousel-control" href="#carouselSimilar-2" role="button" data-slide="prev"
+      span class="fa fa-chevron-left"
+    a class="right carousel-control" href="#carouselSimilar-2" role="button" data-slide="next"
+      span class="fa fa-chevron-right"
+
+  div id="carouselSimilar-3" class="carousel slide visible-xs visible-sm carousel-col"
+    ol class="carousel-indicators"
+      li data-target="#carouselSimilar-3" data-slide-to="0" class="active"
+      li data-target="#carouselSimilar-3" data-slide-to="1"
+      li data-target="#carouselSimilar-3" data-slide-to="2"
+      li data-target="#carouselSimilar-3" data-slide-to="3"
+      li data-target="#carouselSimilar-3" data-slide-to="4"
+      li data-target="#carouselSimilar-3" data-slide-to="5"
+    div class='carousel-inner'
+      - (0..6).each do |m|
+        div class="item #{m == 0 ? 'active' : ''}"
+          div class='row'
+            - (0..0).each do |index|
+              div class='col-xs-12'
+                div data-linkto="/pages/single?property_id=#{index}" class="card"
+                  div class='figure'
+                    img src=asset_path('shore_1.jpg') alt="image"
+                    div class="figCaption"
+                       div $1,550,000
+                       span class="icon-eye" 200
+                       span class="icon-heart" 54
+                       span class="icon-bubble" 13
+                    div class="figView"
+                      span class="icon-eye"
+                    div class="figType" FOR SALE
+                  h2 Modern Residence in New York
+                  div class="cardAddress"
+                    span class="icon-pointer"
+                    | 39 Remsen St, Brooklyn, NY 11201, USA
+                  ul class="cardFeat"
+                    li
+                      span class="fa fa-moon-o"
+                      | 3
+                    li
+                      span class="icon-drop"
+                      | 2
+                    li
+                      span class="icon-frame"
+                      | 3430 Sq Ft
+                  div class="clearfix"
+    a class="left carousel-control" href="#carouselSimilar-3" role="button" data-slide="prev"
+      span class="fa fa-chevron-left"
+    a class="right carousel-control" href="#carouselSimilar-3" role="button" data-slide="next"
+      span class="fa fa-chevron-right"
