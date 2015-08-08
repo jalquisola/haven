@@ -25,10 +25,10 @@
             <div id="content" class="mob-max">
                 <div class="singleTop">
                     <%= render partial: "misc/carousel"%>
-                    <%= render partial: "properties/summary"%>
+                    <%= render partial: "properties/summary", locals: {unit_types: @unit_types}%>
                 </div>
                 <div class="clearfix"></div>
-                <%= render partial: "pages/single/description"%>
+                <%= render partial: "pages/single/description", locals: {unit_types: @unit_types}%>
                 <%= render partial: "pages/single/amenities"%>
                 <%= render partial: "pages/single/similar"%>
                 <%= render partial: "pages/single/comments"%>

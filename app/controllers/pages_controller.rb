@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     @property = Property.where(id: params[:property_id]).first
     return redirect_to root_url  unless @property
 
+    @unit_types = @property.unit_types
     render :single, layout: 'single'
   end
 

@@ -35,16 +35,23 @@ div class="summary"
             span class="icon-bubble"
             | 13
         div class="clearfix"
-        ul class="features"
-          li
-            span class="fa fa-moon-o"
-            div 2 Bedrooms
-          li
-            span class="icon-drop"
-            div 2 Bathrooms
-          li
-            span class="icon-frame"
-            div 2750 Sq Ft
+        ul class="features" role='tablist'
+          - unit_types.each_with_index do |unit_type, index|
+            li class="#{index == 0 ? 'active' : ''}"
+              a href="#unit-type-#{unit_type.id}" role='tab' data-toggle='tab'= unit_type.name
+
+          /li class='active'
+            a href='#studio-desc' role='tab' data-toggle='tab'
+              span class="fa fa-moon-o"
+              | Studio
+          /li
+            a href='#one-bed-desc' role='tab' data-toggle='tab'
+              span class="icon-drop"
+              | 1 Bedrooms
+          /li
+            a href='#two-bed-desc' role='tab' data-toggle='tab'
+              span class="icon-frame"
+              | 2 Bedrooms
         div class="clearfix"
     div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
       div class="agentAvatar summaryItem"
