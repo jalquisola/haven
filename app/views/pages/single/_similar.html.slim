@@ -11,12 +11,13 @@ div class='similar'
           - isActive = false
           div class='row'
             - properties.each do |property|
+              - unit_type = property.unit_types.first
               div class='col-xs-4'
                 div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                   div class='figure'
                     img src=property.images.where(position: 1).first.try(:url) alt="image"
                     div class="figCaption"
-                       div $1,550,000
+                       div ="Php #{unit_type.cost}"
                        span class="icon-eye" 200
                        span class="icon-heart" 54
                        span class="icon-bubble" 13
@@ -30,13 +31,13 @@ div class='similar'
                   ul class="cardFeat"
                     li
                       span class="fa fa-moon-o"
-                      | 3
+                      =< unit_type.bedrooms
                     li
                       span class="icon-drop"
-                      | 2
+                      =< unit_type.bathrooms
                     li
                       span class="icon-frame"
-                      | 3430 Sq Ft
+                      =< "#{unit_type.floor_area} sq m"
                   div class="clearfix"
     a class="left carousel-control" href="#carouselSimilar-1" role="button" data-slide="prev"
       span class="fa fa-chevron-left"

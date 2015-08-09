@@ -17,6 +17,8 @@ class PagesController < ApplicationController
     return redirect_to root_url  unless @property
 
     @unit_types = @property.unit_types
+    @current_user = current_user
+    @comments = @property.comments
     render :single, layout: 'single'
   end
 

@@ -2,9 +2,11 @@ div class="commentsFormWrapper"
   div class="cfAvatar"
     img class="avatar" src=asset_path('avatar-1.png') alt="avatar"
 
-  form class="commentsForm"
+  - comment = @property.comments.new
+  = form_for comment, url: property_comments_path(property_id: @property.id), html: {class: 'commentsForm'} do |f|
+    = f.hidden_field :user_id
     div class="input-group"
-      input type="text" class="form-control" placeholder="Write a comment..."
+      = f.text_field :content, {class:'form-control', placeholder: 'Write a comment...'}
       span class="input-group-btn"
-        a class="btn btn-green" Post
+        input name='submit' type='submit' class="btn btn-green" value='Post'
   div class="clearfix"
