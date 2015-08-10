@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :properties do
     resources :images
     resources :comments
+    resources :amenities
   end
 
   resources :banners

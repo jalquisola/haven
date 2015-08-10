@@ -12,4 +12,12 @@
   .field
     = f.label :location
     = f.text_field :location
+  .field
+    ul
+      - property_amenities = @property.amenities.select(:id).map(&:id)
+      - Amenity.all.each do |amenity|
+        li
+          = check_box_tag 'property[amenity_ids][]', amenity.id,\
+            property_amenities.include?(amenity.id) 
+          = amenity.name
   .actions = f.submit

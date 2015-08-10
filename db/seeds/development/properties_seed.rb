@@ -149,12 +149,12 @@ properties.each do |property|
       img.save!
     end
 
-    property[:amenities].each do |amenity|
-      Property.connection.execute("DELETE FROM properties_amenities WHERE property_id = #{p.id}")
-      am = Amenity.where(name: amenity).first
-      am = Amenity.create!(name: amenity) unless am
-      ActiveRecord::Base.connection.execute("INSERT INTO properties_amenities (property_id, amenity_id) VALUES(#{p.id}, #{am.id})")
-    end
+    #property[:amenities].each do |amenity|
+    #  Property.connection.execute("DELETE FROM properties_amenities WHERE property_id = #{p.id}")
+    #  am = Amenity.where(name: amenity).first
+    #  am = Amenity.create!(name: amenity) unless am
+    #  ActiveRecord::Base.connection.execute("INSERT INTO properties_amenities (property_id, amenity_id) VALUES(#{p.id}, #{am.id})")
+    #end
 
     property[:unit_types].each do |unit_type|
       Property.connection.execute("DELETE FROM unit_types WHERE property_id = #{p.id}")
