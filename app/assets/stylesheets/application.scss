@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require ./default/font-awesome
+ *= require ./default/simple-line-icons
+ *= require ./default/fullscreen-slider
+ *= require ./default/bootstrap
+ *= require ./default/app-blue
+ *= require_self
+ */
+
+.quote-box{
+    border: 1px solid #e6e6e6;
+    padding: 30px;
+    border-radius: 2px;
+}
+
+.quote-box .quote-left{
+    position: absolute;
+    margin: -12px 0 0 -10px;
+    background: image-url("sprite.png") -316px -147px no-repeat;
+    width: 33px;
+    height: 28px;
+}
+
+.quote-box .quote-right{
+    position: absolute;
+    margin: 4px -10px 0 10px;
+    background: image-url("sprite.png") -353px -147px no-repeat;
+    width: 33px;
+    height: 28px;
+}
+
+.testimonials blockquote{
+    border-left: none;
+}
+
+.quote-box q{
+    quotes: none;
+    display: block;
+    font-size: 19px;
+    line-height: 30px;
+    margin: 0 0 0 30px;
+}
+
+.quote-arrow{
+    display: block;
+    margin: -1px 0 0 5px;
+    background: image-url("sprite.png") -480px -120px no-repeat;
+    width: 99px;
+    height: 13px;
+}
+
+cite{
+    display: block;
+    margin: 20px 0 0 20px;
+}
+
+cite .photo{
+    float: left;
+    display: block;
+    margin: 0 15px 0 0;
+    width: 70px;
+    height: 70px;
+}
+
+cite .author{
+    color: #479ccf;
+    font-size: 22px;
+    line-height: 40px;
+}

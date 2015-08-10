@@ -21,12 +21,23 @@ div class="home-wrapper"
                   li
                     span class="fa fa-star star-#{index}"
 
-    h2 class="osLight" Our Services
-    div class="row pb40"
-      - [{title: "Find places anywhere in the Philippines", icon:'icon-pointer'}, {title: "We have agents with experience",icon: 'icon-users'}, {title: "Buy or rent beautiful places", icon: 'icon-home'}].each do |obj|
-        div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 s-menu-item"
-          a href="#"
-            span class="#{obj[:icon]} s-icon"
-            div class="s-content"
-               h2 class="s-main osLight" =obj[:title]
-               h3 class="s-sub osLight"
+    h2 class="osLight" Satisfied Customers
+    div class="row pb40" id='testimonials-wrapper'
+      - [{title: 'Find places anywhere in the Philippines', icon:'icon-pointer'}, {title: "We have agents with experience",icon: 'icon-users'}, {title: "Buy or rent beautiful places", icon: 'icon-home'}].each do |obj|
+        div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 testimonials"
+          blockquote
+            p class='lead' =obj[:title]
+            footer Joseph
+          /div class='quote-box'
+            /span class='quote-left'
+            /q
+              = obj[:title]
+              span class='quote-right'
+          /span class='quote-arrow'
+          /cite
+            span class='photo'
+              img class="avatar" src=asset_path('avatar-1.png') alt="avatar"
+            span class='author' Joseph
+            br
+            | Designer
+
