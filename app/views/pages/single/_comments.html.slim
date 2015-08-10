@@ -4,7 +4,8 @@ div class="comments"
 
   - @comments.each do |comment|
     - commenter = comment.user
-    div class="comment #{comment.user_id != @current_user.id ? 'reply' : ''}"
+    - sClass = (@current_user && comment.user_id != @current_user.id) ? 'reply' : ''
+    div class="comment #{sClass}"
       div class="commentAvatar"
         img class="avatar" src=asset_path('avatar-3.png') alt="avatar"
         div class="commentArrow"
@@ -21,7 +22,7 @@ div class="comments"
               a href="#"
                 span class="icon-like"
                 | 13
-            - if commenter.id == comment.user_id
+            - if @current_user && commenter.id == @current_user.id
               li
                 a href="#"
                   span class="fa fa-trash-o"
