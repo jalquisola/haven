@@ -13,6 +13,12 @@
     = f.label :location
     = f.text_field :location
   .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+  .field
     ul
       - property_amenities = @property.amenities.select(:id).map(&:id)
       - Amenity.all.each do |amenity|

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810072744) do
+ActiveRecord::Schema.define(version: 20150810150852) do
 
   create_table "amenities", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -88,6 +88,8 @@ ActiveRecord::Schema.define(version: 20150810072744) do
     t.string   "location",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "latitude",   limit: 255
+    t.string   "longitude",  limit: 255
   end
 
   create_table "unit_types", force: :cascade do |t|

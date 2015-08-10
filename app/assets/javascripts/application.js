@@ -14,6 +14,7 @@
 //= require ./default/jquery-ui.min.js
 //= require ./default/jquery-ui-touch-punch.js
 //= require ./default/jquery.placeholder.js
+//= require ./default/underscore.js
 //= require ./default/bootstrap.js
 //= require ./default/jquery.touchSwipe.min.js
 //= require ./default/infobox.js
