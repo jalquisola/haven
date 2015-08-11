@@ -7,17 +7,18 @@ div class="home-wrapper"
           a href=pages_single_url(property_id: property.id) class="propWidget-2"
             div class="fig"
               - image = property.images.where(position: 1).first
+              - unit_type = property.unit_types.first
               - if image
                 img src=image.url alt=property.name
                 img src=image.url alt=property.name class='blur'
               div class="opac"
               div class="priceCap osLight"
-                span $730/month
+                span =number_to_currency(unit_type.cost, unit: "Php")
               div class="figType" PRE-SELLING
               h3 class="osLight" =property.name
               div class="address" =property.location
               ul class="rating"
-                - (1...5).each do |index|
+                - (1..5).each do |index|
                   li
                     span class="fa fa-star star-#{index}"
 

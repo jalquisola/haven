@@ -20,103 +20,19 @@
         <%= render partial: "layouts/misc/left_side"%>
 
         <div id="wrapper">
-            <div id="mapView">
-                <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...</div>
-            </div>
+            <%= render partial: "misc/map_view"%>
             <div id="content">
                 <div class="resultsList">
                     <div class="row">
-                        <% properties = [
-                            {title: 'Modern Residence',
-                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
-                            price: "$1,550,000",
-                            image_url: asset_path("grand_residences.jpg"),
-                            views: 200,
-                            likes: 54,
-                            comments: 13,
-                            stars: 4,
-                            rating: 146
-                            },
-                            {title: 'Hauntingly Beautiful Estate',
-                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_residences.jpg"),
-                            price: "$2,550,000",
-                            views: 175,
-                            likes: 67,
-                            comments: 9,
-                            stars: 5,
-                            rating: 123
-                            },
-                            {title: 'Sophisticated Residence',
-                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_residences.jpg"),
-                            price: "$1,340,000",
-                            views: 180,
-                            likes: 87,
-                            comments: 12,
-                            stars: 5,
-                            rating: 120
-                            },
-                            {title: 'House With a Lovely Glass-Roofed Pergola',
-                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_residences.jpg"),
-                            price: "$1,930,000",
-                            views: 145,
-                            likes: 99,
-                            comments: 25,
-                            stars: 5,
-                            rating: 170
-                            },
-                            {title: 'Modern Residence',
-                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_residences.jpg"),
-                            price: "$1,550,000",
-                            views: 200,
-                            likes: 54,
-                            comments: 13,
-                            stars: 4,
-                            rating: 146
-                            },
-                            {title: 'Hauntingly Beautiful Estate',
-                            address: "39 Remsen St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_residences.jpg"),
-                            price: "$2,550,000",
-                            views: 175,
-                            likes: 67,
-                            comments: 9,
-                            stars: 5,
-                            rating: 123
-                            },
-                            {title: 'Sophisticated Residence',
-                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_tower.png"),
-                            price: "$1,340,000",
-                            views: 180,
-                            likes: 87,
-                            comments: 12,
-                            stars: 5,
-                            rating: 120
-                            },
-                            {title: 'House With a Lovely Glass-Roofed Pergola',
-                            address: "38-62 Water St, Brooklyn, NY 11201, USA",
-                            image_url: asset_path("grand_amani_intro.jpg"),
-                            price: "$1,930,000",
-                            views: 145,
-                            likes: 99,
-                            comments: 25,
-                            stars: 5,
-                            rating: 170
-                            },
-                            ]
-                        %>
-                        <% properties.each do |property|%>
+                        <% Property.all.each do |property|%>
                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <a href="<%= pages_single_path%>" class="card">
+                              <a href="<%= pages_single_path(property_id: property.id)%>" class="card">
                                   <div class="figure">
-                                      <!--<%#= image_tag("prop/1-1.png", alt: 'image')%> -->
-                                      <img src='<%= property[:image_url]%>' alt='image' />
+                                      <% image = property.images.where(position: 1).first %>
+                                      <img src='<%= image.url%>' alt='image' />
                                       <div class="figCaption">
-                                          <div><%=property[:price]%></div>
+                                          <% unit_type = property.unit_types.first %>
+                                          <div>Php <%=unit_type.cost%></div>
                                           <span class="icon-eye"> <%= property[:views]%></span>
                                           <span class="icon-heart"> <%= property[:likes]%></span>
                                           <span class="icon-bubble"> <%= property[:comments]%></span>
@@ -124,26 +40,21 @@
                                       <div class="figView"><span class="icon-heart"></span></div>
                                       <div class="figType">FOR SALE</div>
                                   </div>
-                                  <h2><%= property[:title] %></h2>
+                                  <h2><%= property.name %></h2>
                                   <div class="cardAddress">
                                       <span class="icon-pointer"></span>
-                                      <%= property[:address]%>
+                                      <%= property.location%>
                                   </div>
                                   <div class="cardRating">
-                                      <% empty_stars = 5 - property[:stars] %>
-                                      <% (1..property[:stars]).each do |i| %>
+                                      <% (1..5).each do |i| %>
                                         <span class="fa fa-star"></span>
                                       <% end %>
-                                      <% (1..empty_stars).each do |i| %>
-                                        <span class="fa fa-star-o"></span>
-                                      <% end %>
-                                      (<%= property[:rating]%>)
                                   </div>
                                   <ul class="cardFeat">
-                                      <li><span class="fa fa-moon-o"></span> 3</li>
-                                      <li><span class="icon-drop"></span> 2</li>
-                                      <li><span class="icon-frame"></span> 3430 Sq Ft</li>
-                                      <li><span></span> <%= property[:price]%></li>
+                                      <li><span class="fa fa-moon-o"></span> <%= unit_type.bedrooms%></li>
+                                      <li><span class="icon-drop"></span><%= unit_type.bathrooms%></li>
+                                      <li><span class="icon-frame"></span><%= unit_type.floor_area%> sq m</li>
+                                      <li><span></span>Php <%= unit_type.cost%></li>
                                   </ul>
                                   <div class="clearfix"></div>
                               </a>

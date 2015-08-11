@@ -17,12 +17,8 @@ div class="comments"
           div class="commentTime"
             span class="icon-clock"
             =< time_ago_in_words(comment.created_at)
-          ul
-            li
-              a href="#"
-                span class="icon-like"
-                | 13
-            - if @current_user && commenter.id == @current_user.id
+          - if @current_user && commenter.id == @current_user.id
+            ul
               li
                 a href="#"
                   span class="fa fa-trash-o"
