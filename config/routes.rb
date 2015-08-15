@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :enquiries
   resources :properties do
     resources :images
     resources :comments

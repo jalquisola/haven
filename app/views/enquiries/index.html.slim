@@ -1,0 +1,33 @@
+h1 Listing enquiries
+
+table
+  thead
+    tr
+      th Title
+      th Salutation
+      th Name
+      th Country
+      th Contact no
+      th Email
+      th Content
+      th
+      th
+      th
+
+  tbody
+    - @enquiries.each do |enquiry|
+      tr
+        td = enquiry.title
+        td = enquiry.salutation
+        td = enquiry.name
+        td = enquiry.country
+        td = enquiry.contact_no
+        td = enquiry.email
+        td = enquiry.content
+        td = link_to 'Show', enquiry
+        td = link_to 'Edit', edit_enquiry_path(enquiry)
+        td = link_to 'Destroy', enquiry, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Enquiry', new_enquiry_path

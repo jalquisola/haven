@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_filter :authenticate_user!, only: [:single, :explore]
+
   def home
     if user_signed_in?
       return redirect_to pages_explore_url
@@ -19,6 +21,7 @@ class PagesController < ApplicationController
     @unit_types = @property.unit_types
     @current_user = current_user
     @comments = @property.comments
+    @enquiry = Enquiry.new
     render :single, layout: 'single'
   end
 

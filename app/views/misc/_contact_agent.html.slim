@@ -1,0 +1,30 @@
+div class="modal fade" id="contactAgent" role="dialog" aria-labelledby="contactLabel" aria-hidden="true"
+  div class="modal-dialog"
+    div class="modal-content"
+      div class="modal-header"
+        button type="button" class="close" data-dismiss="modal" aria-hidden="true" ×
+        h4 class="modal-title" id="contactLabel" Contact Agent
+      = form_for @enquiry, remote: true, html:{class: 'contactForm'} do |f|
+        = hidden_field_tag :property_id, @property.id
+        div class="modal-body"
+          div class="row"
+            div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"
+              = f.text_field :name, {placeholder: 'Name', class: 'form-control'}
+            div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"
+              = f.text_field :email, {placeholder: 'Email', class: 'form-control'}
+            div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"
+              = f.text_field :contact_no, {placeholder: 'Contact No', class: 'form-control'}
+            div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cfItem"
+              = country_select("enquiry", "country", {include_blank: 'Select your country...'}, {placeholder: 'Country', class: 'form-control'})
+            div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"
+              input type="text" placeholder="Subject" name='enquiry[subject]' class="form-control" value="I want more information"
+            div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cfItem"
+              textarea placeholder="Message" name='enquiry[content]'rows="10" class="form-control"
+                | I found this property on your website and would like more
+                | &nbspinformation on "#{@property.name}".
+                | &#13;&#10;&#13;&#10;Please be in touch with me as soon as possible.
+                | &#13;&#10;&#13;&#10;Thank you.
+        div class="modal-footer"
+          a href="#" data-dismiss="modal" class="btn btn-round btn-o btn-gray" Close
+          = f.submit "Send message", class: "btn btn-round btn-green"
+

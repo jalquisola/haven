@@ -15,6 +15,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
+gem 'country_select', github: 'stefanpenner/country_select'
+
 gem 'slim-rails'
 gem 'dotenv-rails'
 gem 'jquery-rails'

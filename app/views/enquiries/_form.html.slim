@@ -1,0 +1,30 @@
+= form_for @enquiry do |f|
+  - if @enquiry.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@enquiry.errors.count, "error")} prohibited this enquiry from being saved:"
+      ul
+        - @enquiry.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :salutation
+    = f.text_field :salutation
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :contact_no
+    = f.text_field :contact_no
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :content
+    = f.text_area :content
+  .actions = f.submit

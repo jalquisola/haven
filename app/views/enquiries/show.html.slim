@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @enquiry.title
+p
+  strong Salutation:
+  = @enquiry.salutation
+p
+  strong Name:
+  = @enquiry.name
+p
+  strong Country:
+  = @enquiry.country
+p
+  strong Contact no:
+  = @enquiry.contact_no
+p
+  strong Email:
+  = @enquiry.email
+p
+  strong Content:
+  = @enquiry.content
+
+= link_to 'Edit', edit_enquiry_path(@enquiry)
+'|
+= link_to 'Back', enquiries_path
