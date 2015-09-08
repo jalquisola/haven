@@ -18,9 +18,14 @@ Rails.application.routes.draw do
 
   get 'users/profile' => 'users#profile'
   # You can have the root of your site routed with "root"
-  get 'pages/explore' => 'pages#explore'
-  get 'pages/single' => 'pages#single'
-  get 'pages/dashboard' => 'pages#dashboard'
+  resources :pages, only: [] do
+    collection do
+      get :explore
+      get :single
+      get :dashboard
+      get :sellers
+    end
+  end
   root 'pages#home'
 
 end

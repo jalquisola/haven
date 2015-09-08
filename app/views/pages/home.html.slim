@@ -4,7 +4,7 @@ div class="home-wrapper"
     div class="row pb40"
       - @properties.each do |property|
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
-          a href=pages_single_url(property_id: property.id) class="propWidget-2"
+          a href=single_pages_url(property_id: property.id) class="propWidget-2"
             div class="fig"
               - image = property.images.where(position: 1).first
               - unit_type = property.unit_types.first

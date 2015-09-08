@@ -28,4 +28,8 @@ class PagesController < ApplicationController
   def dashboard
     render :dashboard, layout: 'dashboard'
   end
+
+  def sellers
+    render :sellers, layout: 'sellers'
+  end
 end
