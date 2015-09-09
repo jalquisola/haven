@@ -48,7 +48,7 @@
 .btn-gray:active,
 .btn-gray.active,
 .open > .dropdown-toggle.btn-gray {
-    background-color: #333;
+    background-color: #333333;
     color: #fff;
 }
 .no-touch .btn-o.btn-gray:hover,
@@ -74,7 +74,7 @@
 .btn-white.active,
 .open > .dropdown-toggle.btn-white {
     background-color: #fff;
-    color: #333;
+    color: #333333;
 }
 .no-touch .btn-o.btn-white:hover,
 .btn-o.btn-white:focus,
@@ -82,16 +82,16 @@
 .btn-o.btn-white.active,
 .open > .dropdown-toggle.btn-o.btn-white {
     background-color: #fff;
-    color: #333;
+    color: #333333;
 }
 .btn-black {
-    background-color: #333;
+    background-color: #333333;
     color: #fff;
 }
 .btn-o.btn-black {
     background-color: transparent;
-    color: #333;
-    border-color: #333;
+    color: #333333;
+    border-color: #333333;
 }
 .no-touch .btn-black:hover,
 .btn-black:focus,
@@ -362,7 +362,7 @@
   color: #999;
 }
 .no-touch a.text-gray:hover {
-  color: #333;
+  color: #333333;
 }
 .text-green {
   color: #0eaaa6;
@@ -698,7 +698,7 @@ a.notifySettings {
 }
 .notifyName {
     font-size: 12px;
-    color: #333;
+    color: #333333;
     padding-top: 3px;
 }
 .notifyTime {
@@ -854,7 +854,7 @@ a.headerUser {
     padding: 7px 20px;
     display: block;
     font-size: 13px;
-    color: #333;
+    color: #333333;
     text-decoration: none;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1278,7 +1278,7 @@ a.userHandler .counter {
     transition: all .2s ease-in-out;
 }
 .expanded .leftUserWraper ul li a {
-    color: #333;
+    color: #333333;
     background-color: #fff;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1290,7 +1290,7 @@ a.userHandler .counter {
 }
 .no-touch .expanded .leftUserWraper ul li a:hover, .no-touch .expanded .leftUserWraper ul li a:focus {
     background-color: #f3f3f3;
-    color: #333;
+    color: #333333;
 }
 .leftUserWraper ul li a span {
     margin-right: 5px;
@@ -1347,7 +1347,7 @@ a.userHandler .counter {
 }
 .infoW {
     font-family: 'open_sansregular', sans-serif, Arial;
-    color: #333;
+    color: #333333;
     padding: 0 1px;
 }
 .propImg {
@@ -1508,7 +1508,7 @@ a.handleFilter {
 .filterForm label {
     display: block;
     font-size: 13px;
-    color: #333;
+    color: #333333;
 }
 .filterForm {
     padding: 0 20px;
@@ -1526,7 +1526,7 @@ a.handleFilter {
 a.btn.dropdown-btn.btn-gray {
     background-color: #fff;
     border-color: #dfdfdf;
-    color: #333;
+    color: #333333;
 }
 .no-touch a.dropdown-btn.btn-gray:hover, .open a.dropdown-btn.btn-gray {
     color: #333;
@@ -1553,7 +1553,7 @@ a.btn.dropdown-btn.btn-gray {
     padding: 7px 20px;
     display: block;
     font-size: 13px;
-    color: #333;
+    color: #333333;
     text-decoration: none;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -1622,7 +1622,7 @@ a.btn.dropdown-btn.btn-gray {
 }
 .no-touch .volume a.btn:hover {
     background-color: #fff;
-    color: #333;
+    color: #333333;
     border-color: #999;
 }
 .volume a.btn.btn-round-left {
@@ -1649,7 +1649,7 @@ a.btn.dropdown-btn.btn-gray {
     border-right: 0 none;
     -webkit-appearance: none;
     background-color: #fff;
-    color: #333;
+    color: #333333;
     font-size: 13px;
 }
 .resultsList {
@@ -1815,7 +1815,7 @@ a.card h2, div.card h2 {
     line-height: 16px;
     margin: 0 10px 0 0;
     padding: 10px 0 3px 10px;
-    color: #333;
+    color: #333333;
     text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
@@ -1845,7 +1845,7 @@ a.card .cardRating, div.card .cardRating {
     padding: 0 0 10px 10px;
     font-size: 12px;
     line-height: 12px;
-    color: #333;
+    color: #333333;
 }
 a.card .cardRating span, div.card .cardRating span {
     color: #eab134;
@@ -1863,7 +1863,7 @@ a.card ul.cardFeat li, div.card ul.cardFeat li {
     margin-right: 10px;
     font-size: 11px;
     line-height: 11px;
-    color: #333;
+    color: #333333;
 }
 a.card ul.cardFeat li span, div.card ul.cardFeat li span {
     color: #999;
@@ -1895,7 +1895,7 @@ a.card ul.cardFeat li span, div.card ul.cardFeat li span {
     width: 10px;
     height: 10px;
     margin: 0;
-    background-color: #333;
+    background-color: #333333;
 }
 .carousel-control .fa-chevron-left,
 .carousel-control .fa-chevron-right {
@@ -1941,7 +1941,7 @@ a.card ul.cardFeat li span, div.card ul.cardFeat li span {
 }
 .no-touch .carousel-col .carousel-control:hover,
 .carousel-col .carousel-control:focus {
-    color: #333;
+    color: #333333;
     text-decoration: none;
     filter: alpha(opacity=100);
     outline: 0;
@@ -1995,7 +1995,7 @@ h1.pageTitle {
 .singleTop ul.rating li {
     font-size: 12px;
     line-height: 13px;
-    color: #333;
+    color: #333333;
     float: left;
     margin-right: 3px;
 }
@@ -2012,7 +2012,7 @@ h1.pageTitle {
 .singleTop ul.stats li {
     float: left;
     margin-left: 7px;
-    color: #333;
+    color: #333333;
     font-size: 11px;
 }
 .singleTop ul.stats li span {
@@ -2166,7 +2166,7 @@ h1.pageTitle {
 }
 .commentBody {
     font-size: 12px;
-    color: #333;
+    color: #333333;
     line-height: 16px;
     padding: 0 10px 10px 10px;
     border-bottom: 1px solid #e8e8e8;
@@ -2910,7 +2910,7 @@ h1.pageTitle {
     padding-top: 5px;
     font-size: 13px;
     line-height: 13px;
-    color: #333;
+    color: #333333;
 }
 .userWidget-1 .address {
     margin-left: 95px;
@@ -2979,7 +2979,7 @@ h1.pageTitle {
     display: block;
     font-size: 16px;
     line-height: 18px;
-    color: #333;
+    color: #333333;
 }
 
 /* User Widget 2 */
@@ -3078,7 +3078,7 @@ h1.pageTitle {
 .no-touch .nav-tabs > li > a:hover {
     border-color: transparent;
     background-color: transparent;
-    color: #333;
+    color: #333333;
     border-bottom: 1px solid #d9d9d9;
 }
 .nav-tabs > li.active > a,
@@ -3138,7 +3138,7 @@ h1.pageTitle {
     overflow: hidden;
 }
 .tabsWidget ul.propList li a .info .name, .tabsWidget ul.userList li a .info .name {
-    color: #333;
+    color: #333333;
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
@@ -3170,7 +3170,7 @@ h1.pageTitle {
 .tabsWidget ul.userList li a .info .title {
     font-size: 12px;
     line-height: 14px;
-    color: #333;
+    color: #333333;
 }
 
 /* Calendar Widget */
@@ -3225,7 +3225,7 @@ h1.pageTitle {
     padding: 0 10px;
 }
 .no-touch .cal .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
-    color: #333;
+    color: #333333;
 }
 .cal .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive {
     opacity: 0.5;
@@ -3242,7 +3242,7 @@ h1.pageTitle {
     padding: 0 10px;
 }
 .no-touch .cal .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
-    color: #333;
+    color: #333333;
 }
 .cal .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive {
     opacity: 0.5;
@@ -3368,7 +3368,7 @@ h1.pageTitle {
 }
 .notificationsWidget .notification .time .timeBody {
     position: absolute;
-    background-color: #333;
+    background-color: #333333;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13);
     border-radius: 2px;
     width: 100%;
@@ -3384,7 +3384,7 @@ h1.pageTitle {
     left: 139px;
     width: 16px;
     height: 16px;
-    color: #333;
+    color: #333333;
     font-size: 30px;
     line-height: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
@@ -3464,7 +3464,7 @@ h1.pageTitle {
 }
 .notificationsWidget .notification .notifyContent .notifyBody .notify .message {
     font-size: 12px;
-    color: #333;
+    color: #333333;
     line-height: 16px;
 }
 
@@ -3503,7 +3503,7 @@ h1.pageTitle {
     background-color: #999;
 }
 .breadcrumb > li.active .badge {
-    background-color: #333;
+    background-color: #333333;
 }
 .pagination {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13);
@@ -3520,7 +3520,7 @@ h1.pageTitle {
 .no-touch .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-    color: #333;
+    color: #333333;
     background-color: #e8e8e8;
     border-color: #e8e8e8;
 }
@@ -3848,7 +3848,7 @@ li.list-ns-collapsed.list-ns-hovering div {
     cursor: move;
 }
 .no-touch .list-ns li div .list-ns-handler:hover {
-    color: #333;
+    color: #333333;
 }
 
 /* Tables */
@@ -3908,7 +3908,7 @@ li.list-ns-collapsed.list-ns-hovering div {
     margin-bottom: 0;
 }
 .table > thead > tr > th.tablesorter-headerDesc, .table > thead > tr > th.tablesorter-headerAsc {
-    background-color: #333;
+    background-color: #333333;
     color: #fff;
 }
 .table > thead > tr > th.tablesorter-headerUnSorted .tablesorter-header-inner .sortIconAsc,
@@ -4113,7 +4113,7 @@ body.black {
     display: block;
     font-size: 16px;
     line-height: 18px;
-    color: #333;
+    color: #333333;
 }
 .pc-title {
     font-size: 16px;
@@ -4293,11 +4293,11 @@ body.black {
     text-align: left;
     border-top: 0 none;
     font-size: 13px;
-    color: #333;
+    color: #333333;
     font-weight: normal;
 }
 .no-touch .pac-item:hover {
-    color: #333;
+    color: #333333;
     text-decoration: none;
     background-color: #f3f3f3;
 }
@@ -4305,7 +4305,7 @@ body.black {
     display: none;
 }
 .pac-item-query {
-    color: #333;
+    color: #333333;
 }
 .pac-container:after{
     content:"";
@@ -4390,7 +4390,7 @@ a.home-navHandler.active {
     width: 100%;
     height: 100%;
     display: block;
-    color: #333;
+    color: #333333;
     position: relative;
 }
 .s-icon {
@@ -4420,7 +4420,7 @@ a.home-navHandler.active {
 h2.s-main {
     color: #1d82aa;
     font-size: 30px;
-    color: 333;
+    color: #333333;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
