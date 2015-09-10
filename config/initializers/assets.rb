@@ -9,4 +9,4 @@ Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
- Rails.application.config.assets.precompile += %w( explore.css explore.js sign_in.js scaffold.css scaffold.js)
+ Rails.application.config.assets.precompile += %w( explore.scss explore.js sign_in.js scaffold.scss scaffold.js)
