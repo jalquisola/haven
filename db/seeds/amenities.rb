@@ -24,4 +24,14 @@ amenities.each do |code, amenity|
   am.save!
 end
 
+#set all amenities to all properties
+properties = Property.select('id').all
+amenities = Amenity.select('id').all
+Property.connection.execute("TRUNCATE table amenities_properties;")
+properties.each do |property|
+  amenities.each do |amenity|
+    ActiveRecord::Base.connection.execute("INSERT INTO amenities_properties (property_id, amenity_id) VALUES(#{property.id}, #{amenity.id});")
+  end
+end
+
 
