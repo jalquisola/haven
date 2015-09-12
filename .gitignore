@@ -12,4 +12,4 @@ config/*.yml
 /log/*
 !/log/.keep
 /tmp
-/public/*
+/public/assets/*
