@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if user_signed_in?
-      return redirect_to pages_explore_url
+      return redirect_to explore_pages_url
     end
 
     @banners = Banner.all
