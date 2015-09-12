@@ -1,4 +1,5 @@
 class BannersController < ApplicationController
+  before_action :authorize_admin
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
   layout false
 

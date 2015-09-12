@@ -1,4 +1,5 @@
 class AmenitiesController < ApplicationController
+  before_action :authorize_admin
   before_action :set_amenity, only: [:show, :edit, :update, :destroy]
   before_action :set_property
   layout 'scaffold'
