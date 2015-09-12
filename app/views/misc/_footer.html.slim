@@ -16,11 +16,11 @@ div class="home-footer"
         ul class="footer-nav pb20"
           li class="footer-phone"
             span class="fa fa-phone"
-            |  800 234 67 89
+            |  #{ENV['CONTACT_NO']}
           li class="footer-address osLight"
-             p 516 Green St
-             p San Francisco, CA 94133
-             p United States
+            p = ENV['ADDRESS_STREET']
+            p = ENV['ADDRESS_CITY']
+            p = ENV['ADDRESS_COUNTRY']
           li
             a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"
               span class="fa fa-facebook"
