@@ -39,6 +39,9 @@
         </div>
 
         <%= render partial: "misc/contact_agent"%>
+        <script type='text/javascript'>
+            window.active_property = <%= @property.to_json.html_safe%>;
+        </script>
 
         <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
         <%= javascript_include_tag 'explore'%>
