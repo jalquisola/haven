@@ -1,6 +1,6 @@
 div id='hero-container'
   ul class='cb-slideshow'
-    - Image.where(position: [1, 2]).each do |banner|
+    - Image.where(position: 1).limit(6).each do |banner|
       li
         span style="background-image: url(#{banner.url})"
 

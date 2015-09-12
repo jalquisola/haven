@@ -28,7 +28,7 @@ div class="home-wrapper"
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 testimonials"
           blockquote
             q class='lead' =obj[:title]
-            footer Joseph
+            footer = ENV['AGENT']
           /div class='quote-box'
             /span class='quote-left'
             /q
@@ -38,7 +38,7 @@ div class="home-wrapper"
           /cite
             span class='photo'
               img class="avatar" src=asset_path('avatar-1.png') alt="avatar"
-            span class='author' Joseph
+            span class='author' = ENV['AGENT']
             br
             | Designer
 

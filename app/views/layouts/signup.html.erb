@@ -19,7 +19,7 @@
 <%= render partial: 'misc/page_container' %>
 <div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-    <div class="signLogo osLight"><span class="fa fa-home"></span> RealProperty</div>
+    <div class="signLogo osLight"><span class="fa fa-home"></span> <%=ENV['WEBSITE_TITLE']%></div>
       <%= yield %>
   </div>
 </div>
