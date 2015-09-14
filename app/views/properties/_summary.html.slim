@@ -33,6 +33,6 @@ div class="summary"
     div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
       div class="agentAvatar summaryItem"
         div class="clearfix"
-        img class="avatar agentAvatarImg" src="#{asset_path('avatar-2.png')}" alt="avatar"
+        img class="avatar agentAvatarImg" src="#{ENV['AGENT_AVATAR_LINK']}" alt="avatar"
         div class="agentName" = ENV['AGENT']
         a data-toggle="modal" href="#contactAgent" class="btn btn-lg btn-round btn-green contactBtn" Contact Agent
