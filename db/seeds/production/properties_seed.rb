@@ -1,7 +1,7 @@
-BASE_URL = "http://localhost:3010/"
+BASE_URL = ENV['BASE_URL']
 properties = [
   {
-    name: "Air Residences Makati City",
+    name: "Air Residences",
     address: "Malugay and Yakal Streets, Brgy. San Antonio, Makati City",
     latitude: "14.562567",
     longitude: "121.014695",
@@ -38,10 +38,10 @@ properties = [
       }
     ],
     images: [
-      "http://www.airresidences.com/wp-content/uploads/2014/11/SDP-IMAGE-WITH-BUILDING.jpg",
-      "http://www.airresidences.com/wp-content/uploads/2014/10/About-slider.jpg",
-      "http://www.airresidences.com/wp-content/uploads/2014/10/About-slider5.jpg",
-      "http://www.airresidences.com/wp-content/uploads/2014/10/Contact-Us-Slider-Revised-1.jpg"
+      "#{BASE_URL}images/air_residences/overview.jpg",
+      "#{BASE_URL}images/air_residences/amenities.jpg",
+      "#{BASE_URL}images/air_residences/bar.jpg",
+      "#{BASE_URL}images/air_residences/one_bedroom.jpg",
     ]
   },
   {
@@ -91,10 +91,10 @@ properties = [
       }
     ],
     images: [
-      "http://fame-residences.com/wp-content/uploads/bfi_thumb/09-2y0a1izmcuhtg4p5g7vh8g.jpg",
-      "http://fame-residences.com/wp-content/uploads/bfi_thumb/07a-2yb7d9xjjdocayx6dog9hc.jpg",
-      "http://fame-residences.com/wp-content/uploads/bfi_thumb/04-2y03m572kb82429cr9ezgg.jpg",
-      "http://fame-residences.com/wp-content/uploads/bfi_thumb/01-2xzm7jdr4s6xqo18jzugw0.jpg"
+      "#{BASE_URL}images/fame/garden.jpg",
+      "#{BASE_URL}images/fame/lobby.jpg",
+      "#{BASE_URL}images/fame/pool.jpg",
+      "#{BASE_URL}images/fame/Playground.jpg",
     ]
   },
   {

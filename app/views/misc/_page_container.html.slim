@@ -1,5 +1,5 @@
 div id='page-container'
   ul class='cb-slideshow'
-    - (1...6).each do
+    - Banner.limit(6).each do |banner|
       li
-        span
+        span style="background-image: url(#{banner.image_url})"
