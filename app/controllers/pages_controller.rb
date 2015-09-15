@@ -19,6 +19,7 @@ class PagesController < ApplicationController
     return redirect_to root_url  unless @property
 
     @unit_types = @property.unit_types
+    @description = @property.description
     @current_user = current_user
     @comments = @property.comments
     @enquiry = Enquiry.new

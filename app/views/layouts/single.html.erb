@@ -29,7 +29,7 @@
                     <%= render partial: "properties/summary", locals: {unit_types: @unit_types}%>
                 </div>
                 <div class="clearfix"></div>
-                <%= render partial: "pages/single/description", locals: {unit_types: @unit_types}%>
+                <%= render partial: "pages/single/description", locals: {unit_types: @unit_types, description: @description }%>
                 <%= render partial: "pages/single/amenities"%>
                 <%= render partial: "pages/single/similar"%>
                 <%= render partial: "pages/single/comments"%>
