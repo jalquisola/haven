@@ -186,10 +186,10 @@ properties = [
       }
     ],
     images: [
-      "#{BASE_URL}images/breeze/residences.jpg",
-      "#{BASE_URL}images/breeze/residences_anne.jpg",
-      "#{BASE_URL}images/breeze/one_bedroom_floor_plan.jpg",
-      "#{BASE_URL}images/breeze/one_bedroom_deluxe.jpg"
+      "#{BASE_URL}images/breeze/residences1.jpg",
+      "#{BASE_URL}images/breeze/balcony.jpg",
+      "#{BASE_URL}images/breeze/penthouse.jpg",
+      "#{BASE_URL}images/breeze/pool_area.jpg"
     ]
   },
   {
@@ -291,6 +291,7 @@ properties = [
 
 Image.connection.execute("TRUNCATE TABLE images;")
 Property.connection.execute("TRUNCATE TABLE properties;")
+Description.connection.execute("TRUNCATE TABLE descriptions;")
 properties.each do |property|
   p = Property.new
   p.name = property[:name]
@@ -299,7 +300,11 @@ properties.each do |property|
   p.longitude = property[:longitude]
   if p.save!
     puts p.name
-    desc = Description.new(property[:description])
+    description = property[:description]
+    desc = Description.new(property_id: p.id)
+    desc.info =  description[:info]
+    desc.title =  description[:title]
+    desc.subtitle =  description[:subtitle]
     desc.save!
 
     Image.where(property_id: p.id).delete_all
