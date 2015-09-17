@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815075942) do
+ActiveRecord::Schema.define(version: 20150917164434) do
+
+  create_table "agents", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "avatar_url",      limit: 255
+    t.string   "facebook_url",    limit: 255
+    t.string   "email",           limit: 255
+    t.string   "twitter_url",     limit: 255
+    t.string   "google_plus_url", limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "amenities", force: :cascade do |t|
     t.string   "name",       limit: 255

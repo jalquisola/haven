@@ -336,3 +336,16 @@ properties.each do |property|
     end
   end
 end
+
+Agent.connection.execute('TRUNCATE TABLE agents;')
+agents = [
+  {name: "Joseph Alquisola",
+   avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg"},
+  {name: "Richem Alquisola",
+   avatar_url: "https://scontent-sin1-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11252602_779304848851227_1043598856993057438_n.jpg?oh=0c5cbf487281fd4654037f5edfb049fa&oe=566D39FC"}
+]
+
+agents.each do |agent|
+  a = Agent.new(agent)
+  a.save!
+end
