@@ -1,0 +1,23 @@
+h2 class="osLight" Our Agents
+div class="row pb40"
+  - agents.each_with_index do |agent, index|
+    - sClass = "col-xs-12 col-sm-12 col-md-3 col-lg-3"
+    - sClass += "col-md-offset-3 col-lg-offset-3" if index==0
+    div class=sClass
+      div class="agent"
+        a href="#" class='agent-avatar'
+          img src=agent.avatar_url alt=agent.name
+          div class='ring'
+        div class='agent-name osLight' =agent.name
+        div class='agent-rating'
+          -(1..5).each do |index|
+            span class='fa fa-star text-yellow'
+        div class='agent-contact'
+          a href='#' class='btn btn-sm btn-icon btn-round btn-o btn-green'
+            span class='fa fa-envelope-o'
+          a href='#' class='btn btn-sm btn-icon btn-round btn-o btn-facebook'
+            span class='fa fa-facebook'
+          a href='#' class='btn btn-sm btn-icon btn-round btn-o btn-twitter'
+            span class='fa fa-twitter'
+          a href='#' class='btn btn-sm btn-icon btn-round btn-o btn-google'
+            span class='fa fa-google-plus'
