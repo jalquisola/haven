@@ -13,7 +13,7 @@ div class="home-wrapper"
                 img src=image.url alt=property.name class='blur'
               div class="opac"
               div class="priceCap osLight"
-                span =number_to_currency(unit_type.cost, unit: "Php")
+                span ="#{number_to_currency(property.monthly_amort, unit: 'Php')}++"
               div class="figType" PRE-SELLING
               h3 class="osLight" =property.name
               div class="address" =property.location
@@ -33,25 +33,12 @@ div class="home-wrapper"
         li data-target='#home-testimonials' data-slide-to="1" class=''
         li data-target='#home-testimonials' data-slide-to="2" class=''
       div class='carousel-inner'
-        div class='item active'
-          img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg" class='home-testim-avatar'
-          div class='home-testim'
-            div class='home-testim-text'
-              | I would like to thank you and the SMDC Investments team for all of your wonderful support during our search.
-            div class='home-testim-name' Joseph Alquisola
-        div class='item'
-          img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg" class='home-testim-avatar'
-          div class='home-testim'
-            div class='home-testim-text'
-              | I would like to thank you and the SMDC Investments team for all of your wonderful support during our search.
-            div class='home-testim-name' Joseph Alquisola
-        div class='item'
-          img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg" class='home-testim-avatar'
-          div class='home-testim'
-            div class='home-testim-text'
-              | I would like to thank you and the SMDC Investments team for all of your wonderful support during our search.
-            div class='home-testim-name' Joseph Alquisola
-
+        - Testimonial.all.each_with_index do |testim, index|
+          div class="item #{index == 0 ? 'active': ''}"
+            img class='home-testim-avatar' src=testim.avatar_url
+            div class='home-testim'
+              div class='home-testim-text' =testim.content
+              div class='home-testim-name' ="#{testim.client_name}, #{testim.country_of_residence}, #{testim.info}"
 
     /h2 class="osLight" Testimonials
     /div class="row pb40" id='testimonials-wrapper'
