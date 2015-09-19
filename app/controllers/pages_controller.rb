@@ -7,7 +7,8 @@ class PagesController < ApplicationController
     end
 
     @banners = Banner.all
-    @properties = Property.limit(6)
+    @properties = Property.includes(:unit_types).limit(6)
+    @images = Image.where(property_id: @properties.map(&:id), position: 1).group_by(&:property_id)
   end
 
   def explore
