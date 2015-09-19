@@ -377,14 +377,14 @@ testimonials = [
     client_name: "Pete Clyde Cagalawan",
     avatar_url: "#{ENV['BASE_URL']}/images/bg/pete.jpg",
     country_of_residence: "Singapore",
-    info: "Shore 2 and Air Residences Buyer",
+    info: "Shore 2 & Air Residences Buyer",
     content: "Working with Miss Floi Vallespin at SMDC is the most rewarding, fun-filled, super exciting, and awesome experience in my life as client, and at the same time, as a broker referrer. It is always nice to know that you meet someone who is not just adept on her craft, but also a person with a better character, very desirable personality, no nonsense individual style, and an incomparable knowledge and experience when it comes to real estate and beyond.",
   },
   {
     client_name: "Luzviminda Vitalicio",
     avatar_url: "#{ENV['BASE_URL']}/images/bg/luz.jpg",
     country_of_residence: "USA",
-    info: "Shore 2 and Jazz Residences Buyer",
+    info: "Shore 2 & Jazz Residences Buyer",
     content: "From the first moment I spoke with Floi Vallespin over the phone I was impressed with her knowledge and professionalism. Attention to details, ability to act quickly, understanding the needs of the buyer, without these three things, our property buying would not be a success.
     She posses all the attributes necessary to be an excellent broker. A big asset to SMDC.
     Ultimately long distance purchase made easy. My sons and I are grateful to you.",

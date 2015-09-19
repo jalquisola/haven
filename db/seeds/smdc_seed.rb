@@ -353,10 +353,16 @@ end
 
 Agent.connection.execute('TRUNCATE TABLE agents;')
 agents = [
-  {name: "Joseph Alquisola",
-   avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg"},
-  {name: "Richem Alquisola",
-   avatar_url: "https://scontent-sin1-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11252602_779304848851227_1043598856993057438_n.jpg?oh=0c5cbf487281fd4654037f5edfb049fa&oe=566D39FC"}
+  {name: "Floi Vallespin",
+   avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/0b7/14b/301f6f5.jpg",
+   linked_in_url: 'https://www.linkedin.com/pub/floraida-vallespin/a/721/2b7',
+   facebook_url: 'https://www.facebook.com/adiarolf',
+   email: '',
+   skype: 'superfloi',
+   whatsapp: '+63 9053943052',
+   viber: '+63 9053943052',
+   contact_no: '+63 9328853564',
+  },
 ]
 
 agents.each do |agent|
@@ -377,14 +383,14 @@ testimonials = [
     client_name: "Pete Clyde Cagalawan",
     avatar_url: "#{ENV['BASE_URL']}/images/bg/pete.jpg",
     country_of_residence: "Singapore",
-    info: "Shore 2 and Air Residences Buyer",
+    info: "Shore 2 & Air Residences Buyer",
     content: "Working with Miss Floi Vallespin at SMDC is the most rewarding, fun-filled, super exciting, and awesome experience in my life as client, and at the same time, as a broker referrer. It is always nice to know that you meet someone who is not just adept on her craft, but also a person with a better character, very desirable personality, no nonsense individual style, and an incomparable knowledge and experience when it comes to real estate and beyond.",
   },
   {
     client_name: "Luzviminda Vitalicio",
     avatar_url: "#{ENV['BASE_URL']}/images/bg/luz.jpg",
     country_of_residence: "USA",
-    info: "Shore 2 and Jazz Residences Buyer",
+    info: "Shore 2 & Jazz Residences Buyer",
     content: "From the first moment I spoke with Floi Vallespin over the phone I was impressed with her knowledge and professionalism. Attention to details, ability to act quickly, understanding the needs of the buyer, without these three things, our property buying would not be a success.
     She posses all the attributes necessary to be an excellent broker. A big asset to SMDC.
     Ultimately long distance purchase made easy. My sons and I are grateful to you.",
