@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150917164434) do
+ActiveRecord::Schema.define(version: 20150919185454) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20150917164434) do
     t.string   "google_plus_url", limit: 255
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "linked_in_url",   limit: 255
+    t.string   "skype",           limit: 255
+    t.string   "whatsapp",        limit: 255
+    t.string   "viber",           limit: 255
+    t.string   "contact_no",      limit: 255
   end
 
   create_table "amenities", force: :cascade do |t|
@@ -108,12 +113,22 @@ ActiveRecord::Schema.define(version: 20150917164434) do
   add_index "images", ["property_id", "position"], name: "index_images_on_property_id_and_position", using: :btree
 
   create_table "properties", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "location",   limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "latitude",   limit: 255
-    t.string   "longitude",  limit: 255
+    t.string   "name",          limit: 255
+    t.string   "location",      limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "latitude",      limit: 255
+    t.string   "longitude",     limit: 255
+    t.integer  "unit_price",    limit: 4
+    t.integer  "monthly_amort", limit: 4
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string "client_name",          limit: 255
+    t.text   "content",              limit: 65535
+    t.string "country_of_residence", limit: 255
+    t.string "info",                 limit: 255
+    t.string "avatar_url",           limit: 255
   end
 
   create_table "unit_types", force: :cascade do |t|
