@@ -24,10 +24,27 @@ div class="summary"
             span class="icon-bubble"
             | 13
         div class="clearfix"
-        ul class="features" role='tablist'
-          - unit_types.each_with_index do |unit_type, index|
-            li class="#{index == 0 ? 'active' : ''}"
-              a href="#unit-type-#{unit_type.id}" role='tab' data-toggle='tab'= unit_type.name
+        ul class="features"
+          - studio = unit_types.first
+          - room = unit_types.last
+          li
+            span class="fa fa-moon-o"
+            - if studio.bedrooms == room.bedrooms
+              div = "#{studio.bedrooms} Bedroom"
+            - else
+              div = "#{studio.bedrooms}-#{room.bedrooms} Bedrooms"
+          li
+            span class="icon-drop"
+            - if studio.bathrooms == room.bathrooms
+              div = "#{studio.bathrooms} Bathroom"
+            - else
+              div = "#{studio.bathrooms}-#{room.bathrooms} Bathrooms"
+          li
+            span class="icon-frame"
+            div = "#{studio.floor_area_min}-#{room.floor_area_max} sqm"
+          /- unit_types.each_with_index do |unit_type, index|
+          /  li class="#{index == 0 ? 'active' : ''}"
+          /    a href="#unit-type-#{unit_type.id}" role='tab' data-toggle='tab'= unit_type.name
 
         div class="clearfix"
     div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"

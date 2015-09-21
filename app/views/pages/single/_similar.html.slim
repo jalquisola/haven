@@ -12,7 +12,7 @@ div class='similar'
           div class='row'
             - properties.each do |property|
               - unit_type = property.unit_types.first
-              - image = @images[property.id]
+              - image = @images[property.id].first
               div class='col-xs-4'
                 div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                   div class='figure'
@@ -58,7 +58,7 @@ div class='similar'
           div class='row'
             - properties.each do |property|
               - unit_type = property.unit_types.first
-              - image = @images[property.id]
+              - image = @images[property.id].first
               div class='col-xs-6'
                 div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                   div class='figure'
@@ -106,7 +106,7 @@ div class='similar'
         div class='row'
           - @properties.each do |property|
             - unit_type = property.unit_types.first
-            - image = @images[property.id]
+            - image = @images[property.id].first
             div class='col-xs-12'
               div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                 div class='figure'

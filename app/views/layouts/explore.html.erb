@@ -31,8 +31,10 @@
                                       <% image = @images[property.id].first %>
                                       <img src='<%= image.url%>' alt='image' />
                                       <div class="figCaption">
-                                          <% unit_type = property.unit_types.first %>
-                                          <div>Php <%=unit_type.cost%></div>
+                                          <% unit_type = property.unit_types.first
+                                             unit_cost = number_to_human(property.unit_price, {units: {unit: 'ml', million: 'M'} })
+                                          %>
+                                          <div>Php<%=unit_cost%></div>
                                           <span class="icon-eye"> <%= property[:views]%></span>
                                           <span class="icon-heart"> <%= property[:likes]%></span>
                                           <span class="icon-bubble"> <%= property[:comments]%></span>
@@ -54,7 +56,7 @@
                                       <li><span class="fa fa-moon-o"></span> <%= unit_type.bedrooms%></li>
                                       <li><span class="icon-drop"></span><%= unit_type.bathrooms%></li>
                                       <li><span class="icon-frame"></span><%= unit_type.floor_area%> sq m</li>
-                                      <li><span></span>Php <%= unit_type.cost%></li>
+                                      <li><span></span>Php <%= unit_cost%></li>
                                   </ul>
                                   <div class="clearfix"></div>
                               </a>
