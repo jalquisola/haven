@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:single, :explore]
+  before_filter :set_properties, only:[ :home, :explore, :single]
+  before_filter :set_images, only:[ :home, :explore, :single]
 
   def home
     if user_signed_in?
@@ -7,8 +9,6 @@ class PagesController < ApplicationController
     end
 
     @banners = Banner.all
-    @properties = Property.includes(:unit_types).limit(6)
-    @images = Image.where(property_id: @properties.map(&:id), position: 1).group_by(&:property_id)
   end
 
   def explore
@@ -33,5 +33,14 @@ class PagesController < ApplicationController
 
   def sellers
     render :sellers, layout: 'sellers'
+  end
+
+  private
+  def set_properties
+    @properties = Property.includes(:unit_types, :images).all
+  end
+
+  def set_images
+    @images = Image.where(property_id: @properties.map(&:id), position: 1).group_by(&:property_id)
   end
 end

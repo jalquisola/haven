@@ -6,16 +6,17 @@ div class='similar'
       li data-target="#carouselSimilar-1" data-slide-to="1"
     div class='carousel-inner'
       - isActive = true
-      - Property.all.each_slice(3) do |properties|
+      - @properties.each_slice(3) do |properties|
         div class="item #{isActive ? 'active' : ''}"
           - isActive = false
           div class='row'
             - properties.each do |property|
               - unit_type = property.unit_types.first
+              - image = @images[property.id]
               div class='col-xs-4'
                 div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                   div class='figure'
-                    img src=property.images.where(position: 1).first.try(:url) alt="image"
+                    img src=image.try(:url) alt="image"
                     div class="figCaption"
                        div ="Php #{unit_type.cost}"
                        span class="icon-eye" 200
@@ -51,16 +52,17 @@ div class='similar'
       li data-target="#carouselSimilar-2" data-slide-to="2"
     div class='carousel-inner'
       - isActive = true
-      - Property.all.each_slice(2) do |properties|
+      - @properties.each_slice(2) do |properties|
         div class="item #{isActive ? 'active' : ''}"
           - isActive = false
           div class='row'
             - properties.each do |property|
               - unit_type = property.unit_types.first
+              - image = @images[property.id]
               div class='col-xs-6'
                 div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                   div class='figure'
-                    img src=property.images.where(position: 1).first.try(:url) alt="image"
+                    img src=image.try(:url) alt="image"
                     div class="figCaption"
                        div ="Php #{unit_type.cost}"
                        span class="icon-eye" 200
@@ -102,12 +104,13 @@ div class='similar'
       div class="item #{isActive ? 'active' : ''}"
         - isActive = false
         div class='row'
-          - Property.all.each do |property|
+          - @properties.each do |property|
             - unit_type = property.unit_types.first
+            - image = @images[property.id]
             div class='col-xs-12'
               div data-linkto="/pages/single?property_id=#{property.id}" class="card"
                 div class='figure'
-                  img src=property.images.where(position: 1).first.try(:url) alt="image"
+                  img src=image.try(:url) alt="image"
                   div class="figCaption"
                      div ="Php #{unit_type.cost}"
                      span class="icon-eye" 200

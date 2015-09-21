@@ -1,8 +1,8 @@
 ruby:
   map_data = []
-  Property.all.each do |property|
-    image = property.images.where(position: 1).first
-    unit_type= property.unit_types.order("id desc").first
+  @properties.each do |property|
+    image = @images[property.id].first
+    unit_type= property.unit_types.first
     obj = {
       id: property.id,
       title: property.name,
