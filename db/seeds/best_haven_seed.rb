@@ -10,15 +10,19 @@ properties = [
     description: {
       title: "The Air of Convenience",
       subtitle: "Personal efficiency and professional success made attainable",
-      info: "Because striking that balance between a demanding work schedule and vibrant social life is a key to life of success, Air Residences takes it up a notch by providing residents  with front desk and handyman services to aid its residents as they go about their daily pursuit of success."
+      info: "Nothing says your have made it quite like a Makati address. Air Residences gives you privileged lifestyle combining a convenient location with the luxurious comfort of its signature amenities. Modern, contemporary and luxurious 59-storey high-rise condominium ideal for the young urban professional and the empowered single.",
+
+      turnover: "1st Half of 2020"
+      #info: "Because striking that balance between a demanding work schedule and vibrant social life is a key to life of success, Air Residences takes it up a notch by providing residents  with front desk and handyman services to aid its residents as they go about their daily pursuit of success."
     },
     amenities: ["Liesure and Lap Pool", "Pool Island", "Pool Pavilion", "Sun Deck", "BBQ Terrace",
       "Lush Landscape", "Spa", "Function Room", "Function Terrace", "Yoga", "Exercise Lawn", "Kids Play Pool", "Kids Playground", "Outdoor Lounge", "Joggin Trail", "Walking Trail", "Reflective Pool", "Pool Table/Billiards", "Table Tennis", "Game Alley", "Sports Terrace"
     ],
     unit_types: [
       {
-        name: "1 Bedroom Unit",
-        floor_area: 26.35,
+        name: "Studio unit with balcony",
+        floor_area_min: 22.95,
+        floor_area_max: 22.95,
         floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/1-Bedroom-Unit-with-Balcony.jpg",
         cost: 3000000,
         amortization: 14000,
@@ -28,8 +32,21 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "2 Bedroom Unit",
-        floor_area: 46.38,
+        name: "1 Bedroom Unit",
+        floor_area_min: 26.35,
+        floor_area_max: 28.90,
+        floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/1-Bedroom-Unit-with-Balcony.jpg",
+        cost: 3000000,
+        amortization: 14000,
+        reservation_fee: 10000,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "1 Bedroom Unit with Balcony",
+        floor_area_min: 26.35,
+        floor_area_max: 31.45,
         floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/2-Bedroom-Unit-with-Balcony1.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -37,7 +54,31 @@ properties = [
         info: "",
         bathrooms: 1,
         bedrooms: 2,
-      }
+      },
+      {
+        name: "2 Bedroom Unit",
+        floor_area_min: 36.55,
+        floor_area_max: 36.55,
+        floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/1-Bedroom-Unit-with-Balcony.jpg",
+        cost: 3000000,
+        amortization: 14000,
+        reservation_fee: 10000,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom Unit with Balcony",
+        floor_area_min: 46.38,
+        floor_area_max: 46.38,
+        floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/1-Bedroom-Unit-with-Balcony.jpg",
+        cost: 3000000,
+        amortization: 14000,
+        reservation_fee: 10000,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
     ],
     images: [
       "#{BASE_URL}images/air_residences/overview.jpg",
@@ -51,18 +92,20 @@ properties = [
     address: "Central EDSA",
     latitude: "14.577421",
     longitude: "121.052322",
-    unit_price: 2_700_000,
+    unit_price: 2_600_000,
     monthly_amort: 8_000,
     description: {
       title: "Fame Residences",
       subtitle: "Have a glimpse of the life lived in glitz and glamour, with gold curtain walls that surround this lumiscent development.",
-      info: "Fame Residences was designed and created with you in mind. Its features and amenities are intended to provide utmost leisure and opportunities for you to create extraoridinary expreiences worth talking about. Its proximity to key business districts and city hotspots make your life at Fame Residences exceptional, everyday."
+      info: "Fame Residences gives yout the best address in Central EDSA with its close proximity to major Central Business Districts, transportation hubs, and shopping centers, and luxurious amenities. <br>Few meters away from MRT Shaw Boulevard bus stop strategically located at the center of Metro Manila's main artery - EDSA, bringing you close where the action is. A 4-Tower with a Common Podium, 39 floors each with commercial establishment on the groung floor."
+      #info: "Fame Residences was designed and created with you in mind. Its features and amenities are intended to provide utmost leisure and opportunities for you to create extraoridinary expreiences worth talking about. Its proximity to key business districts and city hotspots make your life at Fame Residences exceptional, everyday."
     },
     amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms"],
     unit_types: [
       {
-        name: "1 Bedroom Unit",
-        floor_area: 31.39,
+        name: "1 Bedroom Unit with balcony",
+        floor_area_min: 24.1,
+        floor_area_max: 31.39,
         floor_plan_image: "http://fame-residences.com/wp-content/uploads/2014/11/1br-amenity.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -72,8 +115,9 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "1 Bedroom Unit with Balcony",
-        floor_area: 24.10,
+        name: "1 Bedroom End Unit with Balcony",
+        floor_area_min: 29.74,
+        floor_area_max: 29.74,
         floor_plan_image: "http://fame-residences.com/wp-content/uploads/2014/11/1br.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -84,7 +128,7 @@ properties = [
       },
       {
         name: "2 Bedroom End Unit with Balcony",
-        floor_area: 36.68,
+        floor_area: 38.68,
         floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/2-Bedroom-Unit-with-Balcony1.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -95,10 +139,10 @@ properties = [
       }
     ],
     images: [
+      "#{BASE_URL}images/fame/bldg.jpg",
       "#{BASE_URL}images/fame/garden.jpg",
       "#{BASE_URL}images/fame/lobby.jpg",
       "#{BASE_URL}images/fame/pool.jpg",
-      "#{BASE_URL}images/fame/Playground.jpg",
     ]
   },
   {
@@ -111,13 +155,14 @@ properties = [
     description: {
       title: "Shore Residences",
       subtitle: "Conveniently located at the SM Mall of Asia Complex in Pasay City. It offers the finest in resort living with an exclusive beack-like amenity right at the heart of the development",
-      info: "Everything is within reach - from numerous shopping and dining selection of SM Mall of Asia to the thriving array of activities and attractions in the Enterntainment City."
+      info: "Everything is within reach - from numerous shopping and dining selection of SM Mall of Asia to the thriving array of activities and attractions in the Enterntainment City. A mid-rise, four-tower residential condominium that has a personal resort and entire amenity extends outside to MOA and surrounding parks and commercial areas where everyday is a vacation."
     },
     amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms", "Cascading Water Feature", "Great Lawn", "Lush Tropical Gardens", "Pavillions", "Volleyball Court", "Jogging Trail", "24-Hour Security", "Fire Detection", "Alarm System"],
     unit_types: [
       {
         name: "1 Bedroom Unit",
-        floor_area: 24.10,
+        floor_area_min: 24.10,
+        floor_area_max: 24.10,
         floor_plan_image: "http://www.smdc.com/wp-content/uploads/2014/03/Interior9.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -127,8 +172,21 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "2 Bedroom",
-        floor_area: 36.68,
+        name: "1 Bedroom Unit with Balcony",
+        floor_area_min: 27.67,
+        floor_area_max: 29.53,
+        floor_plan_image: "http://www.smdc.com/wp-content/uploads/2014/03/Interior9.jpg",
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom with Balcony",
+        floor_area_min: 58.46,
+        floor_area_max: 58.46,
         floor_plan_image: "http://www.smdc.com/wp-content/uploads/2014/03/Interior-52.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -160,8 +218,9 @@ properties = [
     amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms", "Cascading Water Feature", "Great Lawn", "Lush Tropical Gardens", "Pavillions", "Volleyball Court", "Jogging Trail", "24-Hour Security", "Fire Detection", "Alarm System"],
     unit_types: [
       {
-        name: "Studio",
-        floor_area: 22.40,
+        name: "Studio with Balcony",
+        floor_area_min: 22.00,
+        floor_area_max: 31.00,
         floor_plan_image: "#{BASE_URL}images/breeze/studio_floor_plan.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -171,8 +230,9 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "1 Bedroom",
-        floor_area: 27.33,
+        name: "1 Bedroom unit with Balcony",
+        floor_area_min: 26.00,
+        floor_area_max: 38.00,
         floor_plan_image: "#{BASE_URL}images/breeze/one_bedroom_floor_plan.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -183,7 +243,8 @@ properties = [
       },
       {
         name: "1 Bedroom Deluxe",
-        floor_area: 56.10,
+        floor_area_min: 40.00,
+        floor_area_max: 40.00,
         floor_plan_image: "#{BASE_URL}images/breeze/one_bedroom_deluxe.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -217,6 +278,8 @@ properties = [
       {
         name: "Studio",
         floor_area: 23.84,
+        floor_area_min: 16.00,
+        floor_area_max: 20.00,
         floor_plan_image: "#{BASE_URL}images/jazz/one_bedroom_floor_plan.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -228,6 +291,8 @@ properties = [
       {
         name: "1 Bedroom",
         floor_area: 31.66,
+        floor_area_min: 23.00,
+        floor_area_max: 32.00,
         floor_plan_image: "#{BASE_URL}images/jazz/one_bedroom_floor_plan_with_balcony.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -237,8 +302,23 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "2 Bedroom",
+        name: "1 Bedroom with Balcony",
+        floor_area: 31.66,
+        floor_area_min: 26.00,
+        floor_area_max: 36.00,
+        floor_plan_image: "#{BASE_URL}images/jazz/one_bedroom_floor_plan_with_balcony.jpg",
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom with Balcony",
         floor_area: 46.72,
+        floor_area_min: 36.00,
+        floor_area_max: 64.00,
         floor_plan_image: "#{BASE_URL}images/jazz/two_bedroom_floor_plan.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -271,7 +351,8 @@ properties = [
     unit_types: [
       {
         name: "Studio",
-        floor_area: 20.64,
+        floor_area_min: 20.00,
+        floor_area_max: 20.00,
         floor_plan_image: "#{BASE_URL}images/wind/studio.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -281,8 +362,36 @@ properties = [
         bedrooms: 1,
       },
       {
-        name: "Resort Unit",
+        name: "1 Bedroom",
         floor_area: 31.97,
+        floor_area_min: 26.00,
+        floor_area_max: 31.00,
+        floor_plan_image: "#{BASE_URL}images/wind/resort_residential.jpg",
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "1 Bedroom with Balcony",
+        floor_area: 31.97,
+        floor_area_min: 28.00,
+        floor_area_max: 48.00,
+        floor_plan_image: "#{BASE_URL}images/wind/resort_residential.jpg",
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom",
+        floor_area: 31.97,
+        floor_area_min: 41.00,
+        floor_area_max: 66.00,
         floor_plan_image: "#{BASE_URL}images/wind/resort_residential.jpg",
         cost: 3500000,
         amortization: 14500,
@@ -293,10 +402,10 @@ properties = [
       },
     ],
     images: [
-      "#{BASE_URL}images/wind/residences.jpg",
       "#{BASE_URL}images/wind/night.jpg",
+      "#{BASE_URL}images/wind/amenities.jpg",
+      "#{BASE_URL}images/wind/residences.jpg",
       "#{BASE_URL}images/wind/lobby.jpg",
-      "#{BASE_URL}images/wind/amenities.jpg"
     ]
   },
 ]
@@ -354,9 +463,27 @@ end
 Agent.connection.execute('TRUNCATE TABLE agents;')
 agents = [
   {name: "Joseph Alquisola",
-   avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg"},
+   avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg",
+   linked_in_url: 'https://sg.linkedin.com/pub/joseph-rey-alquisola/59/43b/338',
+   facebook_url: 'https://www.facebook.com/jralquisola',
+   email: 'jalquisola@gmail.com',
+   skype: 'jalquisola',
+   whatsapp: '+65 97919534',
+   viber: '+65 97919534',
+   contact_no: '+65 97919534',
+   nrds: ''
+  },
   {name: "Richem Alquisola",
-   avatar_url: "https://scontent-sin1-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11252602_779304848851227_1043598856993057438_n.jpg?oh=0c5cbf487281fd4654037f5edfb049fa&oe=566D39FC"}
+   avatar_url: "#{ENV['BASE_URL']}images/angel.jpg",
+   linked_in_url: '',
+   facebook_url: 'https://www.facebook.com/jralquisola',
+   email: 'mybesthaven888@gmail.com',
+   skype: '',
+   whatsapp: '+65 97220400',
+   viber: '+65 97220400',
+   contact_no: '+65 97220400',
+   nrds: ''
+  },
 ]
 
 agents.each do |agent|
@@ -367,31 +494,39 @@ end
 Testimonial.connection.execute('TRUNCATE TABLE testimonials;')
 testimonials = [
   {
-    client_name: "Joseph Alquisola",
-    avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/0a3/1d8/1ebcbdf.jpg",
-    country_of_residence: "Singapore",
-    info: "Shore 2 Residences Buyer",
-    content: "I would like to thank Floi and her team for all of your wonderful support during our search for a good real estate investment.",
+    client_name: "Micha Miths Arias",
+    avatar_url: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/039/126/2a80c9c.jpg",
+    country_of_residence: "Malaysia",
+    info: "Grand Hotel Shareholder",
+    content: "I would like to thank MyBestHaven team for all of their wonderful support during my search for a good real estate investment.",
   },
-  {
-    client_name: "Pete Clyde Cagalawan",
-    avatar_url: "#{ENV['BASE_URL']}/images/bg/pete.jpg",
-    country_of_residence: "Singapore",
-    info: "Shore 2 & Air Residences Buyer",
-    content: "Working with Miss Floi Vallespin at SMDC is the most rewarding, fun-filled, super exciting, and awesome experience in my life as client, and at the same time, as a broker referrer. It is always nice to know that you meet someone who is not just adept on her craft, but also a person with a better character, very desirable personality, no nonsense individual style, and an incomparable knowledge and experience when it comes to real estate and beyond.",
-  },
-  {
-    client_name: "Luzviminda Vitalicio",
-    avatar_url: "#{ENV['BASE_URL']}/images/bg/luz.jpg",
-    country_of_residence: "USA",
-    info: "Shore 2 & Jazz Residences Buyer",
-    content: "From the first moment I spoke with Floi Vallespin over the phone I was impressed with her knowledge and professionalism. Attention to details, ability to act quickly, understanding the needs of the buyer, without these three things, our property buying would not be a success.
-    She posses all the attributes necessary to be an excellent broker. A big asset to SMDC.
-    Ultimately long distance purchase made easy. My sons and I are grateful to you.",
-  },
+  #{
+  #  client_name: "Pete Clyde Cagalawan",
+  #  avatar_url: "#{ENV['BASE_URL']}/images/bg/pete.jpg",
+  #  country_of_residence: "Singapore",
+  #  info: "Shore 2 & Air Residences Buyer",
+  #  content: "Working with Miss Floi Vallespin at SMDC is the most rewarding, fun-filled, super exciting, and awesome experience in my life as client, and at the same time, as a broker referrer. It is always nice to know that you meet someone who is not just adept on her craft, but also a person with a better character, very desirable personality, no nonsense individual style, and an incomparable knowledge and experience when it comes to real estate and beyond.",
+  #},
+  #{
+  #  client_name: "Luzviminda Vitalicio",
+  #  avatar_url: "#{ENV['BASE_URL']}/images/bg/luz.jpg",
+  #  country_of_residence: "USA",
+  #  info: "Shore 2 & Jazz Residences Buyer",
+  #  content: "From the first moment I spoke with Floi Vallespin over the phone I was impressed with her knowledge and professionalism. Attention to details, ability to act quickly, understanding the needs of the buyer, without these three things, our property buying would not be a success.
+  #  She posses all the attributes necessary to be an excellent broker. A big asset to SMDC.
+  #  Ultimately long distance purchase made easy. My sons and I are grateful to you.",
+  #},
 ]
 
 testimonials.each do |testimonial|
   a = Testimonial.new(testimonial)
   a.save!
+end
+
+Banner.connection.execute("TRUNCATE table banners;")
+(1..6).each do |index|
+  banner = Banner.new
+  banner.image_url = "#{BASE_URL}images/bg_#{index}.jpg"
+  banner.position = index
+  banner.save!
 end
