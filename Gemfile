@@ -15,7 +15,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem "recaptcha", require: "recaptcha/rails", git: 'https://github.com/ambethia/recaptcha.git'
+gem "recaptcha", require: "recaptcha/rails"
 
 gem 'country_select', github: 'stefanpenner/country_select'
 

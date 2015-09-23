@@ -10,10 +10,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    if !verify_recaptcha
-      redirect_to new_user_registration_path, notice: 'Please validate recaptcha'
-    else
+    if verify_recaptcha(model: resource, message: "Oh! It's error with reCAPTCHA!")
       super
+    else
+      redirect_to new_user_registration_path
     end
   end
 
