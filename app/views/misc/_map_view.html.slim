@@ -8,11 +8,11 @@ ruby:
       title: property.name,
       image:  image.url,
       type: 'FOR SALE',
-      price: "Php #{unit_type.cost}",
+      price: number_to_currency(property.unit_price, unit: "Php") + '++',
       address: property.location,
       bedrooms: unit_type.bedrooms,
       bathrooms: unit_type.bathrooms,
-      area: unit_type.floor_area,
+      area: unit_type.floor_area_min,
       propertyUrl: "/pages/single?property_id=#{property.id}",
       position: {
           lat: property.latitude.to_f,

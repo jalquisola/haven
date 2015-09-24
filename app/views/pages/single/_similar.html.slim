@@ -2,8 +2,8 @@ div class='similar'
   h3 Similar Properties
   div id="carouselSimilar-1" class="carousel slide visible-lg carousel-col"
     ol class="carousel-indicators"
-      li data-target="#carouselSimilar-1" data-slide-to="0" class="active"
-      li data-target="#carouselSimilar-1" data-slide-to="1"
+      - (0...(@properties.count/3)).each do |index|
+        li data-target="#carouselSimilar-1" data-slide-to="0" class="#{index == 0 ? 'active' : ''}"
     div class='carousel-inner'
       - isActive = true
       - @properties.each_slice(3) do |properties|
@@ -18,7 +18,7 @@ div class='similar'
                   div class='figure'
                     img src=image.try(:url) alt="image"
                     div class="figCaption"
-                       div ="Php #{unit_type.cost}"
+                       div ="#{number_to_currency(property.unit_price, unit: 'Php')}++"
                        span class="icon-eye" 200
                        span class="icon-heart" 54
                        span class="icon-bubble" 13
@@ -38,7 +38,7 @@ div class='similar'
                       =< unit_type.bathrooms
                     li
                       span class="icon-frame"
-                      =< "#{unit_type.floor_area} sq m"
+                      =< "#{unit_type.floor_area_max} sq m"
                   div class="clearfix"
     a class="left carousel-control" href="#carouselSimilar-1" role="button" data-slide="prev"
       span class="fa fa-chevron-left"
@@ -47,9 +47,8 @@ div class='similar'
 
   div id="carouselSimilar-2" class="carousel slide visible-md carousel-col"
     ol class="carousel-indicators"
-      li data-target="#carouselSimilar-2" data-slide-to="0" class="active"
-      li data-target="#carouselSimilar-2" data-slide-to="1"
-      li data-target="#carouselSimilar-2" data-slide-to="2"
+      - (0...5).each do |index|
+        li data-target="#carouselSimilar-2" data-slide-to="0" class="#{index==0?'active':''}"
     div class='carousel-inner'
       - isActive = true
       - @properties.each_slice(2) do |properties|
@@ -64,7 +63,7 @@ div class='similar'
                   div class='figure'
                     img src=image.try(:url) alt="image"
                     div class="figCaption"
-                       div ="Php #{unit_type.cost}"
+                       div ="#{number_to_currency(property.unit_price, unit: 'Php')}++"
                        span class="icon-eye" 200
                        span class="icon-heart" 54
                        span class="icon-bubble" 13
@@ -84,7 +83,7 @@ div class='similar'
                       =< unit_type.bathrooms
                     li
                       span class="icon-frame"
-                      =< "#{unit_type.floor_area} sq m"
+                      =< "#{unit_type.floor_area_max} sq m"
                   div class="clearfix"
     a class="left carousel-control" href="#carouselSimilar-2" role="button" data-slide="prev"
       span class="fa fa-chevron-left"
@@ -112,10 +111,10 @@ div class='similar'
                 div class='figure'
                   img src=image.try(:url) alt="image"
                   div class="figCaption"
-                     div ="Php #{unit_type.cost}"
-                     span class="icon-eye" 200
-                     span class="icon-heart" 54
-                     span class="icon-bubble" 13
+                    div ="#{number_to_currency(property.unit_price, unit: 'Php')}++"
+                    span class="icon-eye" 200
+                    span class="icon-heart" 54
+                    span class="icon-bubble" 13
                   div class="figView"
                     span class="icon-eye"
                   /div class="figType" FOR SALE
@@ -132,7 +131,7 @@ div class='similar'
                     =< unit_type.bathrooms
                   li
                     span class="icon-frame"
-                    =< "#{unit_type.floor_area} sq m"
+                    =< "#{unit_type.floor_area_max} sq m"
                 div class="clearfix"
     a class="left carousel-control" href="#carouselSimilar-3" role="button" data-slide="prev"
       span class="fa fa-chevron-left"
