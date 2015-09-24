@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923143846) do
+ActiveRecord::Schema.define(version: 20150923162535) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 20150923143846) do
     t.string   "longitude",     limit: 255
     t.integer  "unit_price",    limit: 4
     t.integer  "monthly_amort", limit: 4
+    t.integer  "agent_id",      limit: 4
   end
 
   create_table "testimonials", force: :cascade do |t|

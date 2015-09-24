@@ -128,7 +128,8 @@ properties = [
       },
       {
         name: "2 Bedroom End Unit with Balcony",
-        floor_area: 38.68,
+        floor_area_min: 38.68,
+        floor_area_max: 38.68,
         floor_plan_image: "http://www.airresidences.com/wp-content/uploads/2014/11/2-Bedroom-Unit-with-Balcony1.jpg",
         cost: 5000000,
         amortization: 15000,
@@ -408,6 +409,160 @@ properties = [
       "#{BASE_URL}images/wind/lobby.jpg",
     ]
   },
+  {
+    name: "Grand Tower Cebu",
+    address: "Corner Kaohsiung St. & M. Logarta St., North Reclamation Area, Mabolo, Cebu City",
+    latitude: "10.312470",
+    longitude: "123.920481",
+    unit_price: 3_700_000,
+    monthly_amort: 24_000,
+    description: {
+      title: "Grand Tower Cebu",
+      subtitle: "Grand Tower Cebu",
+      info: "Located just where a growing company should be: in Cebu City’s most well- connected new business hub. Grand Tower Cebu is designed to offer a lifestyle experience at work. Standing elegantly in the heart of North Reclamation Area, Grand Tower Cebu is just across SM City Cebu Northwing and a mere drive away from the airport, seaport, business and leisure hubs, and fine hotels of Cebu. Its location is the most accessible place by road, easily connected to Mandaue City and Lapu-Lapu City.<br>With a strategic location, world-class amenities and its flexible design, your office at Grand Tower Cebu would easily be the most desirable workplace in Cebu."
+    },
+    amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms", "Cascading Water Feature", "Great Lawn", "Lush Tropical Gardens", "Pavillions", "Volleyball Court", "Jogging Trail", "24-Hour Security", "Fire Detection", "Alarm System"],
+    unit_types: [
+      {
+        name: "Studio",
+        floor_area_min: 25.00,
+        floor_area_max: 35.40,
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "1 Bedroom",
+        floor_area_min: 52.10,
+        floor_area_max: 52.10,
+        cost: 3500000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+    ],
+    images: [
+      "#{BASE_URL}images/grand_tower/overview.jpg",
+      "#{BASE_URL}images/grand_tower/office.jpg",
+      "#{BASE_URL}images/grand_tower/amenities.jpg",
+      "#{BASE_URL}images/grand_tower/unwind_place.jpg",
+    ]
+  },
+  {
+    name: "Grand Residences",
+    address: "MJ Cuenco Avenue corner Holy Name St., Cebu City, Philippines",
+    latitude: "10.326572",
+    longitude: "123.908551",
+    unit_price: 2_100_000,
+    monthly_amort: 12_000,
+    description: {
+      title: "Grand Residences",
+      subtitle: "Grand Residences",
+      info: ""
+    },
+    amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms", "Cascading Water Feature", "Great Lawn", "Lush Tropical Gardens", "Pavillions", "Volleyball Court", "Jogging Trail", "24-Hour Security", "Fire Detection", "Alarm System"],
+    unit_types: [
+      {
+        name: "Studio",
+        floor_area_min: 22.00,
+        floor_area_max: 32.40,
+        cost: 2_100_000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "1 Bedroom",
+        floor_area_min: 33.00,
+        floor_area_max: 37.00,
+        cost: 3000000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom",
+        floor_area_min: 55.00,
+        floor_area_max: 55.00,
+        cost: 5800000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+    ],
+    images: [
+      "#{BASE_URL}images/grand_residences/lobby.jpg",
+      "#{BASE_URL}images/grand_residences/one_bedroom.jpg",
+      "#{BASE_URL}images/grand_residences/toilet.jpg",
+      "#{BASE_URL}images/grand_residences/two_bedroom.jpg",
+    ]
+  },
+  {
+    name: "Amani Grand Resort Residences",
+    address: "MJ Cuenco Avenue corner Holy Name St., Cebu City, Philippines",
+    latitude: "10.323015",
+    longitude: "123.977838",
+    unit_price: 2_300_000,
+    monthly_amort: 12_000,
+    description: {
+      title: "Amani Grand Resort Residences",
+      subtitle: "Amani Grand Resort Residences",
+      info: "Amani Grand Resort Residences is a collaborative effort to create a high-quality, livable spaces that transcend city resort living. Nestled within a private enclave in Mactan Island, Amani Grand offers a harmonious feeling of privacy and relaxation, yet having all the downtown convenience and weekend comfort at your doorstep."
+    },
+    amenities: ["Grand Lobby", "Amenity Lobby", "Walk of Fame", "Lap Pool", "Kiddie Pool", "Playground", "Outdoor Lounge", "Function Rooms", "Cascading Water Feature", "Great Lawn", "Lush Tropical Gardens", "Pavillions", "Volleyball Court", "Jogging Trail", "24-Hour Security", "Fire Detection", "Alarm System"],
+    unit_types: [
+      {
+        name: "Studio",
+        floor_area_min: 27.00,
+        floor_area_max: 33.00,
+        cost: 2_100_000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "1 Bedroom",
+        floor_area_min: 38.00,
+        floor_area_max: 40.00,
+        cost: 3000000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+      {
+        name: "2 Bedroom",
+        floor_area_min: 92.00,
+        floor_area_max: 106.00,
+        cost: 5800000,
+        amortization: 14500,
+        reservation_fee: 10500,
+        info: "",
+        bathrooms: 1,
+        bedrooms: 1,
+      },
+    ],
+    images: [
+      "#{BASE_URL}images/grand_amani/intro.jpg",
+      "#{BASE_URL}images/grand_amani/intro2.jpg",
+      "#{BASE_URL}images/grand_amani/perspective.jpg",
+      "#{BASE_URL}images/grand_amani/pool.jpg",
+    ]
+  },
 ]
 
 Image.connection.execute("TRUNCATE TABLE images;")
@@ -448,7 +603,8 @@ properties.each do |property|
       unit = UnitType.new
       unit.property_id = p.id
       unit.name = unit_type[:name]
-      unit.floor_area = unit_type[:floor_area]
+      unit.floor_area_min = unit_type[:floor_area_min]
+      unit.floor_area_max = unit_type[:floor_area_max]
       unit.cost = unit_type[:cost]
       unit.amortization = unit_type[:amortization]
       unit.reservation_fee = unit_type[:reservation_fee]
