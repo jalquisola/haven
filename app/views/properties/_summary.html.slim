@@ -49,7 +49,7 @@ div class="summary"
         div class="clearfix"
     div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
       div class="agentAvatar summaryItem"
-        - agent = Agent.first
+        - agent = @property.agent || Agent.first
         div class="clearfix"
         img class="avatar agentAvatarImg" src="#{agent.avatar_url}" alt="avatar"
         div class="agentName" = agent.name

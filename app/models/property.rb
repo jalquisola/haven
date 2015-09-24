@@ -5,4 +5,5 @@ class Property < ActiveRecord::Base
   has_many :comments, as: :commentable
   has_one :description
   accepts_nested_attributes_for :amenities
+  belongs_to :agent
 end

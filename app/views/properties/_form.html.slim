@@ -19,6 +19,9 @@
     = f.label :longitude
     = f.text_field :longitude
   .field
+    = f.label :agent_id
+    = f.select :agent_id, Agent.all.collect{|a| [a.name, a.id]}
+  .field
     ul
       - property_amenities = @property.amenities.select(:id).map(&:id)
       - Amenity.all.each do |amenity|
