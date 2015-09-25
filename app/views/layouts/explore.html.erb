@@ -77,6 +77,8 @@
         
           ga('create', "<%= ENV['GOOGLE_ANALYTICS_TRACKING_ID']%>", 'auto');
           ga('send', 'pageview');
+
+          $("a.mapHandler").click();
         </script>
     </body>
 </html>
