@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Realproperty</title>
+    <title><%= ENV['WEBSITE_TITLE']%></title>
   <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>

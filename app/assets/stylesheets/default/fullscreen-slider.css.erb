@@ -40,7 +40,13 @@
     -o-animation: imageAnimation 36s linear infinite 0s;
     -ms-animation: imageAnimation 36s linear infinite 0s;
     animation: imageAnimation 36s linear infinite 0s; 
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
+
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(<%= asset_path 'air_residences_structure.jpg'%>);
 }
