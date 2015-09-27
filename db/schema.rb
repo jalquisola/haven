@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923162535) do
+ActiveRecord::Schema.define(version: 20150927061608) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -114,15 +114,18 @@ ActiveRecord::Schema.define(version: 20150923162535) do
   add_index "images", ["property_id", "position"], name: "index_images_on_property_id_and_position", using: :btree
 
   create_table "properties", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.string   "location",      limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "latitude",      limit: 255
-    t.string   "longitude",     limit: 255
-    t.integer  "unit_price",    limit: 4
-    t.integer  "monthly_amort", limit: 4
-    t.integer  "agent_id",      limit: 4
+    t.string   "name",            limit: 255
+    t.string   "location",        limit: 255
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "latitude",        limit: 255
+    t.string   "longitude",       limit: 255
+    t.integer  "unit_price",      limit: 4
+    t.integer  "monthly_amort",   limit: 4
+    t.integer  "agent_id",        limit: 4
+    t.integer  "view_count",      limit: 4,   default: 0
+    t.integer  "favourite_count", limit: 4,   default: 0
+    t.integer  "comments_count",  limit: 4,   default: 0
   end
 
   create_table "testimonials", force: :cascade do |t|
