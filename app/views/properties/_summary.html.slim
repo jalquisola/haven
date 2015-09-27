@@ -14,15 +14,13 @@ div class="summary"
 
         div class="favLink"
           a href="#"
-            span class="icon-heart"
-            | 54
+            span class="icon-heart" =@property.favourite_count || 54
         ul class="stats"
           li
-            span class="icon-eye"
-            | 200
-          li
-            span class="icon-bubble"
-            | 13
+            span class="icon-eye" =@property.view_count || 200
+          - if @property.comments_count > 0
+            li
+              span class="icon-bubble"=@property.comments_count
         div class="clearfix"
         ul class="features"
           - studio = unit_types.first

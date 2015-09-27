@@ -19,6 +19,12 @@ class PagesController < ApplicationController
     @property = Property.where(id: params[:property_id]).first
     return redirect_to root_url  unless @property
 
+
+    @property.update_attribute(:view_count, @property.view_count+1)
+    if request.referrer.match(/pages\/explore/)
+      @property.update_attribute(:favourite_count, @property.favourite_count+1)
+    end
+
     @unit_types = @property.unit_types
     @description = @property.description
     @current_user = current_user
