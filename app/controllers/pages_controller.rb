@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 
 
     @property.update_attribute(:view_count, @property.view_count+1)
-    if request.referrer.match(/pages\/explore/)
+    if request.referrer && request.referrer.match(/pages\/explore/)
       @property.update_attribute(:favourite_count, @property.favourite_count+1)
     end
 
