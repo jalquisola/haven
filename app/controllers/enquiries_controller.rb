@@ -27,6 +27,7 @@ class EnquiriesController < ApplicationController
 
     respond_to do |format|
       if @enquiry.save
+        EnquiryMailer.send_email(params[:property_id], @enquiry.id).deliver_now
         format.html do
           redirect_to pages_single_url(property_id: params[:property_id]), notice: 'Enquiry was successfully created.'
         end
