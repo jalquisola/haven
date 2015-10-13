@@ -7,8 +7,9 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "bootstrap")
+Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "images")
 
-Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
+Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf|png)\z/
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.

@@ -49,7 +49,7 @@ div id="page-content"
           div class="wrapper"
             span class="title" Do you want your property to be listed here?
             span class="submit"
-            | Submit it now!
+              | Submit it now!
               i class="fa fa-plus-square"
 
   section id="new-properties" class="block"
@@ -131,4 +131,10 @@ div id="page-content"
             aside class="cite"
               p= testimonial.content
               footer= testimonial.client_name
+
+- content_for :script do
+  javascript:
+    $(window).load(function(){
+        initializeOwl(false);
+    });
 

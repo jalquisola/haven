@@ -31,7 +31,6 @@ class PagesController < ApplicationController
     @current_user = current_user
     @comments = @property.comments
     @enquiry = Enquiry.new
-    render :single, layout: 'single'
   end
 
   def dashboard
