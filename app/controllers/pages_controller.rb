@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:single, :explore]
   before_filter :set_properties, only:[ :home, :explore, :single]
   before_filter :set_images, only:[ :home, :explore, :single]
+  layout 'zoner/application'
 
   def home
     if user_signed_in?
