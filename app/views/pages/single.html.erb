@@ -47,14 +47,9 @@
                                 <section id="property-features">
                                     <header><h2>Property Amenities</h2></header>
                                     <ul class="list-unstyled property-features-list">
-                                        <li>Sauna</li>
-                                        <li>Fireplace or fire pit</li>
-                                        <li>Outdoor Kitchen</li>
-                                        <li>Tennis Courts</li>
-                                        <li>Trees and Landscaping</li>
-                                        <li>Sun Room</li>
-                                        <li>Family Room</li>
-                                        <li>Concrete Flooring</li>
+                                        <%- @property.amenities.each do |amenity|%>
+                                            <li><%= amenity.name%></li>
+                                        <% end%>
                                     </ul>
                                 </section><!-- /#property-features -->
                                 <section id="floor-plans">
