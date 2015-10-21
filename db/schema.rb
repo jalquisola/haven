@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150927061608) do
+ActiveRecord::Schema.define(version: 20151021132736) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -116,16 +116,22 @@ ActiveRecord::Schema.define(version: 20150927061608) do
   create_table "properties", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "location",        limit: 255
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",                                                      null: false
+    t.datetime "updated_at",                                                      null: false
     t.string   "latitude",        limit: 255
     t.string   "longitude",       limit: 255
     t.integer  "unit_price",      limit: 4
     t.integer  "monthly_amort",   limit: 4
     t.integer  "agent_id",        limit: 4
-    t.integer  "view_count",      limit: 4,   default: 0
-    t.integer  "favourite_count", limit: 4,   default: 0
-    t.integer  "comments_count",  limit: 4,   default: 0
+    t.integer  "view_count",      limit: 4,                           default: 0
+    t.integer  "favourite_count", limit: 4,                           default: 0
+    t.integer  "comments_count",  limit: 4,                           default: 0
+    t.decimal  "min_area",                    precision: 6, scale: 2
+    t.decimal  "max_area",                    precision: 6, scale: 2
+    t.integer  "property_type",   limit: 4
+    t.integer  "status",          limit: 4
+    t.integer  "turnover",        limit: 4
+    t.integer  "rating",          limit: 4
   end
 
   create_table "testimonials", force: :cascade do |t|

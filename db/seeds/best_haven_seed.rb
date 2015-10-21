@@ -7,6 +7,12 @@ properties = [
     longitude: "121.014695",
     unit_price: 3_000_000,
     monthly_amort: 14_000,
+    min_area: 22.95,
+    max_area: 46.38,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
     description: {
       title: "The Air of Convenience",
       subtitle: "Personal efficiency and professional success made attainable",
@@ -94,6 +100,12 @@ properties = [
     longitude: "121.052322",
     unit_price: 2_600_000,
     monthly_amort: 8_000,
+    min_area: 24.1,
+    max_area: 38.68,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
     description: {
       title: "Fame Residences",
       subtitle: "Have a glimpse of the life lived in glitz and glamour, with gold curtain walls that surround this lumiscent development.",
@@ -153,6 +165,12 @@ properties = [
     longitude: "120.985125",
     unit_price: 2_900_000,
     monthly_amort: 12_000,
+    min_area: 24.1,
+    max_area: 58.46,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2018,
     description: {
       title: "Shore Residences",
       subtitle: "Conveniently located at the SM Mall of Asia Complex in Pasay City. It offers the finest in resort living with an exclusive beack-like amenity right at the heart of the development",
@@ -211,6 +229,12 @@ properties = [
     longitude: "120.9892",
     unit_price: 2_800_000,
     monthly_amort: 12_000,
+    min_area: 22,
+    max_area: 40,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
     description: {
       title: "Breeze Residences",
       subtitle: "Located in a very relaxing suburb, the residents can choose to enjoy the scenic view of the Manila Bay Sunset or the eye-catching Makati Skyline.",
@@ -269,6 +293,12 @@ properties = [
     longitude: "121.021684",
     unit_price: 2_900_000,
     monthly_amort: 12_000,
+    min_area: 20,
+    max_area: 64,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
     description: {
       title: "Jazz Residences",
       subtitle: "Jazz Residences",
@@ -343,6 +373,12 @@ properties = [
     longitude: "120.943798",
     unit_price: 2_500_000,
     monthly_amort: 11_000,
+    min_area: 20,
+    max_area: 66,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
     description: {
       title: "Wind Residences",
       subtitle: "Wind Residences",
@@ -416,6 +452,12 @@ properties = [
     longitude: "123.920481",
     unit_price: 3_700_000,
     monthly_amort: 24_000,
+    min_area: 25,
+    max_area: 52.10,
+    property_type: :condo_hotel,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
     description: {
       title: "Grand Tower Cebu",
       subtitle: "Grand Tower Cebu",
@@ -460,6 +502,12 @@ properties = [
     longitude: "123.908551",
     unit_price: 2_100_000,
     monthly_amort: 12_000,
+    min_area: 22,
+    max_area: 55.00,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
     description: {
       title: "Grand Residences",
       subtitle: "Grand Residences",
@@ -515,6 +563,12 @@ properties = [
     longitude: "123.977838",
     unit_price: 2_300_000,
     monthly_amort: 12_000,
+    min_area: 27,
+    max_area: 106.00,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
     description: {
       title: "Amani Grand Resort Residences",
       subtitle: "Amani Grand Resort Residences",
@@ -576,6 +630,12 @@ properties.each do |property|
   p.longitude = property[:longitude]
   p.unit_price = property[:unit_price]
   p.monthly_amort = property[:monthly_amort]
+  p.min_area = property[:min_area]
+  p.max_area = property[:max_area]
+  p.rating = property[:rating]
+  p.turnover = property[:turnover]
+  p.property_type = property[:property_type]
+  p.status = property[:status]
   if p.save!
     puts p.name
     description = property[:description]

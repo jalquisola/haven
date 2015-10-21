@@ -6,21 +6,17 @@ section id="quick-summary" class="clearfix"
     dd=property.location
     dt Monthly Amortization
     dd
-      span class="tag price" = number_to_currency(property.monthly_amort, unit: 'Php')
+      span class="tag price" = "#{number_to_currency(property.monthly_amort, unit: 'Php')}++"
     dt Property Type:
-    dd Condo
+    dd =property.property_type.titleize
     dt Status:
-    dd Sale
+    dd =property.status.titleize
     dt Area:
     dd
-      | 25++ m
+      | #{property.min_area} - #{property.max_area} m
       sup 2
-    dt Beds:
-    dd 2
-    dt Baths:
-    dd 1
-    dt Garages:
-    dd 1
+    dt Turnover:
+    dd =property.turnover
     dt Rating:
     dd
-      div class="rating rating-overall" data-score="5"
+      div class="rating rating-overall" data-score=property.rating
