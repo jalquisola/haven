@@ -30,6 +30,7 @@ class PagesController < ApplicationController
     @description = @property.description
     @current_user = current_user
     @comments = @property.comments
+    @agent = @property.agent
     @enquiry = Enquiry.new
   end
 

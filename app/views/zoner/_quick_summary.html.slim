@@ -4,23 +4,23 @@ section id="quick-summary" class="clearfix"
   dl
     dt Location
     dd=property.location
-    dt Price
+    dt Monthly Amortization
     dd
-      span class="tag price" $78,000
+      span class="tag price" = number_to_currency(property.monthly_amort, unit: 'Php')
     dt Property Type:
-    dd House
+    dd Condo
     dt Status:
     dd Sale
     dt Area:
     dd
-      | 860 m
+      | 25++ m
       sup 2
     dt Beds:
-    dd 3
+    dd 2
     dt Baths:
-    dd 2
+    dd 1
     dt Garages:
-    dd 2
+    dd 1
     dt Rating:
     dd
       div class="rating rating-overall" data-score="5"

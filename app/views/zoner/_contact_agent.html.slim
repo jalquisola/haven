@@ -1,0 +1,60 @@
+section id="contact-agent"
+  header
+    h2 Contact Agent
+  div class="row"
+    section class="agent-form"
+      div class="col-md-7 col-sm-12"
+        aside class="agent-info clearfix"
+          figure
+            a href="#"
+              img alt="" src=agent.avatar_url
+          div class="agent-contact-info"
+            h3=agent.name
+            p
+            dl
+              - if agent.linked_in_url.present?
+                dt LinkedIn:
+                dd
+                  a href=agent.linked_in_url target='_blank' =agent.linked_in_url
+
+              - if agent.twitter_url.present?
+                dt Twitter:
+                dd
+                  a href=agent.twitter_url target='_blank' =agent.twitter_url
+
+              - if agent.facebook_url.present?
+                dt Facebook:
+                dd
+                  a href=agent.facebook_url target='_blank' =agent.facebook_url
+
+              dt Mobile:
+              dd= agent.contact_no
+              dt Viber:
+              dd= agent.contact_no
+              dt Email:
+              dd
+                a href="mailto:#{agent.email}"=agent.email
+              dt Skype:
+              dd=agent.skype
+            hr
+      div class="col-md-5 col-sm-12"
+        div class="agent-form"
+          form role="form" id="form-contact-agent" method="post"  class="clearfix"
+            div class="form-group"
+              label for="form-contact-agent-name"
+                | Your Name
+                em *
+              input type="text" class="form-control" id="form-contact-agent-name" name="form-contact-agent-name" required=''
+            div class="form-group"
+              label for="form-contact-agent-email"
+                | Your Email
+                em *
+              input type="email" class="form-control" id="form-contact-agent-email" name="form-contact-agent-email" required=''
+            div class="form-group"
+              label for="form-contact-agent-message"
+                | Your Message
+                em *
+              textarea class="form-control" id="form-contact-agent-message" rows="2" name="form-contact-agent-message" required=''
+            div class="form-group"
+              button type="submit" class="btn pull-right btn-default" id="form-contact-agent-submit" Send a Message
+            div id="form-contact-agent-status"

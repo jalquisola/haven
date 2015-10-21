@@ -1,0 +1,32 @@
+section id="similar-properties"
+  header
+    h2 class="no-border" Similar Properties
+  div class="row"
+    - Property.limit(3).each do |property|
+      - image = property.images.first
+      - unit_type = property.unit_types.first
+      div class="col-md-4 col-sm-6"
+        div class="property"
+          a href=single_pages_url(property_id: property.id)
+            div class="property-image"
+              img alt="" src=image.url
+            div class="overlay"
+              div class="info"
+                div class="tag price" $ 11,000
+                h3 =property.name
+                figure = property.location
+              ul class="additional-info"
+                li
+                  header Area:
+                  figure
+                    | 240m
+                    sup 2
+                li
+                   header Beds:
+                   figure 2
+                li
+                   header Baths:
+                   figure 2
+                li
+                   header Garages:
+                   figure 0
