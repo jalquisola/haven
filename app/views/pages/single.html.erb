@@ -55,8 +55,9 @@
                                 <section id="floor-plans">
                                     <div class="floor-plans">
                                         <header><h2>Floor Plans</h2></header>
-                                        <a href="assets/img/properties/floor-plan-big.jpg" class="image-popup"><img alt="" src="assets/img/properties/floor-plan-01.jpg"></a>
-                                        <a href="assets/img/properties/floor-plan-big.jpg" class="image-popup"><img alt="" src="assets/img/properties/floor-plan-02.jpg"></a>
+                                        <%- @property.floor_plans.each do |fp| %>
+                                            <a href="<%= fp.image_url%>" class="image-popup"><img alt="<%= fp.name%>" width='212' height='155' class="img-thumbnail" src="<%= fp.image_url%>"></a>
+                                        <% end %>
                                     </div>
                                 </section><!-- /#floor-plans -->
                                 <section id="property-map">

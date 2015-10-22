@@ -91,7 +91,13 @@ properties = [
       "#{BASE_URL}images/air_residences/amenities.jpg",
       "#{BASE_URL}images/air_residences/bar.jpg",
       "#{BASE_URL}images/air_residences/one_bedroom.jpg",
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/air_residences/floor_plans/1br.jpg",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/air_residences/floor_plans/1brb.jpg",
+      "2 Bedroom" => "#{BASE_URL}images/air_residences/floor_plans/2br.jpg",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/air_residences/floor_plans/2brb.jpg",
+    }
   },
   {
     name: "Fame Residences",
@@ -156,7 +162,11 @@ properties = [
       "#{BASE_URL}images/fame/garden.jpg",
       "#{BASE_URL}images/fame/lobby.jpg",
       "#{BASE_URL}images/fame/pool.jpg",
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom with balcony type A" => "#{BASE_URL}images/fame/floor_plans/1brb.jpg",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/fame/floor_plans/2brbE.jpg",
+    }
   },
   {
     name: "Shore Residences",
@@ -220,7 +230,12 @@ properties = [
       "#{BASE_URL}images/shore/pool.jpg",
       "#{BASE_URL}images/shore/amenities.jpg",
       "#{BASE_URL}images/shore/bedroom.jpg"
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/shore/shore_1bra.jpg",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/shore/shore_1br.jpg",
+      "2 Bedroom" => "#{BASE_URL}images/shore/shore_2br.jpg",
+    }
   },
   {
     name: "Breeze Residences",
@@ -284,7 +299,12 @@ properties = [
       "#{BASE_URL}images/breeze/balcony.jpg",
       "#{BASE_URL}images/breeze/penthouse.jpg",
       "#{BASE_URL}images/breeze/pool_area.jpg"
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/breeze/floor_plans/1br.png",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/breeze/floor_plans/1brb.png",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/breeze/floor_plans/2brb_56.png",
+    }
   },
   {
     name: "Jazz Residences",
@@ -364,7 +384,13 @@ properties = [
       "#{BASE_URL}images/jazz/lobby.jpg",
       "#{BASE_URL}images/jazz/amenities.jpg",
       "#{BASE_URL}images/jazz/model.jpg"
-    ]
+    ],
+    floor_plans: {
+      "Site Development" =>  "#{BASE_URL}images/jazz/floor_plans/site.jpg",
+      "1 Bedroom End Unit" =>  "#{BASE_URL}images/jazz/floor_plans/1br_end_unit.jpg",
+      "1 Bedroom with balcony" =>  "#{BASE_URL}images/jazz/floor_plans/1brb.jpg",
+      "2 Bedroom" =>  "#{BASE_URL}images/jazz/floor_plans/2br.jpg",
+    }
   },
   {
     name: "Wind Residences",
@@ -443,7 +469,13 @@ properties = [
       "#{BASE_URL}images/wind/amenities.jpg",
       "#{BASE_URL}images/wind/residences.jpg",
       "#{BASE_URL}images/wind/lobby.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Site Development" => "#{BASE_URL}images/wind/floor_plans/site.jpg",
+      "Tower 1 Penthouse" => "#{BASE_URL}images/wind/floor_plans/tower1_penthouse.jpg",
+      "Tower 2 Penthouse" => "#{BASE_URL}images/wind/floor_plans/tower2_penthouse.jpg",
+      "Tower 3 Resort Units" => "#{BASE_URL}images/wind/floor_plans/tower3_resort_units.jpg",
+    }
   },
   {
     name: "Grand Tower Cebu",
@@ -493,7 +525,11 @@ properties = [
       "#{BASE_URL}images/grand_tower/office.jpg",
       "#{BASE_URL}images/grand_tower/amenities.jpg",
       "#{BASE_URL}images/grand_tower/unwind_place.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Condo Hotel" => "#{BASE_URL}images/grand_tower/floor_plans/condo_hotel.jpg",
+      "Site Development" => "#{BASE_URL}images/grand_tower/floor_plans/site.jpg",
+    }
   },
   {
     name: "Grand Residences",
@@ -554,7 +590,11 @@ properties = [
       "#{BASE_URL}images/grand_residences/one_bedroom.jpg",
       "#{BASE_URL}images/grand_residences/toilet.jpg",
       "#{BASE_URL}images/grand_residences/two_bedroom.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Studio Unit" => "#{BASE_URL}images/grand_residences/floor_plans/studio.jpg",
+      "1 Bedroom Unit" => "#{BASE_URL}images/grand_residences/floor_plans/1br.jpg",
+    }
   },
   {
     name: "Amani Grand Resort Residences",
@@ -615,7 +655,11 @@ properties = [
       "#{BASE_URL}images/grand_amani/intro2.jpg",
       "#{BASE_URL}images/grand_amani/perspective.jpg",
       "#{BASE_URL}images/grand_amani/pool.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Studio Unit" => "#{BASE_URL}images/grand_amani/floor_plans/studio.jpg",
+      "1 Bedroom Unit" => "#{BASE_URL}images/grand_amani/floor_plans/1br.jpg",
+    }
   },
 ]
 
@@ -649,6 +693,12 @@ properties.each do |property|
     property[:images].each_with_index do |image, index|
       img = Image.new(url: image, name: image, position: index+1, property_id: p.id)
       img.save!
+    end
+
+    FloorPlan.where(property_id: p.id).delete_all
+    property[:floor_plans].each do |name, url|
+      fp = FloorPlan.new(image_url: url, name: name, property_id: p.id)
+      fp.save!
     end
 
     #property[:amenities].each do |amenity|

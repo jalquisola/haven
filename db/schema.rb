@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021132736) do
+ActiveRecord::Schema.define(version: 20151021141420) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -91,6 +91,14 @@ ActiveRecord::Schema.define(version: 20151021132736) do
     t.datetime "updated_at",               null: false
     t.string   "subject",    limit: 255
   end
+
+  create_table "floor_plans", force: :cascade do |t|
+    t.string  "name",        limit: 255
+    t.string  "image_url",   limit: 255
+    t.integer "property_id", limit: 4
+  end
+
+  add_index "floor_plans", ["property_id"], name: "index_floor_plans_on_property_id", using: :btree
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
