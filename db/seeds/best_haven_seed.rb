@@ -13,6 +13,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
+    video_url: "https://www.youtube.com/embed/TEGIQkWHdBM",
     description: {
       title: "The Air of Convenience",
       subtitle: "Personal efficiency and professional success made attainable",
@@ -112,6 +113,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
+    video_url: "https://www.youtube.com/2q7DujqEj3w",
     description: {
       title: "Fame Residences",
       subtitle: "Have a glimpse of the life lived in glitz and glamour, with gold curtain walls that surround this lumiscent development.",
@@ -181,6 +183,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2018,
+    video_url: "https://www.youtube.com/embed/89H7qWwI224",
     description: {
       title: "Shore Residences",
       subtitle: "Conveniently located at the SM Mall of Asia Complex in Pasay City. It offers the finest in resort living with an exclusive beack-like amenity right at the heart of the development",
@@ -250,6 +253,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2016,
+    video_url: "https://www.youtube.com/embed/Vz9MqaxyPr8",
     description: {
       title: "Breeze Residences",
       subtitle: "Located in a very relaxing suburb, the residents can choose to enjoy the scenic view of the Manila Bay Sunset or the eye-catching Makati Skyline.",
@@ -319,6 +323,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2016,
+    video_url: "https://www.youtube.com/embed/4eeH9dlf59w",
     description: {
       title: "Jazz Residences",
       subtitle: "Jazz Residences",
@@ -405,6 +410,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2016,
+    video_url: "https://www.youtube.com/embed/e_x8nPrJVqw",
     description: {
       title: "Wind Residences",
       subtitle: "Wind Residences",
@@ -490,6 +496,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
+    video_url: "https://www.youtube.com/embed/CcZh4Hj4owQ",
     description: {
       title: "Grand Tower Cebu",
       subtitle: "Grand Tower Cebu",
@@ -544,6 +551,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
+    video_url: "https://www.youtube.com/embed/zhr9nr9xarI",
     description: {
       title: "Grand Residences",
       subtitle: "Grand Residences",
@@ -609,6 +617,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
+    video_url: "https://www.youtube.com/G_izDEpCfDQ",
     description: {
       title: "Amani Grand Resort Residences",
       subtitle: "Amani Grand Resort Residences",
@@ -680,6 +689,7 @@ properties.each do |property|
   p.turnover = property[:turnover]
   p.property_type = property[:property_type]
   p.status = property[:status]
+  p.video_url = property[:video_url]
   if p.save!
     puts p.name
     description = property[:description]
