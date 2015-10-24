@@ -227,9 +227,12 @@
 <% content_for :script do%>
 <script type="text/javascript">
     $(window).load(function(){
-      var propertyId = 0;
+      var property = {
+          longitude: "<%= @property.longitude%>",
+          latitude: "<%= @property.latitude%>"
+      };
       initializeOwl(false);
-      google.maps.event.addDomListener(window, 'load', initMap(propertyId));
+      google.maps.event.addDomListener(window, 'load', initMap(property));
     });
 </script>
 <% end %>
