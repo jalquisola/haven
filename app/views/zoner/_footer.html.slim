@@ -10,7 +10,7 @@ footer id="page-footer"
               hr
               a href="#" class="link-arrow" Read More
 
-          div class="col-md-3 col-sm-3"
+          div class="offset-md-3 offset-sm-3 col-md-3 col-sm-3"
             article
               h3 Recent Properties
               - Property.order(id: :desc).limit(2).each do |property|
@@ -44,7 +44,9 @@ footer id="page-footer"
                 li
                   a href=explore_pages_url All Properties
                 li
-                  a href=user_session_url Login and Register Account
+                  a href=new_user_registration_url Register
+                li
+                  a href=new_user_session_url Sign In
 
     aside id="footer-thumbnails" class="footer-thumbnails"
     aside id="footer-copyright"

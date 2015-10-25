@@ -21,7 +21,6 @@
 //= require zoner/jquery.placeholder.js
 //= require zoner/icheck.min.js
 //= require zoner/jquery.vanillabox-0.1.5.min.js
-//= require zoner/retina-1.1.0.min.js
 //= require zoner/jshashtable-2.1_src.js
 //= require zoner/jquery.numberformatter-1.2.3.js
 //= require zoner/tmpl.js

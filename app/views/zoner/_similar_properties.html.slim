@@ -12,7 +12,7 @@ section id="similar-properties"
               img alt="" src=image.url
             div class="overlay"
               div class="info"
-                div class="tag price" $ 11,000
+                div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
                 h3 =property.name
                 figure = property.location
               ul class="additional-info"

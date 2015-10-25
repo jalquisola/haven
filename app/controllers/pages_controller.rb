@@ -13,7 +13,8 @@ class PagesController < ApplicationController
   end
 
   def explore
-    render :explore, layout: 'explore'
+    @properties = Property.all
+    #render :explore, layout: 'explore'
   end
 
   def single

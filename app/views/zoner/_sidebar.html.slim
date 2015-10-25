@@ -1,0 +1,63 @@
+section id="sidebar"
+  aside id="edit-search"
+    header
+      h3 Search Properties
+    form role="form" id="form-sidebar" class="form-search" action="properties-listing.html"
+      div class="form-group"
+        select name="type"
+          option value="" Status
+          option value="1" Rent
+          option value="2" Sale
+      div class="form-group"
+        select name="country"
+          option value="" Country
+          option value="1" France
+          option value="2" Great Britain
+          option value="3" Spain
+          option value="4" Russia
+          option value="5" United States
+      div class="form-group"
+        select name="city"
+          option value="" City
+          option value="1" New York
+          option value="2" Los Angeles
+          option value="3" Chicago
+          option value="4" Houston
+          option value="5" Philadelphia
+      div class="form-group"
+        select name="district"
+          option value="" District
+          option value="1" Manhattan
+          option value="2" The Bronx
+          option value="3" Brooklyn
+          option value="4" Queens
+          option value="5" Staten Island
+      div class="form-group"
+        select name="property-type"
+          option value="" Property Type
+          option value="1" Apartment
+          option value="2" Condominium
+          option value="3" Cottage
+          option value="4" Flat
+          option value="5" House
+      div class="form-group"
+        div class="price-range"
+          input id="price-input" type="text" name="price" value="1000;299000"
+
+      div class="form-group"
+        button type="submit" class="btn btn-default" Search Now
+
+  aside id="featured-properties"
+    header
+      h3 Featured Properties
+      - Property.limit(3).each do |property|
+        - image = property.images.first
+        div class="property small"
+          a href=single_pages_url(property_id: property.id)
+            div class="property-image"
+              img alt="" src=image.url
+          div class="info"
+            a href=single_pages_path(property_id: property.id)
+              h4 =property.name
+            figure =property.location
+            div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")

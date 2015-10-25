@@ -1,0 +1,44 @@
+div id="page-content"
+  div class="container"
+    ol class="breadcrumb"
+      li
+        a href="#" Home
+      li class="active" Property Listing
+  div class="container"
+    div class="row"
+      div class="col-md-9 col-sm-9"
+        section id="results"
+          header class=""
+            h1 Properties Listing
+          section id="properties"
+            - @properties.each_slice(3).to_a.each do |properties|
+              div class="row"
+                - properties.each do |property|
+                  div class='col-md-4 col-sm-4'
+                    div class='property' style='margin-bottom: 30px;'
+                      figure class='tag status' =property.status.titleize
+                      a href=single_pages_url(property_id: property.id)
+                        div class='property-image'
+                          img alt='' src=property.images.first.url 
+                        div class='overlay'
+                          div class='info'
+                            div class='tag price' =number_to_currency(property.unit_price, unit: 'Php')
+                            h3 =property.name
+                            figure=property.location
+                          ul class='additional-info'
+                            li
+                              header Area:
+                              figure
+                                | #{property.min_area}-#{property.max_area}
+                                sup 2
+                            li
+                              header Beds:
+                              figure 1 or 2
+                            li
+                              header Baths:
+                              figure 1
+      div class="col-md-3 col-sm-3"
+        = render partial: 'zoner/sidebar'
+
+- content_for :header_script do
+  script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"

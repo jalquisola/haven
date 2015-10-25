@@ -4,9 +4,12 @@ section id="quick-summary" class="clearfix"
   dl
     dt Location
     dd=property.location
+    dt Total Selling Price
+    dd
+      span class="tag price" =number_to_human(property.unit_price, format: "Php %n %u++")
     dt Monthly Amortization
     dd
-      span class="tag price" = "#{number_to_currency(property.monthly_amort, unit: 'Php')}++"
+      span class="tag price" =number_to_currency(property.monthly_amort, format: "Php %n++")
     dt Property Type:
     dd =property.property_type.titleize
     dt Status:
