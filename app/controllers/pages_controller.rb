@@ -13,7 +13,9 @@ class PagesController < ApplicationController
   end
 
   def explore
-    @properties = Property.all
+    @properties = Property.where("short_address LIKE ?", params[:city]) if params[:city].present?
+    @properties = @properties.where(property_type: params[:property_type]) if params[:property_type].present?
+    @properties = @properties.where(status: params[:status]) if params[:status].present?
     #render :explore, layout: 'explore'
   end
 

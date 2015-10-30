@@ -3,6 +3,7 @@ properties = [
   {
     name: "Air Residences",
     address: "Malugay and Yakal Streets, Brgy. San Antonio, Makati City",
+    short_address: "Makati City",
     latitude: "14.562567",
     longitude: "121.014695",
     unit_price: 3_000_000,
@@ -103,6 +104,7 @@ properties = [
   {
     name: "Fame Residences",
     address: "Central EDSA",
+    short_address: "Manila",
     latitude: "14.577421",
     longitude: "121.052322",
     unit_price: 2_600_000,
@@ -173,6 +175,7 @@ properties = [
   {
     name: "Shore Residences",
     address: "Mall of Asia Complex",
+    short_address: "Pasay City",
     latitude: "14.541756",
     longitude: "120.985125",
     unit_price: 2_900_000,
@@ -243,6 +246,7 @@ properties = [
   {
     name: "Breeze Residences",
     address: "CCP Complex, Roxas Boulevard, Pasay City",
+    short_address: "Pasay City",
     latitude: "14.555585",
     longitude: "120.9892",
     unit_price: 2_800_000,
@@ -313,6 +317,7 @@ properties = [
   {
     name: "Jazz Residences",
     address: "Metropolitan Avenue and Nicanor Garcia Streets, Makati City ",
+    short_address: "Makati City",
     latitude: "14.563646",
     longitude: "121.021684",
     unit_price: 2_900_000,
@@ -400,6 +405,7 @@ properties = [
   {
     name: "Wind Residences",
     address: "Aguinaldo Highway, Barangay Maharika West, Tagaytay City",
+    short_address: "Tagaytay City",
     latitude: "14.101855",
     longitude: "120.943798",
     unit_price: 2_500_000,
@@ -486,6 +492,7 @@ properties = [
   {
     name: "Grand Tower Cebu",
     address: "Corner Kaohsiung St. & M. Logarta St., North Reclamation Area, Mabolo, Cebu City",
+    short_address: "Cebu City",
     latitude: "10.312470",
     longitude: "123.920481",
     unit_price: 3_700_000,
@@ -541,6 +548,7 @@ properties = [
   {
     name: "Grand Residences",
     address: "MJ Cuenco Avenue corner Holy Name St., Cebu City, Philippines",
+    short_address: "Cebu City",
     latitude: "10.326572",
     longitude: "123.908551",
     unit_price: 2_100_000,
@@ -607,6 +615,7 @@ properties = [
   {
     name: "Amani Grand Resort Residences",
     address: "MJ Cuenco Avenue corner Holy Name St., Cebu City, Philippines",
+    short_address: "Cebu City",
     latitude: "10.323015",
     longitude: "123.977838",
     unit_price: 2_300_000,
@@ -679,6 +688,7 @@ properties.each do |property|
   p = Property.new
   p.name = property[:name]
   p.location = property[:address]
+  p.short_address = property[:short_address]
   p.latitude = property[:latitude]
   p.longitude = property[:longitude]
   p.unit_price = property[:unit_price]

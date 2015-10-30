@@ -2,44 +2,42 @@ section id="sidebar"
   aside id="edit-search"
     header
       h3 Search Properties
-    form role="form" id="form-sidebar" class="form-search" action="properties-listing.html"
+    = form_tag(explore_pages_url, {method: :get,role: 'form', id: 'form-sidebar', class:'form-search'}) do
       div class="form-group"
-        select name="type"
+        select name="status"
           option value="" Status
-          option value="1" Rent
-          option value="2" Sale
+          - Property.statuses.each do |status, index|
+            - if params[:status].present? && params[:status].to_i== index
+              option value=index selected='selected' =status.titleize
+            - else
+              option value=index =status
       div class="form-group"
         select name="country"
-          option value="" Country
-          option value="1" France
-          option value="2" Great Britain
-          option value="3" Spain
-          option value="4" Russia
-          option value="5" United States
+          option value="" Philippines
+      div class="form-group"
+        select name="province"
+          option value='' Province
+          - ['Metro Manila', 'Cebu', 'Cavite'].each do |province|
+            - if params[:province] && params[:province] == province
+              option value=province selected='selected' =province
+            - else
+              option value=province =province
       div class="form-group"
         select name="city"
           option value="" City
-          option value="1" New York
-          option value="2" Los Angeles
-          option value="3" Chicago
-          option value="4" Houston
-          option value="5" Philadelphia
+          - ['Pasay City', 'Makati City', 'Tagaytay City', 'Cebu City'].each do |city|
+            - if params[:city] && params[:city] == city
+              option value=city selected='selected' =city
+            - else
+              option value=city =city
       div class="form-group"
-        select name="district"
-          option value="" District
-          option value="1" Manhattan
-          option value="2" The Bronx
-          option value="3" Brooklyn
-          option value="4" Queens
-          option value="5" Staten Island
-      div class="form-group"
-        select name="property-type"
+        select name="property_type"
           option value="" Property Type
-          option value="1" Apartment
-          option value="2" Condominium
-          option value="3" Cottage
-          option value="4" Flat
-          option value="5" House
+          - Property.property_types.each do |type, index|
+            - if params[:property_type].present? && params[:property_type].to_i == index
+              option value=indexl selected='selected' =type.titleize
+            - else
+              option value=index =type.titleize
       div class="form-group"
         div class="price-range"
           input id="price-input" type="text" name="price" value="1000;299000"
