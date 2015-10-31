@@ -6,10 +6,10 @@ section id="quick-summary" class="clearfix"
     dd=property.location
     dt Total Selling Price
     dd
-      span class="tag price" =number_to_human(property.unit_price, format: "Php %n %u++")
+      span class="tag price" =property_price_label(property.unit_price)
     dt Monthly Amortization
     dd
-      span class="tag price" =number_to_currency(property.monthly_amort, format: "Php %n++")
+      span class="tag price" =property_price_label(property.monthly_amort)
     dt Property Type:
     dd =property.property_type.titleize
     dt Status:

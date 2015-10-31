@@ -35,12 +35,16 @@ section id="sidebar"
           option value="" Property Type
           - Property.property_types.each do |type, index|
             - if params[:property_type].present? && params[:property_type].to_i == index
-              option value=indexl selected='selected' =type.titleize
+              option value=index selected='selected' =type.titleize
             - else
               option value=index =type.titleize
       div class="form-group"
         div class="price-range"
-          input id="price-input" type="text" name="price" value="1000;299000"
+          - if params[:price].present?
+            - price_range = params[:price].match(';') ? params[:price] : "#{params[:price]}000000;25000000"
+            input id="price-input" type="text" name="price" value=price_range
+          - else
+            input id="price-input" type="text" name="price" value="1000000;25000000"
 
       div class="form-group"
         button type="submit" class="btn btn-default" Search Now
@@ -57,5 +61,5 @@ section id="sidebar"
           div class="info"
             a href=single_pages_path(property_id: property.id)
               h4 =property.name
-            figure =property.location
-            div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
+            figure =property.short_address
+            div class="tag price"=property_price_label(property.unit_price)

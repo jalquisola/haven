@@ -21,21 +21,21 @@ footer id="page-footer"
                   div class="info"
                     a href=single_pages_url(property.id)
                       h4 =property.name
-                    figure =property.location
-                    div class="tag price" =number_to_currency(property.unit_price, unit: "Php")
+                    figure =property.short_address
+                    div class="tag price" =property_price_label(property.unit_price)
 
           div class="col-md-3 col-sm-3"
             article
               h3 Contact
               address
-                strong Your Company
-                br
-                | 4877 Spruce Drive
-                br
-                | West Newton, PA 15089
-              | +1 (734) 123-4567
+              | WhatsApp/Viber #:
               br
-              a href="#" hello@example.com
+              | +6597919534
+              br
+              br
+              | Email:
+              br
+              a href="emailto:joseph.alquisola@gmail.com" joseph.alquisola@gmail.com
 
           div class="col-md-3 col-sm-3"
             article

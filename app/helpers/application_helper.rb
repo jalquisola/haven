@@ -16,4 +16,8 @@ module ApplicationHelper
     end
     nil
   end
+
+  def property_price_label(price)
+    number_to_human(price, format: "Php %n %u+")
+  end
 end

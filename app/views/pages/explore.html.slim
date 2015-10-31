@@ -2,7 +2,7 @@ div id="page-content"
   div class="container"
     ol class="breadcrumb"
       li
-        a href="#" Home
+        a href=root_path Home
       li class="active" Property Listing
   div class="container"
     div class="row"
@@ -11,31 +11,36 @@ div id="page-content"
           header class=""
             h1 Properties Listing
           section id="properties"
-            - @properties.each_slice(3).to_a.each do |properties|
-              div class="row"
-                - properties.each do |property|
-                  div class='col-md-4 col-sm-4'
-                    div class='property' style='margin-bottom: 30px;'
-                      figure class='tag status' =property.status.titleize
-                      a href=single_pages_url(property_id: property.id)
-                        div class='property-image'
-                          img alt='' src=property.images.first.url 
-                        div class='overlay'
-                          div class='info'
-                            div class='tag price' =number_to_currency(property.unit_price, unit: 'Php')
-                            h3 =property.name
-                            figure=property.location
-                          ul class='additional-info'
-                            li
-                              header Area:
-                              figure
-                                | #{property.min_area}-#{property.max_area}
-                                sup 2
-                            li
-                              header Beds:
-                              figure 1 or 2
-                            li
-                              header Baths:
-                              figure 1
+            - if @properties.any?
+              - @properties.each_slice(3).to_a.each do |properties|
+                div class="row"
+                  - properties.each do |property|
+                    div class='col-md-4 col-sm-4'
+                      div class='property' style='margin-bottom: 30px;'
+                        figure class='tag status' =property.status.titleize
+                        a href=single_pages_url(property_id: property.id)
+                          div class='property-image'
+                            img alt='' src=property.images.first.url 
+                          div class='overlay'
+                            div class='info'
+                              div class='tag price' =property_price_label(property.unit_price)
+                              h3 =property.name
+                              figure=property.short_address
+                            ul class='additional-info'
+                              li
+                                header Area:
+                                figure
+                                  | #{property.min_area}-#{property.max_area}
+                                  sup 2
+                              li
+                                header Beds:
+                                figure 1 or 2
+                              li
+                                header Baths:
+                                figure 1
+            - else
+              div class='alert alert-danger' role='alert'
+                strong No results found.
+                |  Please try another search criteria.
       div class="col-md-3 col-sm-3"
         = render partial: 'zoner/sidebar'
