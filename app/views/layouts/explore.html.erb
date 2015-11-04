@@ -21,49 +21,7 @@
 
         <div id="wrapper">
             <%= render partial: "misc/map_view"%>
-            <div id="content">
-                <div class="resultsList">
-                    <div class="row">
-                        <% @properties.each do |property|%>
-                          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                              <a href="<%= single_pages_path(property_id: property.id)%>" class="card">
-                                  <div class="figure">
-                                      <% image = @images[property.id].first %>
-                                      <img src='<%= image.url%>' alt='image' />
-                                      <div class="figCaption">
-                                          <% unit_type = property.unit_types.first
-                                             unit_cost = number_to_human(property.unit_price, {units: {unit: 'ml', million: 'M'} })
-                                          %>
-                                          <div>Php<%=unit_cost%></div>
-                                          <span class="icon-eye"> <%= property[:views]%></span>
-                                          <span class="icon-heart"> <%= property[:likes]%></span>
-                                          <span class="icon-bubble"> <%= property[:comments]%></span>
-                                      </div>
-                                      <div class="figView"><span class="icon-heart"></span></div>
-                                      <div class="figType">FOR SALE</div>
-                                  </div>
-                                  <h2><%= property.name %></h2>
-                                  <div class="cardAddress">
-                                      <span class="icon-pointer"></span>
-                                      <%= property.location%>
-                                  </div>
-                                  <div class="cardRating">
-                                      <% (1..5).each do |i| %>
-                                        <span class="fa fa-star"></span>
-                                      <% end %>
-                                  </div>
-                                  <ul class="cardFeat">
-                                      <li><span class="fa fa-moon-o"></span> <%= unit_type.bedrooms%></li>
-                                      <li><span class="icon-drop"></span><%= unit_type.bathrooms%></li>
-                                      <li><span class="icon-frame"></span> <%= unit_type.floor_area_max%> sq m</li>
-                                      <li><span></span>Php <%= unit_cost%></li>
-                                  </ul>
-                                  <div class="clearfix"></div>
-                              </a>
-                          </div>
-                        <% end %>
-                </div>
-            </div>
+            <%= yield %>
             <div class="clearfix"></div>
         </div>
 

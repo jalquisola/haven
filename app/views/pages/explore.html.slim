@@ -1,0 +1,38 @@
+div id="content"
+  div class="resultsList"
+    div class="row"
+      - @properties.each do |property|
+        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
+          a href=single_pages_path(property_id: property.id) class="card"
+            div class="figure"
+              - image = @images[property.id].first
+              img src=image.url alt='image'
+              div class="figCaption"
+                div =number_to_human(property.unit_price, format: "Php %n %u+")
+                span class="icon-eye" = property[:views]
+                span class="icon-heart" = property[:likes]
+                span class="icon-bubble"= property[:comments]
+              div class="figView"
+                span class="icon-heart"
+              div class="figType" =property.status.titleize
+            h2= property.name
+            div class="cardAddress"
+              span class="icon-pointer"
+              | #{property.short_address}
+
+            div class="cardRating"
+              - (1..5).each do |i|
+                span class="fa fa-star"
+            ul class="cardFeat"
+              li
+                span class="fa fa-moon-o"
+                | 2
+              li
+                span class="icon-drop"
+                | 1
+              li
+                span class="icon-frame"
+                | #{property.max_area} sq m
+              li
+                span =price_label(property.unit_price)
+            div class="clearfix"
