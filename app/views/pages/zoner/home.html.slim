@@ -1,0 +1,136 @@
+div id="page-content"
+  section id="banner"
+    div class="block has-dark-background background-color-default-darker center text-banner"
+      div class="container"
+        h1 class="no-bottom-margin no-border"
+          | Zoner Is Fully Loaded Real Estate Template with &nbsp
+          a href="#" class="text-underline" Tons of Features
+          | !
+
+  /section id="our-services" class="block"
+    div class="container"
+      header class="section-title"
+        h2 Our Services
+      div class="row"
+        div class="col-md-4 col-sm-4"
+          div class="feature-box equal-height"
+            figure class="icon"
+              i class="fa fa-folder"
+            aside class="description"
+              header
+                h3 Wide Range of Properties
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              a href="properties-listing.html" class="link-arrow" Read More
+
+        div class="col-md-4 col-sm-4"
+          div class="feature-box equal-height"
+            figure class="icon"
+              i class="fa fa-users"
+            aside class="description"
+              header
+                h3 14 Agents for Your Service
+              p Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi
+              a href="agents-listing.html" class="link-arrow" Read More
+
+        div class="col-md-4 col-sm-4"
+          div class="feature-box equal-height"
+            figure class="icon"
+              i class="fa fa-money"
+            aside class="description"
+              header
+                h3 Best Price Guarantee!
+              p Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat
+              a href="#" class="link-arrow" Read More
+
+  section id="new-properties" class="block"
+    div class="container"
+      header class="section-title"
+        h2 New Properties for You
+        a href="properties-listing.html" class="link-arrow" All Properties
+
+      div class="row"
+        - Property.limit(4).each do |property|
+          div class="col-md-3 col-sm-6"
+            div class="property"
+              a href=single_pages_url(property_id: property.id)
+                div class="property-image"
+                  img alt="" src=property.images.first.url
+
+                div class="overlay"
+                  div class="info"
+                    div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
+                    h3 =property.name
+                    figure =property.short_address
+
+                  ul class="additional-info"
+                    li
+                      header Area:
+                      figure
+                      | 240m
+                      sup 2
+
+                    li
+                      header Beds:
+                      figure 2
+                    li
+                      header Baths:
+                      figure 2
+
+      div class="row"
+        - Property.limit(4).offset(4).each do |property|
+          div class="col-md-3 col-sm-6"
+            div class="property"
+              a href=single_pages_url(property_id: property.id)
+                div class="property-image"
+                  img alt="" src=property.images.first.url
+
+                div class="overlay"
+                  div class="info"
+                    div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
+                    h3 =property.name
+                    figure =property.short_address
+
+                  ul class="additional-info"
+                    li
+                      header Area:
+                      figure
+                      | 240m
+                      sup 2
+
+                    li
+                      header Beds:
+                      figure 2
+                    li
+                      header Baths:
+                      figure 2
+
+  aside id="advertising" class="block"
+    div class="container"
+      a href="submit.html"
+        div class="banner"
+          div class="wrapper"
+            span class="title" Do you want your property to be listed here?
+            span class="submit"
+              | Submit it now!
+              i class="fa fa-plus-square"
+
+
+  section id="testimonials" class="block"
+    div class="container"
+      header class="section-title"
+        h2 Testimonials
+      div class="owl-carousel testimonials-carousel"
+        - Testimonial.all.each do |testimonial|
+          blockquote class="testimonial"
+            figure
+              div class="image"
+                img alt="" src=testimonial.avatar_url
+            aside class="cite"
+              p= testimonial.content
+              footer= testimonial.client_name
+
+- content_for :script do
+  javascript:
+    $(window).load(function(){
+        initializeOwl(false);
+    });
