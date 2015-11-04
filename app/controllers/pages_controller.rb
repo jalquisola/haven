@@ -25,7 +25,7 @@ class PagesController < ApplicationController
   end
 
   def single
-    @property = Property.where(id: params[:property_id]).first
+    @property = Property.friendly.find(params[:property_id])
     return redirect_to root_url  unless @property
 
 

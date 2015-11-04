@@ -92,7 +92,7 @@ div id="content" class='mob-max'
       - if @properties.any?
         - @properties.each do |property|
           div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
-            a href=single_pages_path(property_id: property.id) class="card"
+            a href=single_pages_path(property_id: property.slug) class="card"
               div class="figure"
                 - image = @images[property.id].first
                 img src=image.url alt='image'

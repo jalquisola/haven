@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025154157) do
+ActiveRecord::Schema.define(version: 20151104130342) do
+
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "avatar_url",      limit: 255
@@ -99,6 +100,19 @@ ActiveRecord::Schema.define(version: 20151025154157) do
 
   add_index "floor_plans", ["property_id"], name: "index_floor_plans_on_property_id", using: :btree
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string   "slug",           limit: 255, null: false
+    t.integer  "sluggable_id",   limit: 4,   null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope",          limit: 255
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.string   "provider",   limit: 255
@@ -141,7 +155,10 @@ ActiveRecord::Schema.define(version: 20151025154157) do
     t.integer  "rating",          limit: 4
     t.string   "video_url",       limit: 255
     t.string   "short_address",   limit: 255
+    t.string   "slug",            limit: 255
   end
+
+  add_index "properties", ["slug"], name: "index_properties_on_slug", unique: true, using: :btree
 
   create_table "testimonials", force: :cascade do |t|
     t.string "client_name",          limit: 255
