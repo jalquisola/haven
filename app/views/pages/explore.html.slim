@@ -1,38 +1,122 @@
 div id="content"
+  div class="filter"
+    h1 class="osLight" Filter your results
+    a href="#" class="handleFilter"
+      span class="icon-equalizer"
+    div class="clearfix"
+    = form_tag(explore_pages_url, {method: :get, class:'filterForm'}) do
+      div class="row"
+        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem"
+          div class="formField controls"
+            label Status
+            a href="#" data-toggle="dropdown" class="btn btn-gray dropdown-btn dropdown-toggle propTypeSelect"
+              span class='dropdown-label' =Property.statuses.key(params[:status].to_i).titleize || 'Status'
+              span class="fa fa-angle-down dsArrow"
+            ul class="dropdown-menu dropdown-select full" role="menu"
+              - Property.statuses.each do |label, index|
+                - if params[:status].to_i == index
+                  li class="active"
+                    input type="radio" name="status" value=index checked='checked'
+                      a href="#" =label.titleize
+                - else
+                  li class=""
+                    input type="radio" name="status" value=index
+                      a href="#" =label.titleize
+
+        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem"
+          div class="formField"
+            label City
+            a href="#" data-toggle="dropdown" class="btn btn-gray dropdown-btn dropdown-toggle propTypeSelect"
+              span class='dropdown-label' = params[:city] || 'City'
+              span class="fa fa-angle-down dsArrow"
+            ul class="dropdown-menu dropdown-select full" role="menu"
+              - ['All', 'Pasay City', 'Makati City', 'Tagaytay City'].each do |city|
+                - if params[:city] == city
+                  li class="active"
+                    input type="radio" name="city" value=city checked='checked'
+                      a href="#" =city
+                - else
+                  li class=""
+                    input type="radio" name="city" value=city
+                      a href="#" =city
+
+      div class="row"
+        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem"
+          div class="formField"
+            label Property Type
+            a href="#" data-toggle="dropdown" class="btn btn-gray dropdown-btn dropdown-toggle propTypeSelect"
+              span class='dropdown-label' =Property.property_types.key(params[:property_type].to_i).titleize || 'Type'
+              span class="fa fa-angle-down dsArrow"
+            ul class="dropdown-menu dropdown-select full" role="menu"
+              - Property.property_types.each do |label, index|
+                - if params[:property_type].to_i == index
+                  li class="active"
+                    input type="radio" name="property_type" value=index checked='checked'
+                      a href="#" =label.titleize
+                - else
+                  li class=""
+                    input type="radio" name="property_type" value=index
+                      a href="#" =label.titleize
+
+
+        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 formItem"
+          div class="formField"
+            label Price
+            a href="#" data-toggle="dropdown" class="btn btn-gray dropdown-btn dropdown-toggle propTypeSelect"
+              span class="dropdown-label" = params[:price].present? ? "Php #{params[:price]}M+" : 'Price'
+              span class="fa fa-angle-down dsArrow"
+            ul class="dropdown-menu dropdown-select full" role="menu"
+              - (2..5).each do |val|
+                - if params[:price].to_i == val
+                  li class="active"
+                    input type="radio" name="price" value=val checked='checked'
+                      a href="#" ="Php #{val}M+"
+                - else
+                  li class=""
+                    input type="radio" name="price" value=val
+                      a href="#" ="Php #{val}M+"
+      div class='row'
+        button type='submit' class='btn btn-green btn-block' Search
+
   div class="resultsList"
     div class="row"
-      - @properties.each do |property|
-        div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
-          a href=single_pages_path(property_id: property.id) class="card"
-            div class="figure"
-              - image = @images[property.id].first
-              img src=image.url alt='image'
-              div class="figCaption"
-                div =number_to_human(property.unit_price, format: "Php %n %u+")
-                span class="icon-eye" = property[:views]
-                span class="icon-heart" = property[:likes]
-                span class="icon-bubble"= property[:comments]
-              div class="figView"
-                span class="icon-heart"
-              div class="figType" =property.status.titleize
-            h2= property.name
-            div class="cardAddress"
-              span class="icon-pointer"
-              | #{property.short_address}
+      - if @properties.any?
+        - @properties.each do |property|
+          div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"
+            a href=single_pages_path(property_id: property.id) class="card"
+              div class="figure"
+                - image = @images[property.id].first
+                img src=image.url alt='image'
+                div class="figCaption"
+                  div =number_to_human(property.unit_price, format: "Php %n %u+")
+                  span class="icon-eye" = property[:views]
+                  span class="icon-heart" = property[:likes]
+                  span class="icon-bubble"= property[:comments]
+                div class="figView"
+                  span class="icon-heart"
+                div class="figType" =property.status.titleize
+              h2= property.name
+              div class="cardAddress"
+                span class="icon-pointer"
+                | #{property.short_address}
 
-            div class="cardRating"
-              - (1..5).each do |i|
-                span class="fa fa-star"
-            ul class="cardFeat"
-              li
-                span class="fa fa-moon-o"
-                | 2
-              li
-                span class="icon-drop"
-                | 1
-              li
-                span class="icon-frame"
-                | #{property.max_area} sq m
-              li
-                span =price_label(property.unit_price)
-            div class="clearfix"
+              div class="cardRating"
+                - (1..5).each do |i|
+                  span class="fa fa-star"
+              ul class="cardFeat"
+                li
+                  span class="fa fa-moon-o"
+                  | 2
+                li
+                  span class="icon-drop"
+                  | 1
+                li
+                  span class="icon-frame"
+                  | #{property.max_area} sq m
+                li
+                  span =price_label(property.unit_price)
+              div class="clearfix"
+      - else
+        div class='alert alert-danger' role='alert'
+          strong No results found.
+          |  Please try another search criteria

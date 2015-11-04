@@ -1,18 +1,20 @@
 ruby:
   map_data = []
-  @properties.each do |property|
-    image = @images[property.id].first
+  properties = @properties.present? ? @properties : Property.all
+  images = @images.present? ? @images : Image.where(property_id: properties.map(&:id), position: 0).index_by(property_id)
+  properties.each do |property|
+    image = images[property.id].first
     unit_type= property.unit_types.first
     obj = {
       id: property.id,
       title: property.name,
       image:  image.url,
-      type: 'FOR SALE',
-      price: number_to_currency(property.unit_price, unit: "Php") + '++',
-      address: property.location,
-      bedrooms: unit_type.bedrooms,
-      bathrooms: unit_type.bathrooms,
-      area: unit_type.floor_area_min,
+      type: property.property_type,
+      price: price_label(property.unit_price),
+      address: property.short_address,
+      bedrooms: 2,
+      bathrooms: 1,
+      area: property.max_area,
       propertyUrl: "/pages/single?property_id=#{property.id}",
       position: {
           lat: property.latitude.to_f,
