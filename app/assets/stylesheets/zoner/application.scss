@@ -20,3 +20,11 @@
  *= require zoner/style.css
  *= require_self
  */
+
+.social-share{
+  display: inline-block;
+  font-size: 1px;
+  iframe, .fb-share-button{
+    vertical-align: middle;
+  }
+}

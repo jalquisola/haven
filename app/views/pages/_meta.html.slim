@@ -1,0 +1,4 @@
+- content_for :meta do
+  meta property="og:url" content=single_pages_url(property_id: property.id)
+  meta property="og:description"   content=property.description.info
+  meta property="og:image" content=property.images.first.url

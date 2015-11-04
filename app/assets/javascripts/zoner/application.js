@@ -35,4 +35,3 @@
 //= require zoner/custom-map.js
 //= require zoner/custom.js
 //= require jquery_ujs
-//

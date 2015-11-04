@@ -1,11 +1,16 @@
+- content_for :meta do 
+  meta property="og:url" content=root_url
+  meta property="og:description"   content="Don't wait to buy real estate, BUY REAL ESTATE and WAIT! - T. Harv Eker"
+  meta property="og:image" content=Image.first.url
+
 div id="page-content"
   section id="banner"
     div class="block has-dark-background background-color-default-darker center text-banner"
       div class="container"
         h1 class="no-bottom-margin no-border"
-          | Zoner Is Fully Loaded Real Estate Template with &nbsp
-          a href="#" class="text-underline" Tons of Features
-          | !
+          | Don't wait to buy real estate,
+          strong  BUY REAL ESTATE and WAIT! - 
+          em T. Harv Eker
 
   /section id="our-services" class="block"
     div class="container"
@@ -58,7 +63,7 @@ div id="page-content"
 
                 div class="overlay"
                   div class="info"
-                    div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
+                    div class="tag price"=property_price_label(property.unit_price)
                     h3 =property.name
                     figure =property.short_address
 

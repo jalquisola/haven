@@ -10,7 +10,13 @@
     <%= csrf_meta_tags %>
     <%= yield :header_script%>
 
-    <title><%= ENV['WEBSITE_URL']%></title>
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content='<%=ENV['WEBSITE_TITLE']%>' />
+
+    <%= yield :meta%>
+
+
+    <title><%= ENV['WEBSITE_TITLE']%></title>
 
 </head>
 
@@ -29,11 +35,20 @@
                 <div class="contact">
                     <figure><strong>Phone:</strong>+65 97919534</figure>
                     <figure><strong>Email:</strong>mybesthaven888@gmail.com</figure>
+                    <div class='social-share'>
+                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+                      <a class="twitter-share-button" style='display: inline-block;'
+                        href="https://twitter.com/intent/tweet?text=Don%27t%20wait%20to%20buy%20real%20estate%2C%20BUY%20REAL%20ESTATE%20and%20WAIT!%20-%20T.%20Harv%20Eker"
+                        data-counturl="https://dev.twitter.com/web/tweet-button"
+                      >
+                      Tweet</a>
+                    </div>
                 </div>
                 <div class="user-area">
                     <div class="actions">
                         <a href="<%= new_user_registration_url %>" class="promoted"><strong>Register</strong></a>
                         <a href="<%= new_user_session_url%>">Sign In</a>
+
                     </div>
                     <!--<div class="language-bar">
                         <a href="#" class="active"><img src="assets/img/flags/gb.png" alt=""></a>
@@ -75,6 +90,7 @@
     <%= yield %>
     <%= render partial: 'zoner/footer' if params[:action] != 'single'.freeze%>
 </div>
+
 <%= render partial: 'zoner/footer' if params[:action] == 'single'.freeze%>
 
 <div id="overlay"></div>
@@ -85,5 +101,53 @@
 <%= javascript_include_tag 'zoner/application'%>
 <%= yield :script%>
 
+<script>
+  $(document).ready(function(){
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : "<%= ENV['FACEBOOK_APP_ID']%>",
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+   });
+</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
