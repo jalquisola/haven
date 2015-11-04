@@ -13,11 +13,35 @@
     = f.label :location
     = f.text_field :location
   .field
+    = f.label :short_address
+    = f.text_field :short_address
+  .field
     = f.label :latitude
     = f.text_field :latitude
   .field
     = f.label :longitude
     = f.text_field :longitude
+  .field
+    = f.label :unit_price
+    = f.text_field :unit_price
+  .field
+    = f.label :monthly_amort
+    = f.text_field :monthly_amort
+  .field
+    = f.label :min_area
+    = f.text_field :min_area
+  .field
+    = f.label :max_area
+    = f.text_field :max_area
+  .field
+    = f.label :property_type
+    = f.select :property_type, Property.property_types.keys, {include_blank: true, selected: @property.property_type}
+  .field
+    = f.label :status
+    = f.select :status, Property.statuses.keys, {include_blank: true, selected: @property.status}
+  .field
+    = f.label :video_url
+    = f.text_field :video_url
   .field
     = f.label :agent_id
     = f.select :agent_id, Agent.all.collect{|a| [a.name, a.id]}
