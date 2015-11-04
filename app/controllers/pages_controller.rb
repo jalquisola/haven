@@ -15,6 +15,12 @@ class PagesController < ApplicationController
     @properties = Property.where("short_address LIKE ?", params[:city]) if params[:city].present?
     @properties = @properties.where(property_type: params[:property_type]) if params[:property_type].present?
     @properties = @properties.where(status: params[:status]) if params[:status].present?
+
+    if params[:price].present?
+      price = params[:price].match(';') ? params[:price].split(';').first : "#{params[:price]}000000"
+      @properties = @properties.where("unit_price >= ?", price)
+    end
+
     render :explore, layout: 'explore'
   end
 

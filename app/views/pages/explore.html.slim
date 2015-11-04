@@ -13,6 +13,9 @@ div id="content"
               span class='dropdown-label' =Property.statuses.key(params[:status].to_i).titleize || 'Status'
               span class="fa fa-angle-down dsArrow"
             ul class="dropdown-menu dropdown-select full" role="menu"
+              li class=""
+                input type="radio" name="status" value=''
+                  a href="#" All
               - Property.statuses.each do |label, index|
                 - if params[:status].to_i == index
                   li class="active"
@@ -30,7 +33,10 @@ div id="content"
               span class='dropdown-label' = params[:city] || 'City'
               span class="fa fa-angle-down dsArrow"
             ul class="dropdown-menu dropdown-select full" role="menu"
-              - ['All', 'Pasay City', 'Makati City', 'Tagaytay City'].each do |city|
+              li class=""
+                input type="radio" name="city" value=''
+                  a href="#" All
+              - ['Pasay City', 'Makati City', 'Tagaytay City'].each do |city|
                 - if params[:city] == city
                   li class="active"
                     input type="radio" name="city" value=city checked='checked'
@@ -48,6 +54,9 @@ div id="content"
               span class='dropdown-label' =Property.property_types.key(params[:property_type].to_i).titleize || 'Type'
               span class="fa fa-angle-down dsArrow"
             ul class="dropdown-menu dropdown-select full" role="menu"
+              li class=""
+                input type="radio" name="property_type" value=''
+                  a href="#" All
               - Property.property_types.each do |label, index|
                 - if params[:property_type].to_i == index
                   li class="active"
