@@ -7,3 +7,11 @@ div class="amenities"
       div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 amItem #{sClass}"
         span class="fa #{amenity.icon}"
         =< amenity.name
+
+div id='video' class='description' data-url=@property.video_url
+
+/div class='description buttonsWrapper'
+  a href='javascript:void(0)' class="btn btn-red btn-lg"=price_label(@property.unit_price)
+  a href='javascript:void(0)' class="btn btn-blue btn-lg"=price_label(@property.monthly_amort)
+
+

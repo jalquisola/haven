@@ -540,4 +540,13 @@
 
     $('input, textarea').placeholder();
 
+    $('#facebook').click(function(){
+      FB.ui({
+        method: 'share',
+        href: window.location.href,
+      }, function(response){});
+    });
+
+    var $video = $('#video');
+    $video.append("<iframe src='" + $video.data('url') + "' width=" + $video.width() + " height=281 frameborder=0 allowfullscreen/>");
 })(jQuery);
