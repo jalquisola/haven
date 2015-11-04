@@ -12,7 +12,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20151025154157) do
-
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "avatar_url",      limit: 255
@@ -92,6 +91,14 @@ ActiveRecord::Schema.define(version: 20151025154157) do
     t.string   "subject",    limit: 255
   end
 
+  create_table "floor_plans", force: :cascade do |t|
+    t.string  "name",        limit: 255
+    t.string  "image_url",   limit: 255
+    t.integer "property_id", limit: 4
+  end
+
+  add_index "floor_plans", ["property_id"], name: "index_floor_plans_on_property_id", using: :btree
+
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.string   "provider",   limit: 255
@@ -116,8 +123,8 @@ ActiveRecord::Schema.define(version: 20151025154157) do
   create_table "properties", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "location",        limit: 255
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",                                                      null: false
+    t.datetime "updated_at",                                                      null: false
     t.string   "latitude",        limit: 255
     t.string   "longitude",       limit: 255
     t.integer  "unit_price",      limit: 4

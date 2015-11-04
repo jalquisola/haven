@@ -8,6 +8,13 @@ properties = [
     longitude: "121.014695",
     unit_price: 3_000_000,
     monthly_amort: 14_000,
+    min_area: 22.95,
+    max_area: 46.38,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
+    video_url: "https://www.youtube.com/embed/TEGIQkWHdBM",
     description: {
       title: "The Air of Convenience",
       subtitle: "Personal efficiency and professional success made attainable",
@@ -86,7 +93,13 @@ properties = [
       "#{BASE_URL}images/air_residences/amenities.jpg",
       "#{BASE_URL}images/air_residences/bar.jpg",
       "#{BASE_URL}images/air_residences/one_bedroom.jpg",
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/air_residences/floor_plans/1br.jpg",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/air_residences/floor_plans/1brb.jpg",
+      "2 Bedroom" => "#{BASE_URL}images/air_residences/floor_plans/2br.jpg",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/air_residences/floor_plans/2brb.jpg",
+    }
   },
   {
     name: "Fame Residences",
@@ -96,6 +109,13 @@ properties = [
     longitude: "121.052322",
     unit_price: 2_600_000,
     monthly_amort: 8_000,
+    min_area: 24.1,
+    max_area: 38.68,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
+    video_url: "https://www.youtube.com/2q7DujqEj3w",
     description: {
       title: "Fame Residences",
       subtitle: "Have a glimpse of the life lived in glitz and glamour, with gold curtain walls that surround this lumiscent development.",
@@ -146,7 +166,11 @@ properties = [
       "#{BASE_URL}images/fame/garden.jpg",
       "#{BASE_URL}images/fame/lobby.jpg",
       "#{BASE_URL}images/fame/pool.jpg",
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom with balcony type A" => "#{BASE_URL}images/fame/floor_plans/1brb.jpg",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/fame/floor_plans/2brbE.jpg",
+    }
   },
   {
     name: "Shore Residences",
@@ -156,6 +180,13 @@ properties = [
     longitude: "120.985125",
     unit_price: 2_900_000,
     monthly_amort: 12_000,
+    min_area: 24.1,
+    max_area: 58.46,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2018,
+    video_url: "https://www.youtube.com/embed/89H7qWwI224",
     description: {
       title: "Shore Residences",
       subtitle: "Conveniently located at the SM Mall of Asia Complex in Pasay City. It offers the finest in resort living with an exclusive beack-like amenity right at the heart of the development",
@@ -205,7 +236,12 @@ properties = [
       "#{BASE_URL}images/shore/pool.jpg",
       "#{BASE_URL}images/shore/amenities.jpg",
       "#{BASE_URL}images/shore/bedroom.jpg"
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/shore/shore_1bra.jpg",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/shore/shore_1br.jpg",
+      "2 Bedroom" => "#{BASE_URL}images/shore/shore_2br.jpg",
+    }
   },
   {
     name: "Breeze Residences",
@@ -215,6 +251,13 @@ properties = [
     longitude: "120.9892",
     unit_price: 2_800_000,
     monthly_amort: 12_000,
+    min_area: 22,
+    max_area: 40,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
+    video_url: "https://www.youtube.com/embed/Vz9MqaxyPr8",
     description: {
       title: "Breeze Residences",
       subtitle: "Located in a very relaxing suburb, the residents can choose to enjoy the scenic view of the Manila Bay Sunset or the eye-catching Makati Skyline.",
@@ -264,7 +307,12 @@ properties = [
       "#{BASE_URL}images/breeze/balcony.jpg",
       "#{BASE_URL}images/breeze/penthouse.jpg",
       "#{BASE_URL}images/breeze/pool_area.jpg"
-    ]
+    ],
+    floor_plans: {
+      "1 Bedroom" => "#{BASE_URL}images/breeze/floor_plans/1br.png",
+      "1 Bedroom with balcony" => "#{BASE_URL}images/breeze/floor_plans/1brb.png",
+      "2 Bedroom with balcony" => "#{BASE_URL}images/breeze/floor_plans/2brb_56.png",
+    }
   },
   {
     name: "Jazz Residences",
@@ -274,6 +322,13 @@ properties = [
     longitude: "121.021684",
     unit_price: 2_900_000,
     monthly_amort: 12_000,
+    min_area: 20,
+    max_area: 64,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
+    video_url: "https://www.youtube.com/embed/4eeH9dlf59w",
     description: {
       title: "Jazz Residences",
       subtitle: "Jazz Residences",
@@ -339,7 +394,13 @@ properties = [
       "#{BASE_URL}images/jazz/lobby.jpg",
       "#{BASE_URL}images/jazz/amenities.jpg",
       "#{BASE_URL}images/jazz/model.jpg"
-    ]
+    ],
+    floor_plans: {
+      "Site Development" =>  "#{BASE_URL}images/jazz/floor_plans/site.jpg",
+      "1 Bedroom End Unit" =>  "#{BASE_URL}images/jazz/floor_plans/1br_end_unit.jpg",
+      "1 Bedroom with balcony" =>  "#{BASE_URL}images/jazz/floor_plans/1brb.jpg",
+      "2 Bedroom" =>  "#{BASE_URL}images/jazz/floor_plans/2br.jpg",
+    }
   },
   {
     name: "Wind Residences",
@@ -349,6 +410,13 @@ properties = [
     longitude: "120.943798",
     unit_price: 2_500_000,
     monthly_amort: 11_000,
+    min_area: 20,
+    max_area: 66,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2016,
+    video_url: "https://www.youtube.com/embed/e_x8nPrJVqw",
     description: {
       title: "Wind Residences",
       subtitle: "Wind Residences",
@@ -413,7 +481,13 @@ properties = [
       "#{BASE_URL}images/wind/amenities.jpg",
       "#{BASE_URL}images/wind/residences.jpg",
       "#{BASE_URL}images/wind/lobby.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Site Development" => "#{BASE_URL}images/wind/floor_plans/site.jpg",
+      "Tower 1 Penthouse" => "#{BASE_URL}images/wind/floor_plans/tower1_penthouse.jpg",
+      "Tower 2 Penthouse" => "#{BASE_URL}images/wind/floor_plans/tower2_penthouse.jpg",
+      "Tower 3 Resort Units" => "#{BASE_URL}images/wind/floor_plans/tower3_resort_units.jpg",
+    }
   },
   {
     name: "Grand Tower Cebu",
@@ -423,6 +497,13 @@ properties = [
     longitude: "123.920481",
     unit_price: 3_700_000,
     monthly_amort: 24_000,
+    min_area: 25,
+    max_area: 52.10,
+    property_type: :condo_hotel,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
+    video_url: "https://www.youtube.com/embed/CcZh4Hj4owQ",
     description: {
       title: "Grand Tower Cebu",
       subtitle: "Grand Tower Cebu",
@@ -458,7 +539,11 @@ properties = [
       "#{BASE_URL}images/grand_tower/office.jpg",
       "#{BASE_URL}images/grand_tower/amenities.jpg",
       "#{BASE_URL}images/grand_tower/unwind_place.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Condo Hotel" => "#{BASE_URL}images/grand_tower/floor_plans/condo_hotel.jpg",
+      "Site Development" => "#{BASE_URL}images/grand_tower/floor_plans/site.jpg",
+    }
   },
   {
     name: "Grand Residences",
@@ -468,6 +553,13 @@ properties = [
     longitude: "123.908551",
     unit_price: 2_100_000,
     monthly_amort: 12_000,
+    min_area: 22,
+    max_area: 55.00,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
+    video_url: "https://www.youtube.com/embed/zhr9nr9xarI",
     description: {
       title: "Grand Residences",
       subtitle: "Grand Residences",
@@ -514,7 +606,11 @@ properties = [
       "#{BASE_URL}images/grand_residences/one_bedroom.jpg",
       "#{BASE_URL}images/grand_residences/toilet.jpg",
       "#{BASE_URL}images/grand_residences/two_bedroom.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Studio Unit" => "#{BASE_URL}images/grand_residences/floor_plans/studio.jpg",
+      "1 Bedroom Unit" => "#{BASE_URL}images/grand_residences/floor_plans/1br.jpg",
+    }
   },
   {
     name: "Amani Grand Resort Residences",
@@ -524,6 +620,13 @@ properties = [
     longitude: "123.977838",
     unit_price: 2_300_000,
     monthly_amort: 12_000,
+    min_area: 27,
+    max_area: 106.00,
+    property_type: :condo,
+    status: :pre_selling,
+    rating: 5,
+    turnover: 2020,
+    video_url: "https://www.youtube.com/G_izDEpCfDQ",
     description: {
       title: "Amani Grand Resort Residences",
       subtitle: "Amani Grand Resort Residences",
@@ -570,7 +673,11 @@ properties = [
       "#{BASE_URL}images/grand_amani/intro2.jpg",
       "#{BASE_URL}images/grand_amani/perspective.jpg",
       "#{BASE_URL}images/grand_amani/pool.jpg",
-    ]
+    ],
+    floor_plans: {
+      "Studio Unit" => "#{BASE_URL}images/grand_amani/floor_plans/studio.jpg",
+      "1 Bedroom Unit" => "#{BASE_URL}images/grand_amani/floor_plans/1br.jpg",
+    }
   },
 ]
 
@@ -586,6 +693,13 @@ properties.each do |property|
   p.longitude = property[:longitude]
   p.unit_price = property[:unit_price]
   p.monthly_amort = property[:monthly_amort]
+  p.min_area = property[:min_area]
+  p.max_area = property[:max_area]
+  p.rating = property[:rating]
+  p.turnover = property[:turnover]
+  p.property_type = property[:property_type]
+  p.status = property[:status]
+  p.video_url = property[:video_url]
   if p.save!
     puts p.name
     description = property[:description]
@@ -599,6 +713,12 @@ properties.each do |property|
     property[:images].each_with_index do |image, index|
       img = Image.new(url: image, name: image, position: index+1, property_id: p.id)
       img.save!
+    end
+
+    FloorPlan.where(property_id: p.id).delete_all
+    property[:floor_plans].each do |name, url|
+      fp = FloorPlan.new(image_url: url, name: name, property_id: p.id)
+      fp.save!
     end
 
     #property[:amenities].each do |amenity|
