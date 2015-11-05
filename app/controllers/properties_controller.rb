@@ -50,7 +50,7 @@ class PropertiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property
-      @property = Property.find(params[:id])
+      @property = Property.friendly.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
@@ -58,7 +58,7 @@ class PropertiesController < ApplicationController
       params.require(:property).
             permit(:name, :location, :latitude, :longitude, :agent_id, :short_address,
                    :unit_price, :monthly_amort, :min_area, :max_area, :property_type,
-                   :status,
+                   :status, :turnover, :video_url,
                    amenity_ids: [])
     end
 end
