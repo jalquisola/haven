@@ -198,13 +198,13 @@
                                 image = property.images.first
                             %>
                             <div class="property small">
-                                <a href="<%= single_pages_url(property_id: property.id)%>">
+                                <a href="<%= realestates_url(property_id: property.id)%>">
                                     <div class="property-image">
                                         <img alt="" src="<%= image.url%>">
                                     </div>
                                 </a>
                                 <div class="info">
-                                    <a href="<%= single_pages_path(property_id: property.id)%>">
+                                    <a href="<%= realestates_url(property_id: property.id)%>">
                                         <h4><%= property.name%></h4>
                                     </a>
                                     <figure><%= property.location%></figure>

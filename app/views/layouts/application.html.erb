@@ -2,6 +2,7 @@
 <html>
 <head>
     <title><%= ENV['WEBSITE_TITLE']%></title>
+    <meta name='description' content='<%= description_label(@property)%>' />
   <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>

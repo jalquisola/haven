@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Realproperty</title>
+    <title><%= ENV['WEBSITE_TITLE']%> | SignIn</title>
+    <meta name='description' content='<%= description_label(@property)%>' />
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>
   <meta charset="utf-8">

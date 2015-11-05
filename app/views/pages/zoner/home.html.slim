@@ -52,7 +52,7 @@ div id="page-content"
         - Property.limit(4).each do |property|
           div class="col-md-3 col-sm-6"
             div class="property"
-              a href=single_pages_url(property_id: property.slug)
+              a href=realestates_url(property_id: property.slug)
                 div class="property-image"
                   img alt="" src=property.images.first.url
 
@@ -80,7 +80,7 @@ div id="page-content"
         - Property.limit(4).offset(4).each do |property|
           div class="col-md-3 col-sm-6"
             div class="property"
-              a href=single_pages_url(property_id: property.slug)
+              a href=realestates_url(property_id: property.slug)
                 div class="property-image"
                   img alt="" src=property.images.first.url
 
