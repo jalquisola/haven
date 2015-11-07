@@ -46,8 +46,14 @@
                 </div>
                 <div class="user-area">
                     <div class="actions">
-                        <a href="<%= new_user_registration_url %>" class="promoted"><strong>Register</strong></a>
-                        <a href="<%= new_user_session_url%>">Sign In</a>
+                        <%- if user_signed_in? %>
+                          <a href="<%= destroy_user_session_url%>" data-method='delete' rel='nofollow'>
+                              Sign Out
+                          </a>
+                        <%- else%>
+                          <a href="<%= new_user_registration_url %>" class="promoted"><strong>Register</strong></a>
+                          <a href="<%= new_user_session_url%>">Sign In</a>
+                        <%- end%>
 
                     </div>
                     <!--<div class="language-bar">
