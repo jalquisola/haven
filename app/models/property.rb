@@ -1,6 +1,11 @@
 class Property < ActiveRecord::Base
+  include FriendlyId
   enum status: [:pre_selling, :sale, :rent]
   enum property_type: [:condo, :landed, :office, :condo_hotel ]
+
+  friendly_id :name, use: :slugged
+
+  validates_presence_of :name
 
   has_many :images
   has_many :floor_plans
