@@ -27,8 +27,6 @@
 //= require zoner/jquery.dependClass-0.1.js
 //= require zoner/draggable-0.1.js
 //= require zoner/jquery.slider.js
-//= require zoner/markerwithlabel_packed.js
-//= require zoner/infobox.js
 //= require zoner/jquery.raty.min.js
 //= require zoner/jquery.magnific-popup.min.js
 //= require zoner/jquery.fitvids.js
