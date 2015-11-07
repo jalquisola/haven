@@ -3,23 +3,17 @@ footer id="page-footer"
     aside id="footer-main"
       div class="container"
         div class="row"
-          /div class="col-md-3 col-sm-3"
-            article
-              h3 About Us
-              p Vel fermentum ipsum. Suspendisse quis molestie odio. Interdum et malesuada fames ac ante ipsum  primis in faucibus. Quisque aliquet a metus in aliquet. Praesent ut turpis posuere, commodo odio id, ornare tortor
-              hr
-              a href="#" class="link-arrow" Read More
 
           div class="offset-md-3 offset-sm-3 col-md-3 col-sm-3"
             article
               h3 Recent Properties
               - Property.order(id: :desc).limit(2).each do |property|
                 div class="property small"
-                  a href=single_pages_url(property.id)
+                  a href=realestate_url(id: property.slug)
                     div class="property-image"
                       img alt="" src=property.images.first.url
                   div class="info"
-                    a href=single_pages_url(property.id)
+                    a href=realestate_url(id: property.slug)
                       h4 =property.name
                     figure =property.short_address
                     div class="tag price" =property_price_label(property.unit_price)
@@ -42,7 +36,7 @@ footer id="page-footer"
               h3 Useful Links
               ul class="list-unstyled list-links"
                 li
-                  a href=explore_pages_url All Properties
+                  a href=realestates_url All Properties
                 li
                   a href=new_user_registration_url Register
                 li

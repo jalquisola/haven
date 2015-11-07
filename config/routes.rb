@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :realestates, only: [:index, :show]
+
   resources :enquiries
   resources :properties do
     resources :images

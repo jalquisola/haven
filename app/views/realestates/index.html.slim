@@ -1,4 +1,4 @@
-- content_for :meta do 
+- content_for :meta do
   meta property="og:url" content=root_url
   meta property="og:description"   content="Don't wait to buy real estate, BUY REAL ESTATE and WAIT! - T. Harv Eker"
   meta property="og:image" content=Image.first.url
@@ -23,7 +23,7 @@ div id="page-content"
                     div class='col-md-4 col-sm-4'
                       div class='property' style='margin-bottom: 30px;'
                         figure class='tag status' =property.status.titleize
-                        a href=realestate_url(id: property.id)
+                        a href=realestate_url(id: property.slug)
                           div class='property-image'
                             img alt='' src=property.images.first.url 
                           div class='overlay'

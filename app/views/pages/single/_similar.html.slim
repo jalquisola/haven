@@ -14,7 +14,7 @@ div class='similar'
               - unit_type = property.unit_types.first
               - image = @images[property.id].first
               div class='col-xs-4'
-                div data-linkto=single_pages_path(property_id: property.slug) class="card"
+                div data-linkto=realestate_url(property.slug) class="card"
                   div class='figure'
                     img src=image.try(:url) alt="image"
                     div class="figCaption"
@@ -59,7 +59,7 @@ div class='similar'
               - unit_type = property.unit_types.first
               - image = @images[property.id].first
               div class='col-xs-6'
-                div data-linkto=single_pages_path(property_id: property.slug) class="card"
+                div data-linkto=realestate_url(property.slug) class="card"
                   div class='figure'
                     img src=image.try(:url) alt="image"
                     div class="figCaption"
@@ -107,7 +107,7 @@ div class='similar'
             - unit_type = property.unit_types.first
             - image = @images[property.id].first
             div class='col-xs-12'
-              div data-linkto=single_pages_path(property_id: property.slug) class="card"
+              div data-linkto=realestate_url(property.slug) class="card"
                 div class='figure'
                   img src=image.try(:url) alt="image"
                   div class="figCaption"

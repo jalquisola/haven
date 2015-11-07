@@ -1,9 +1,6 @@
 div class="search-panel"
-  /form class="form-inline" role="form"
-    div class="form-group"
-      input type="text" class="form-control" id="city" placeholder="City" autocomplete="off"
-
-    div class="form-group hidden-xs adv"
+  = form_tag(realestates_url, {method: :get,role: 'form', class:'form-inline'}) do
+    div class="form-group adv hidden-xs"
       a href="#" data-toggle="dropdown" class="btn btn-white dropdown-toggle"
         span class="dropdown-label" Rooms
         span class="caret"

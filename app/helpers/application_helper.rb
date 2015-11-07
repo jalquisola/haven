@@ -20,4 +20,12 @@ module ApplicationHelper
   def property_price_label(price)
     number_to_human(price, format: "Php %n %u+")
   end
+
+  def description_label(property)
+    if property.blank?
+      "Find your future home or investments at #{ENV['WEBSITE_TITLE']}. Own a unit for as low as Php 8,000 a month."
+    else
+      "#{property.name} is located at #{property.location}.Own a unit in #{property.name} for as low as Php #{property.monthly_amort}++ per month."
+    end
+  end
 end

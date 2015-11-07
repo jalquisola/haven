@@ -2,7 +2,7 @@ section id="sidebar"
   aside id="edit-search"
     header
       h3 Search Properties
-    = form_tag(explore_pages_url, {method: :get,role: 'form', id: 'form-sidebar', class:'form-search'}) do
+    = form_tag(realestates_url, {method: :get,role: 'form', id: 'form-sidebar', class:'form-search'}) do
       div class="form-group"
         select name="status"
           option value="" Status
@@ -10,11 +10,11 @@ section id="sidebar"
             - if params[:status].present? && params[:status].to_i== index
               option value=index selected='selected' =status.titleize
             - else
-              option value=index =status
+              option value=index =status.titleize
       div class="form-group"
         select name="country"
           option value="" Philippines
-      div class="form-group"
+      /div class="form-group"
         select name="province"
           option value='' Province
           - ['Metro Manila', 'Cebu', 'Cavite'].each do |province|
@@ -55,11 +55,11 @@ section id="sidebar"
       - Property.limit(3).each do |property|
         - image = property.images.first
         div class="property small"
-          a href=single_pages_url(property_id: property.id)
+          a href=realestate_url(id: property.slug)
             div class="property-image"
               img alt="" src=image.url
           div class="info"
-            a href=single_pages_path(property_id: property.id)
+            a href=realestate_url(id: property.slug)
               h4 =property.name
             figure =property.short_address
             div class="tag price"=property_price_label(property.unit_price)

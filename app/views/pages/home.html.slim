@@ -12,52 +12,17 @@ div id="page-content"
           strong  BUY REAL ESTATE and WAIT! - 
           em T. Harv Eker
 
-  /section id="our-services" class="block"
-    div class="container"
-      header class="section-title"
-        h2 Our Services
-      div class="row"
-        div class="col-md-4 col-sm-4"
-          div class="feature-box equal-height"
-            figure class="icon"
-              i class="fa fa-folder"
-            aside class="description"
-              header
-                h3 Wide Range of Properties
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              a href="properties-listing.html" class="link-arrow" Read More
-
-        div class="col-md-4 col-sm-4"
-          div class="feature-box equal-height"
-            figure class="icon"
-              i class="fa fa-users"
-            aside class="description"
-              header
-                h3 14 Agents for Your Service
-              p Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi
-              a href="agents-listing.html" class="link-arrow" Read More
-
-        div class="col-md-4 col-sm-4"
-          div class="feature-box equal-height"
-            figure class="icon"
-              i class="fa fa-money"
-            aside class="description"
-              header
-                h3 Best Price Guarantee!
-              p Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat
-              a href="#" class="link-arrow" Read More
-
   section id="new-properties" class="block"
     div class="container"
       header class="section-title"
         h2 New Properties for You
-        a href="properties-listing.html" class="link-arrow" All Properties
+        a href=realestates_url class="link-arrow" All Properties
 
       div class="row"
         - Property.limit(4).each do |property|
           div class="col-md-3 col-sm-6"
             div class="property"
-              a href=single_pages_url(property_id: property.id)
+              a href=realestate_url(id: property.slug)
                 div class="property-image"
                   img alt="" src=property.images.first.url
 
@@ -85,7 +50,7 @@ div id="page-content"
         - Property.limit(4).offset(4).each do |property|
           div class="col-md-3 col-sm-6"
             div class="property"
-              a href=single_pages_url(property_id: property.id)
+              a href=realestate_url(property)
                 div class="property-image"
                   img alt="" src=property.images.first.url
 
@@ -109,17 +74,6 @@ div id="page-content"
                       header Baths:
                       figure 2
 
-  /aside id="advertising" class="block"
-    div class="container"
-      a href="submit.html"
-        div class="banner"
-          div class="wrapper"
-            span class="title" Do you want your property to be listed here?
-            span class="submit"
-              | Submit it now!
-              i class="fa fa-plus-square"
-
-
   section id="testimonials" class="block"
     div class="container"
       header class="section-title"
@@ -139,4 +93,3 @@ div id="page-content"
     $(window).load(function(){
         initializeOwl(false);
     });
-
