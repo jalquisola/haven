@@ -74,20 +74,6 @@ div id="page-content"
                       header Baths:
                       figure 2
 
-  section id="testimonials" class="block"
-    div class="container"
-      header class="section-title"
-        h2 Testimonials
-      div class="owl-carousel testimonials-carousel"
-        - Testimonial.all.each do |testimonial|
-          blockquote class="testimonial"
-            figure
-              div class="image"
-                img alt="" src=testimonial.avatar_url
-            aside class="cite"
-              p= testimonial.content
-              footer= testimonial.client_name
-
 - content_for :script do
   javascript:
     $(window).load(function(){

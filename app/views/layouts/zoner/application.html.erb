@@ -10,6 +10,7 @@
 
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content='<%=ENV['WEBSITE_TITLE']%>' />
+    <meta property="fb:app_id" content="<%= ENV['FACEBOOK_APP_ID']%>" />
 
     <%= yield :meta%>
     <title><%= ENV['WEBSITE_TITLE']%></title>
@@ -32,7 +33,7 @@
                     <figure><strong>Phone:</strong>+65 97919534</figure>
                     <figure><strong>Email:</strong>mybesthaven888@gmail.com</figure>
                     <div class='social-share'>
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+                      <div id='facebook' class="fb-share-button" data-href='http://mybesthaven.com' data-layout="button_count"></div>
                       <a class="twitter-share-button" style='display: inline-block;'
                         href="https://twitter.com/intent/tweet?text=Don%27t%20wait%20to%20buy%20real%20estate%2C%20BUY%20REAL%20ESTATE%20and%20WAIT!%20-%20T.%20Harv%20Eker"
                         data-counturl="https://dev.twitter.com/web/tweet-button"
@@ -90,10 +91,10 @@
     <%= render partial: 'zoner/search_box'%>
     <% end %>
     <%= yield %>
-    <%= render partial: 'zoner/footer' if params[:action] != 'single'.freeze%>
+    <%= render partial: 'zoner/footer' if (params[:action] != 'show'.freeze || params[:controller]!='realestates'.freeze)%>
 </div>
 
-<%= render partial: 'zoner/footer' if params[:action] == 'single'.freeze%>
+<%= render partial: 'zoner/footer' if params[:action] == 'show'.freeze && params[:controller] == 'realestates'.freeze%>
 
 <div id="overlay"></div>
 
