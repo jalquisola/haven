@@ -4,7 +4,7 @@ div class="home-wrapper"
     div class="row pb40"
       - @properties.each do |property|
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
-          a href=realestates_url(property_id: property.slug) class="propWidget-2"
+          a href=realestate_url(property) class="propWidget-2"
             div class="fig"
               - image = @images[property.id].first
               - unit_type = property.unit_types.first
@@ -39,24 +39,4 @@ div class="home-wrapper"
             div class='home-testim'
               div class='home-testim-text' =testim.content
               div class='home-testim-name' ="#{testim.client_name}, #{testim.country_of_residence}, #{testim.info}"
-
-    /h2 class="osLight" Testimonials
-    /div class="row pb40" id='testimonials-wrapper'
-      - [{title: 'Find places anywhere in the Philippines', icon:'icon-pointer'}, {title: "We have agents with experience",icon: 'icon-users'}, {title: "Buy or rent beautiful places", icon: 'icon-home'}].each do |obj|
-        div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 testimonials"
-          blockquote
-            q class='lead' =obj[:title]
-            footer = ENV['AGENT']
-          /div class='quote-box'
-            /span class='quote-left'
-            /q
-              = obj[:title]
-              span class='quote-right'
-          /span class='quote-arrow'
-          /cite
-            span class='photo'
-              img class="avatar" src=asset_path('avatar-1.png') alt="avatar"
-            span class='author' = ENV['AGENT']
-            br
-            | Designer
 
