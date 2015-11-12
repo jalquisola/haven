@@ -39,22 +39,28 @@ section id="contact-agent"
             hr
       div class="col-md-5 col-sm-12"
         div class="agent-form"
-          form role="form" id="form-contact-agent" method="post"  class="clearfix"
+          = form_for Enquiry.new, html: { id: 'form-contact-agent', class:'clearfix', role: 'form' } do |f|
+            = hidden_field_tag :property_id, @property.id
             div class="form-group"
               label for="form-contact-agent-name"
                 | Your Name
                 em *
-              input type="text" class="form-control" id="form-contact-agent-name" name="form-contact-agent-name" required=''
+              = f.text_field :name, {type: 'text', class: 'form-control', id: 'form-contact-agent-name', required: ''}
             div class="form-group"
               label for="form-contact-agent-email"
                 | Your Email
                 em *
-              input type="email" class="form-control" id="form-contact-agent-email" name="form-contact-agent-email" required=''
+              = f.text_field :email, {type: 'email', class: 'form-control', id: 'form-contact-agent-email'}
+            div class="form-group"
+              label for="form-contact-agent-mobile_no"
+                | Your Contact No
+                em *
+              = f.text_field :contact_no, {type: 'text', class: 'form-control', id: 'form-contact-agent-contact_no'}
             div class="form-group"
               label for="form-contact-agent-message"
                 | Your Message
                 em *
-              textarea class="form-control" id="form-contact-agent-message" rows="2" name="form-contact-agent-message" required=''
+              = f.text_area :content, {class: 'form-control', id: 'form-contact-agent-message', rows: 2, required: ''}
             div class="form-group"
               button type="submit" class="btn pull-right btn-default" id="form-contact-agent-submit" Send a Message
             div id="form-contact-agent-status"

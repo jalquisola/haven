@@ -24,19 +24,20 @@ class EnquiriesController < ApplicationController
   # POST /enquiries
   def create
     @enquiry = Enquiry.new(enquiry_params)
+    @property = Property.friendly.find(params[:property_id])
 
     respond_to do |format|
       if @enquiry.save
         EnquiryMailer.send_email(params[:property_id], @enquiry.id).deliver_now
         format.html do
-          redirect_to pages_single_url(property_id: params[:property_id]), notice: 'Enquiry was successfully created.'
+          redirect_to realestate_path(@property), notice: 'Enquiry was successfully created.'
         end
         format.json do
           render json: @enquiry, status: :created
         end
       else
         format.html do
-          redirect_to pages_single_url(property_id: params[:property_id]), error: 'Enquiry creation failed.'
+          redirect_to realestate_path(@property), error: 'Enquiry creation failed.'
         end
         format.json do
           render json: @enquiry.errors, status: :unprocessable_entity
@@ -68,6 +69,6 @@ class EnquiriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def enquiry_params
-      params.require(:enquiry).permit(:title, :salutation, :name, :country, :contact_no, :email, :content, :subject)
+      params.require(:enquiry).permit(:name, :contact_no, :email, :content)
     end
 end
