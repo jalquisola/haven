@@ -5,7 +5,7 @@ class EnquiryMailer < ApplicationMailer
     @enquiry = Enquiry.where(id: enquiry_id).first
     if @enquiry
       mail(to: ENV['RECIPIENT_EMAIL'],
-         subject: @enquiry.title,
+         subject: @enquiry.title || "[ENQUIRY] #{@property.name}",
          from: @enquiry.email)
     end
   end
