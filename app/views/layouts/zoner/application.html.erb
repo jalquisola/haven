@@ -102,6 +102,7 @@
     </div>
     <%= render partial: 'zoner/search_box'%>
     <% end %>
+    <%= flash_messages %>
     <%= yield %>
     <%= render partial: 'zoner/footer' if (params[:action] != 'show'.freeze || params[:controller]!='realestates'.freeze)%>
 </div>

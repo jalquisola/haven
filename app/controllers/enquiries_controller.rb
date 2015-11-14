@@ -27,7 +27,8 @@ class EnquiriesController < ApplicationController
     @property = Property.friendly.find(params[:property_id])
 
     respond_to do |format|
-      if @enquiry.save
+      is_recaptcha_verified = verify_recaptcha(:model => @post, :message => "Oh! It's error with reCAPTCHA!")
+      if is_recaptcha_verified && @enquiry.save
         EnquiryMailer.send_email(params[:property_id], @enquiry.id).deliver_now
         format.html do
           redirect_to realestate_path(@property), notice: 'Enquiry was successfully created.'
@@ -37,7 +38,8 @@ class EnquiriesController < ApplicationController
         end
       else
         format.html do
-          redirect_to realestate_path(@property), error: 'Enquiry creation failed.'
+          flash[:error] = 'Enquiry creation failed.'
+          redirect_to realestate_path(@property)
         end
         format.json do
           render json: @enquiry.errors, status: :unprocessable_entity
