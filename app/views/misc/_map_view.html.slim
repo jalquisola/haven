@@ -15,7 +15,7 @@ ruby:
       bedrooms: 2,
       bathrooms: 1,
       area: property.max_area,
-      propertyUrl: "/pages/single?property_id=#{property.id}",
+      propertyUrl: realestate_url(property),
       position: {
           lat: property.latitude.to_f,
           lng: property.longitude.to_f
