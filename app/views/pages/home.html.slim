@@ -52,11 +52,6 @@ div id="page-content"
     $(window).load(function(){
         initializeOwl(false);
 
-        $('.preload-image').each(function(){
-            var $this = $(this);
-            $this.attr('src', $this.data('src'));
-        });
-
         var viewPortWidth = $(window).width();
         $('.preload-image-carousel').each(function(){
             var $this = $(this);

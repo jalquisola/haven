@@ -9,7 +9,7 @@ section id="similar-properties"
         div class="property"
           a href=realestate_url(property)
             div class="property-image"
-              img alt="" src=image.url
+              img alt="" class='preload-image' data-src=image.url
             div class="overlay"
               div class="info"
                 div class="tag price"=property_price_label(property.unit_price)

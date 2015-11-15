@@ -177,6 +177,13 @@
        link.type = "text/css";
        fjs.parentNode.insertBefore(link, fjs);
      }(document, 'link', 'google-fonts'));
+
+    $('.preload-image').each(function(){
+        var $this = $(this);
+        $this.attr('src', $this.data('src'));
+    });
+
+
    });
 </script>
 

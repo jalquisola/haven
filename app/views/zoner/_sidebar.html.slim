@@ -57,7 +57,7 @@ section id="sidebar"
         div class="property small"
           a href=realestate_url(id: property.slug)
             div class="property-image"
-              img alt="" src=image.url
+              img alt="" class='preload-image' data-src=image.url
           div class="info"
             a href=realestate_url(id: property.slug)
               h4 =property.name

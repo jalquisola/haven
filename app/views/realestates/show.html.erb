@@ -29,7 +29,7 @@
                                 <div class="property-slide">
                                     <a href='<%=image.url%>' class="image-popup">
                                         <div class="overlay"><h3>Front View</h3></div>
-                                        <img alt="" src='<%=image.url%>'>
+                                        <img alt="" class='preload-image' data-src='<%=image.url%>'>
                                     </a>
                                 </div>
                                 <% end %>
@@ -58,7 +58,7 @@
                                     <div class="floor-plans">
                                         <header><h2>Floor Plans</h2></header>
                                         <%- @property.floor_plans.each do |fp| %>
-                                            <a href="<%= fp.image_url%>" class="image-popup"><img alt="<%= fp.name%>" width='212' height='155' class="img-thumbnail" src="<%= fp.image_url%>"></a>
+                                            <a href="<%= fp.image_url%>" class="image-popup"><img alt="<%= fp.name%>" width='212' height='155' class="img-thumbnail preload-image" data-src="<%= fp.image_url%>"></a>
                                         <% end %>
                                     </div>
                                 </section><!-- /#floor-plans -->
@@ -118,7 +118,6 @@
                                 <section id="video-presentation">
                                     <header><h2>Video Presentation</h2></header>
                                     <div class="video">
-                                        <iframe src="<%= @property.video_url%>" width="500" height="281" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                 </section><!-- /#video-presentation -->
                             </div><!-- /.col-md-8 -->
@@ -144,10 +143,14 @@
     $(window).load(function(){
       var property = {
           longitude: "<%= @property.longitude%>",
-          latitude: "<%= @property.latitude%>"
+          latitude: "<%= @property.latitude%>",
+          video_url: "<%= @property.video_url%>"
       };
+
       initializeOwl(false);
       google.maps.event.addDomListener(window, 'load', initMap(property));
+
+      $('div.video').append("<iframe src='" + property.video_url +"' width=500 height=281 frameborder=0 allowfullscreen></iframe>");
     });
 </script>
 <%- end %>

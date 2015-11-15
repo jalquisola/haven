@@ -11,7 +11,7 @@ footer id="page-footer"
                 div class="property small"
                   a href=realestate_url(id: property.slug)
                     div class="property-image"
-                      img alt="" src=property.images.first.url
+                      img alt="" class='preload-image' data-src=property.images.first.url
                   div class="info"
                     a href=realestate_url(id: property.slug)
                       h4 =property.name
