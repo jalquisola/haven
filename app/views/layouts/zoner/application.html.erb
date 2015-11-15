@@ -82,7 +82,7 @@
     <div id="slider" class="loading has-parallax">
         <div id="loading-icon"><i class="fa fa-cog fa-spin"></i></div>
         <div class="owl-carousel homepage-slider carousel-full-width">
-            <% Property.all.each do |property|%>
+            <% @properties.each do |property|%>
               <div class="slide">
                   <div class="container">
                       <div class="overlay">
@@ -95,7 +95,7 @@
                           <a href="<%=single_pages_url(property_id: property.id)%>" class="link-arrow">Read More</a>
                       </div>
                   </div>
-                  <img alt="" src="<%= property.images.first.url%>">
+                  <img alt="" class='preload-image-carousel' data-src="<%= property.images.first.url%>">
               </div>
             <% end %>
         </div>

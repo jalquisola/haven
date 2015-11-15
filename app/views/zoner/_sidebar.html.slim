@@ -52,7 +52,7 @@ section id="sidebar"
   aside id="featured-properties"
     header
       h3 Featured Properties
-      - Property.limit(3).each do |property|
+      - Property.includes(:images).limit(3).each do |property|
         - image = property.images.first
         div class="property small"
           a href=realestate_url(id: property.slug)

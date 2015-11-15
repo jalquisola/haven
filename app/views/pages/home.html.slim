@@ -18,64 +18,53 @@ div id="page-content"
         h2 New Properties for You
         a href=realestates_url class="link-arrow" All Properties
 
-      div class="row"
-        - Property.limit(4).each do |property|
-          div class="col-md-3 col-sm-6"
-            div class="property"
-              a href=realestate_url(id: property.slug)
-                div class="property-image"
-                  img alt="" src=property.images.first.url
+      - @properties.each_slice(4) do |properties|
+        div class="row"
+          - properties.each do |property|
+            div class="col-md-3 col-sm-6"
+              div class="property"
+                a href=realestate_url(id: property.slug)
+                  div class="property-image"
+                    img alt="" class='preload-image' data-src=property.images.first.url
 
-                div class="overlay"
-                  div class="info"
-                    div class="tag price"=property_price_label(property.unit_price)
-                    h3 =property.name
-                    figure =property.short_address
+                  div class="overlay"
+                    div class="info"
+                      div class="tag price"=property_price_label(property.unit_price)
+                      h3 =property.name
+                      figure =property.short_address
 
-                  ul class="additional-info"
-                    li
-                      header Area:
-                      figure
-                      | 240m
-                      sup 2
+                    ul class="additional-info"
+                      li
+                        header Area:
+                        figure
+                        | 240m
+                        sup 2
 
-                    li
-                      header Beds:
-                      figure 2
-                    li
-                      header Baths:
-                      figure 2
-
-      div class="row"
-        - Property.limit(4).offset(4).each do |property|
-          div class="col-md-3 col-sm-6"
-            div class="property"
-              a href=realestate_url(property)
-                div class="property-image"
-                  img alt="" src=property.images.first.url
-
-                div class="overlay"
-                  div class="info"
-                    div class="tag price"=number_to_human(property.unit_price, format: "Php %n %u++")
-                    h3 =property.name
-                    figure =property.short_address
-
-                  ul class="additional-info"
-                    li
-                      header Area:
-                      figure
-                      | 240m
-                      sup 2
-
-                    li
-                      header Beds:
-                      figure 2
-                    li
-                      header Baths:
-                      figure 2
+                      li
+                        header Beds:
+                        figure 2
+                      li
+                        header Baths:
+                        figure 2
 
 - content_for :script do
   javascript:
     $(window).load(function(){
         initializeOwl(false);
+
+        $('.preload-image').each(function(){
+            var $this = $(this);
+            $this.attr('src', $this.data('src'));
+        });
+
+        var viewPortWidth = $(window).width();
+        $('.preload-image-carousel').each(function(){
+            var $this = $(this);
+            $this.attr('src', $this.data('src'));
+        });
+
+        $('.preload-image-carousel').load(function(){
+            var $this = $(this);
+            $this.css('left', -($this.width() - viewPortWidth)/2);
+        });
     });
