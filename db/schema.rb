@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104130342) do
+ActiveRecord::Schema.define(version: 20151117152003) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -124,12 +124,13 @@ ActiveRecord::Schema.define(version: 20151104130342) do
   add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
   create_table "images", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "url",         limit: 255
-    t.integer  "position",    limit: 4
-    t.integer  "property_id", limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name",          limit: 255
+    t.string   "url",           limit: 255
+    t.integer  "position",      limit: 4
+    t.integer  "property_id",   limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "thumbnail_url", limit: 255
   end
 
   add_index "images", ["property_id", "position"], name: "index_images_on_property_id_and_position", using: :btree
@@ -137,8 +138,8 @@ ActiveRecord::Schema.define(version: 20151104130342) do
   create_table "properties", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "location",        limit: 255
-    t.datetime "created_at",                                                      null: false
-    t.datetime "updated_at",                                                      null: false
+    t.datetime "created_at",                                                          null: false
+    t.datetime "updated_at",                                                          null: false
     t.string   "latitude",        limit: 255
     t.string   "longitude",       limit: 255
     t.integer  "unit_price",      limit: 4
@@ -156,8 +157,12 @@ ActiveRecord::Schema.define(version: 20151104130342) do
     t.string   "video_url",       limit: 255
     t.string   "short_address",   limit: 255
     t.string   "slug",            limit: 255
+    t.boolean  "enabled",         limit: 1,                           default: false
+    t.integer  "featured",        limit: 4,                           default: 0
   end
 
+  add_index "properties", ["enabled"], name: "index_properties_on_enabled", using: :btree
+  add_index "properties", ["featured"], name: "index_properties_on_featured", using: :btree
   add_index "properties", ["slug"], name: "index_properties_on_slug", unique: true, using: :btree
 
   create_table "testimonials", force: :cascade do |t|
