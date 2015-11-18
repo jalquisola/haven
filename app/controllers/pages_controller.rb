@@ -17,6 +17,10 @@ class PagesController < ApplicationController
     render :sellers, layout: 'sellers'
   end
 
+  def explore
+    redirect_to realestates_path
+  end
+
   private
   def set_properties
     @properties = Property.includes(:unit_types, :images).all
