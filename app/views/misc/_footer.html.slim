@@ -13,9 +13,9 @@ div class="home-footer"
       div class="col-xs-6 col-sm-6 col-md-3 col-lg-3"
       div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"
         div class="osLight footer-header" Get in Touch
+        - agent = Agent.first
         ul class="footer-nav pb20"
           li class="footer-phone"
-            - agent = Agent.first
             a href="tel:#{agent.contact_no}"
               span class="fa fa-phone" = agent.contact_no
           li class="footer-phone"
@@ -26,11 +26,11 @@ div class="home-footer"
             p = ENV['ADDRESS_CITY']
             p = ENV['ADDRESS_COUNTRY']
           li
-            a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"
+            a href="mailto:#{agent.email}" class="btn btn-sm btn-icon btn-round btn-o btn-white"
+              span class="fa fa-envelope-o"
+            a href=agent.facebook_url class="btn btn-sm btn-icon btn-round btn-o btn-white"
               span class="fa fa-facebook"
-            a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"
-              span class="fa fa-google-plus"
-            a href="#" class="btn btn-sm btn-icon btn-round btn-o btn-white"
+            a href=agent.linked_in_url class="btn btn-sm btn-icon btn-round btn-o btn-white"
               span class="fa fa-linkedin"
       div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"
         div class="osLight footer-header" Subscribe to Our Newsletter
