@@ -22,4 +22,6 @@
 //= require ./default/home.js
 //= require ./default/signin.js
 //= require ./default/signup.js
+//= require ./default/jquery.cookie.js
+//= require ./views/subscribers
 //= require jquery_ujs

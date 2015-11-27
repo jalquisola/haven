@@ -10,6 +10,8 @@
 #= require ./default/jquery.tagsinput.min.js
 #= require ./default/bootstrap-datepicker.js
 #= require ./default/app.js
+#= require ./default/jquery.cookie.js
+#= require ./views/subscribers
 #= require jquery_ujs
 
 $ ->

@@ -50,6 +50,8 @@
         </div>
 
         <%= render partial: "misc/contact_agent"%>
+        <%= render partial: "misc/subscriber_popup" unless user_signed_in? %>
+
         <script type='text/javascript'>
             window.active_property = <%= @property.to_json.html_safe%>;
         </script>

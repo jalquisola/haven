@@ -96,3 +96,16 @@ cite .author{
   min-width: 50%;
   min-height: 50%;
 }
+
+#subscribe_button{
+    font-size: 20px;
+}
+
+.subscribePopup{
+  margin-top: 20px;
+  text-align: center;
+
+  .form-group{
+    line-height: 25px;
+  }
+}

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :subscribers, only: [:create]
   resources :realestates, only: [:index, :show]
 
   resources :enquiries

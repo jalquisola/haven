@@ -24,19 +24,20 @@ class EnquiriesController < ApplicationController
   # POST /enquiries
   def create
     @enquiry = Enquiry.new(enquiry_params)
+    @property =  Property.where(id: params[:property_id]).first
 
     respond_to do |format|
       if @enquiry.save
         EnquiryMailer.send_email(params[:property_id], @enquiry.id).deliver_now
         format.html do
-          redirect_to pages_single_url(property_id: params[:property_id]), notice: 'Enquiry was successfully created.'
+          redirect_to realestate_url(@property), notice: 'Enquiry was successfully created.'
         end
         format.json do
           render json: @enquiry, status: :created
         end
       else
         format.html do
-          redirect_to pages_single_url(property_id: params[:property_id]), error: 'Enquiry creation failed.'
+          redirect_to realestate_url(@property), error: 'Enquiry creation failed.'
         end
         format.json do
           render json: @enquiry.errors, status: :unprocessable_entity

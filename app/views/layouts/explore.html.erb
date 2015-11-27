@@ -29,6 +29,8 @@
             <div class="clearfix"></div>
         </div>
 
+        <%= render partial: "misc/subscriber_popup" unless user_signed_in? %>
+
         <script src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=geometry&amp;libraries=places" type="text/javascript"></script>
         <%= javascript_include_tag 'explore'%>
         <script>
