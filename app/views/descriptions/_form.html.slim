@@ -1,0 +1,21 @@
+= form_for @description, url:property_description_path(@property,@description) do |f|
+  - if @description.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@description.errors.count, "error")} prohibited this description from being saved:"
+      ul
+        - @description.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_area :title
+
+  .field
+    = f.label :subtitle
+    = f.text_area :subtitle
+
+  .field
+    = f.label :info
+    = f.text_area :info
+
+  .actions = f.submit

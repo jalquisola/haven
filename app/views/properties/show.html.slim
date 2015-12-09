@@ -21,6 +21,19 @@ ul
     li
       = amenity.name
 
+h1 Description
+- description = @property.description
+p
+  strong Title
+  = description.title
+p
+  strong Subtitle
+  = description.subtitle
+p
+  strong Info
+  = description.info
+= link_to 'Edit Description', edit_property_description_path(@property, description)
+'|
 = link_to 'Edit', edit_property_path(@property)
 '|
 = link_to 'Back', properties_path

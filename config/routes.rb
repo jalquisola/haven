@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :images
     resources :comments
     resources :amenities
+    resources :descriptions
   end
 
   resources :banners
