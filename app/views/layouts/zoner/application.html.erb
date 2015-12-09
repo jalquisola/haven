@@ -9,7 +9,7 @@
     <%= yield :header_script%>
 
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content='<%=ENV['WEBSITE_TITLE']%>' />
+    <meta property="og:title"         content='<%= page_title(@property)%>' />
     <meta property="fb:app_id" content="<%= ENV['FACEBOOK_APP_ID']%>" />
     <!-- Facebook Pixel Code -->
     <script>
@@ -27,7 +27,7 @@
     <!-- End Facebook Pixel Code -->
 
     <%= yield :meta%>
-    <title><%= ENV['WEBSITE_TITLE']%></title>
+    <title><%= page_title(@property)%></title>
 </head>
 
 <%- if params[:controller]=='realestates' && params[:action] == 'index'%>
@@ -89,7 +89,8 @@
                           <a href="<%=realestate_url(property)%>" class="link-arrow">Read More</a>
                       </div>
                   </div>
-                  <img alt="" class='preload-image-carousel' data-src="<%= property.images.first.url%>">
+                  <% image = property.images.first%>
+                  <img alt='<%=image.name%>' title='<%=image.name%>' class='preload-image-carousel' data-src="<%= image.url%>">
               </div>
             <% end %>
         </div>

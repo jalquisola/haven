@@ -25,7 +25,8 @@ div id="page-content"
               div class="property"
                 a href=realestate_url(id: property.slug)
                   div class="property-image"
-                    img alt="" class='preload-image' data-src=property.images.first.url
+                    - image = property.images.first
+                    img alt=image.name title=image.name class='preload-image' data-src=image.url
 
                   div class="overlay"
                     div class="info"

@@ -1,4 +1,5 @@
 - content_for :meta do
   meta property="og:url" content=realestate_url(id: property.slug)
-  meta property="og:description"   content=property.description.info
+  meta property="og:description"   content=property.description.subtitle
   meta property="og:image" content=property.images.first.url
+  meta name='description'  content=property.description.subtitle

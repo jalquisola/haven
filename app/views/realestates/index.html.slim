@@ -2,6 +2,7 @@
   meta property="og:url" content=root_url
   meta property="og:description"   content="Don't wait to buy real estate, BUY REAL ESTATE and WAIT! - T. Harv Eker"
   meta property="og:image" content=Image.first.url
+  meta name='description' content='MyBestHaven Philippine Property Listing'
 
 div id="page-content"
   div class="container"
@@ -25,7 +26,8 @@ div id="page-content"
                         figure class='tag status' =property.status.titleize
                         a href=realestate_url(id: property.slug)
                           div class='property-image'
-                            img alt='' src=property.images.first.url 
+                            -image = property.images.first
+                            img alt=image.name title=image.name src=image.url
                           div class='overlay'
                             div class='info'
                               div class='tag price' =property_price_label(property.unit_price)
