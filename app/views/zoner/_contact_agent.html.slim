@@ -12,6 +12,13 @@ section id="contact-agent"
             h3=agent.name
             p
             dl
+              dt Email:
+              dd
+                a href="mailto:#{agent.email}"=agent.email
+              dt Mobile:
+              dd= agent.contact_no
+              dt Viber:
+              dd= agent.contact_no
               - if agent.linked_in_url.present?
                 dt LinkedIn:
                 dd
@@ -27,15 +34,9 @@ section id="contact-agent"
                 dd
                   a href=agent.facebook_url target='_blank' =agent.facebook_url
 
-              dt Mobile:
-              dd= agent.contact_no
-              dt Viber:
-              dd= agent.contact_no
-              dt Email:
-              dd
-                a href="mailto:#{agent.email}"=agent.email
-              dt Skype:
-              dd=agent.skype
+              - if agent.skype.present?
+                dt Skype:
+                dd=agent.skype
             hr
       div class="col-md-5 col-sm-12"
         div class="agent-form"

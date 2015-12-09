@@ -28,4 +28,11 @@ module ApplicationHelper
       "#{property.name} is located at #{property.location}.Own a unit in #{property.name} for as low as Php #{property.monthly_amort}++ per month."
     end
   end
+
+  def page_title(property)
+    str = "#{ENV['WEBSITE_TITLE']}"
+    str << ": #{property.name}" if property.present?
+
+    str
+  end
 end
