@@ -415,10 +415,15 @@ function initializeOwl(_rtl){
         });
         $(".property-carousel").owlCarousel({
             rtl: _rtl,
+            autoplay: true,
+            autoplayTimeout: 2000,
             items: 1,
             responsiveBaseWidth: ".property-slide",
             dots: false,
             autoHeight : true,
+            animateOut: 'fadeOut',
+            loop: true,
+            lazyLoad: true,
             nav: true,
             navText: ["",""]
         });

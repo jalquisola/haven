@@ -23,16 +23,9 @@
                                 -->
                             </span>
                         </header>
-                        <section id="property-gallery">
-                            <div class="owl-carousel property-carousel">
-                                <%- @property.images.each do |image|%>
-                                <div class="property-slide">
-                                    <a href='<%=image.url%>' class="image-popup">
-                                        <div class="overlay"><h3>Front View</h3></div>
-                                        <img alt='<%=image.name%>' title='<%=image.name%>' class='preload-image' data-src='<%=image.url%>'>
-                                    </a>
-                                </div>
-                                <% end %>
+                        <section id="video-presentation">
+                            <div class="youtube-container">
+                              <div class="youtube-player" data-id="<%= @property.youtube_video_id%>"></div>
                             </div>
                         </section>
                         <div class="row">
@@ -54,17 +47,25 @@
                                         <% end%>
                                     </ul>
                                 </section><!-- /#property-features -->
-                                <section id="video-presentation">
-                                    <header><h2><%= @property.name%>: Video Presentation</h2></header>
-                                    <div class="video">
-                                    </div>
-                                </section><!-- /#video-presentation -->
                                 <section id="property-map">
                                     <header><h2><%= @property.name%>: Location</h2></header>
                                     <div class="property-detail-map-wrapper">
                                         <div class="property-detail-map" id="property-detail-map"></div>
                                     </div>
                                 </section><!-- /#property-map -->
+                                <section id="property-gallery">
+                                    <header><h2><%= @property.name%>: Gallery</h2></header>
+                                    <div class="owl-carousel property-carousel">
+                                        <%- @property.images.each do |image|%>
+                                        <div class="property-slide">
+                                            <a href='<%=image.url%>' class="image-popup">
+                                                <div class="overlay"><h3>Front View</h3></div>
+                                                <img alt='<%=image.name%>' title='<%=image.name%>' class='preload-image' data-src='<%= image.url%>'>
+                                            </a>
+                                        </div>
+                                        <% end %>
+                                    </div>
+                                </section>
                             </div><!-- /.col-md-8 -->
                             <div class="col-md-12 col-sm-12">
                                 <%= render partial: 'zoner/contact_agent', locals: {agent: @agent} %>

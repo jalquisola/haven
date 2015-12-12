@@ -2552,10 +2552,11 @@ ul.list-links li a:hover {
   padding: 12px;
 }
 .property .property-image {
-  /*height: 195px;*/
+  height: 195px;
   overflow: hidden;
   width: 100%;
 }
+
 .property .tag.status {
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;

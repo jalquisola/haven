@@ -32,4 +32,5 @@
 //= require zoner/jquery.fitvids.js
 //= require zoner/custom-map.js
 //= require zoner/custom.js
+//= require views/realestates/show.js
 //= require jquery_ujs
