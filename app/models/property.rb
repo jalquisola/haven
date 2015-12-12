@@ -15,4 +15,8 @@ class Property < ActiveRecord::Base
   has_one :description
   accepts_nested_attributes_for :amenities
   belongs_to :agent
+
+  def should_generate_new_friendly_id?
+    name_changed?
+  end
 end
