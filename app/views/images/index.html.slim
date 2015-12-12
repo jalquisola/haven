@@ -3,6 +3,7 @@ h1= "Listing images for #{@property.name}"
 table
   thead
     tr
+      th Position
       th Name
       th Url
       th Property
@@ -13,6 +14,7 @@ table
   tbody
     - @images.each do |image|
       tr
+        td = image.position
         td = image.name
         td = image.url
         td = image.property.name
@@ -22,5 +24,5 @@ table
 
 br
 
-= link_to 'New Image', new_property_image_path
+= link_to 'New Image', new_property_image_path(property_id: @property.id)
 = link_to 'Property Listing', properties_path

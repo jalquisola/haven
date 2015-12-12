@@ -58,11 +58,11 @@ class ImagesController < ApplicationController
     end
 
     def set_property
-      @property = Property.where(id: params[:property_id]).first
+      @property = Property.friendly.find(params[:property_id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def image_params
-      params.require(:image).permit(:name, :url, :property_id)
+      params.require(:image).permit(:name, :url, :property_id, :position)
     end
 end
