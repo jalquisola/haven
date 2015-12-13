@@ -1,6 +1,6 @@
 class PropertyFeaturesController < ApplicationController
   before_action :set_property_feature, only: [:show, :edit, :update, :destroy]
-  layout false
+  layout 'zoner/scaffold'
 
   # GET /property_features
   def index

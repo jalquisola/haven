@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   before_action :authorize_admin
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   before_action :set_property
-  layout 'scaffold'
+  layout 'zoner/scaffold'
 
   # GET /images
   def index

@@ -3,7 +3,7 @@ class RealestatesController < ApplicationController
   layout 'zoner/application'
 
   def index
-    @properties = Property.includes(:images)
+    @properties = Property.all
     @properties = @properties.where("short_address LIKE ?", params[:city]) if params[:city].present?
     @properties = @properties.where(property_type: params[:property_type]) if params[:property_type].present?
     @properties = @properties.where(status: params[:status]) if params[:status].present?
@@ -12,6 +12,8 @@ class RealestatesController < ApplicationController
       price = params[:price].match(';') ? params[:price].split(';').first : "#{params[:price]}000000"
       @properties = @properties.where("unit_price >= ?", price)
     end
+
+    @images = Image.where(property_id: @properties.map(&:id).uniq, position: 1).index_by(&:property_id)
   end
 
   def show

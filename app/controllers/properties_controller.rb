@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :authorize_admin
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  layout false
+  layout 'zoner/scaffold'
 
   # GET /properties
   def index

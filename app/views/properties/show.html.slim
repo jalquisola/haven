@@ -41,10 +41,20 @@ p
 p
   strong Info
   = description.info
-= link_to 'Edit Description', edit_property_description_path(@property, description)
+
+h1 Images
+- @property.images.each do |image|
+  img src=image.url alt=image.name width=140 height=140 class='img-thumbnail'
+
+br
+br
+= link_to 'Edit Description', edit_property_description_path(@property, description), class: "btn btn-primary btn-lg", type: "button"
 '|
-= link_to 'Edit', edit_property_path(@property)
+= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary btn-lg", type: "button"
+
 '|
-= link_to 'Back', properties_path
+= link_to 'Back', properties_path, class: "btn btn-primary btn-lg", type: "button"
+
 '|
-= link_to 'Add Images', new_property_image_path(@property)
+= link_to 'Add Images', new_property_image_path(@property), class: "btn btn-primary btn-lg", type: "button"
+
