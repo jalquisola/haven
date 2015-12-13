@@ -40,6 +40,14 @@
                                     </p>
                                 </section><!-- /#description -->
                                 <section id="property-features">
+                                    <header><h2><%= @property.name%>: Features</h2></header>
+                                    <ul class="list-unstyled property-features-list">
+                                        <%- @property.features.each do |feature|%>
+                                            <li><%= feature.info%></li>
+                                        <% end%>
+                                    </ul>
+                                </section><!-- /#property-features -->
+                                <section id="property-features">
                                     <header><h2><%= @property.name%>: Amenities</h2></header>
                                     <ul class="list-unstyled property-features-list">
                                         <%- @property.amenities.each do |amenity|%>

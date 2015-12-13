@@ -17,9 +17,18 @@ p
   = @property.agent.name
 
 ul
+  p
+    strong Amenities:
   - @property.amenities.each do |amenity|
     li
       = amenity.name
+
+ul
+  p
+    strong Features:
+  - @property.features.each do |feature|
+    li
+      = feature.name
 
 h1 Description
 - description = @property.description

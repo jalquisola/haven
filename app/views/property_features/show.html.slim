@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Property:
+  = @property_feature.property_id
+p
+  strong Feature:
+  = @property_feature.feature_id
+
+= link_to 'Edit', edit_property_feature_path(@property_feature)
+'|
+= link_to 'Back', property_features_path

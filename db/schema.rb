@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212140526) do
+ActiveRecord::Schema.define(version: 20151213011817) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -92,6 +92,13 @@ ActiveRecord::Schema.define(version: 20151212140526) do
     t.string   "subject",    limit: 255
   end
 
+  create_table "features", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "info",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "floor_plans", force: :cascade do |t|
     t.string  "name",        limit: 255
     t.string  "image_url",   limit: 255
@@ -165,6 +172,13 @@ ActiveRecord::Schema.define(version: 20151212140526) do
   add_index "properties", ["enabled"], name: "index_properties_on_enabled", using: :btree
   add_index "properties", ["featured"], name: "index_properties_on_featured", using: :btree
   add_index "properties", ["slug"], name: "index_properties_on_slug", unique: true, using: :btree
+
+  create_table "property_features", force: :cascade do |t|
+    t.integer  "property_id", limit: 4
+    t.integer  "feature_id",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "subscribers", force: :cascade do |t|
     t.string   "email",      limit: 255
