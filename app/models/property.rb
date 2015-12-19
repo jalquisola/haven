@@ -18,6 +18,8 @@ class Property < ActiveRecord::Base
   has_many :property_features
   has_many :features, through: :property_features
 
+  scope :enabled, -> { where(enabled: true) }
+
   def should_generate_new_friendly_id?
     name_changed?
   end

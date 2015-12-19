@@ -99,10 +99,11 @@
     <% end %>
     <%= flash_messages %>
     <%= yield %>
-    <%= render partial: 'zoner/footer' if (params[:action] != 'show'.freeze || params[:controller]!='realestates'.freeze)%>
+    <%= render partial: 'zoner/footer'%>
+    <%= yield :exit_popup%>
 </div>
 
-<%= render partial: 'zoner/footer' if params[:action] == 'show'.freeze && params[:controller] == 'realestates'.freeze%>
+
 
 <div id="overlay"></div>
 

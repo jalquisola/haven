@@ -14,7 +14,7 @@ function labnolThumb(id) {
 
 function labnolIframe() {
     var iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=1&listType=user_uploads");
+    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&controls=1&showinfo=1&listType=playlist&list=PLuNeaxbXnjJeTZdTi9l04uUaQVtXI8Nvw");
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("id", "youtube-iframe");
     this.parentNode.replaceChild(iframe, this);

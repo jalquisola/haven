@@ -3,7 +3,7 @@ class RealestatesController < ApplicationController
   layout 'zoner/application'
 
   def index
-    @properties = Property.all
+    @properties = Property.enabled
     @properties = @properties.where("short_address LIKE ?", params[:city]) if params[:city].present?
     @properties = @properties.where(property_type: params[:property_type]) if params[:property_type].present?
     @properties = @properties.where(status: params[:status]) if params[:status].present?
