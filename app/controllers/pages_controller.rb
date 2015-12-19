@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     if user_signed_in?
       return redirect_to realestates_path
     end
-    @properties = Property.includes(:images).all
+    @properties = Property.featured.includes(:images)
   end
 
   def dashboard

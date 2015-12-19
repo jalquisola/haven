@@ -19,7 +19,7 @@ class Property < ActiveRecord::Base
   has_many :features, through: :property_features
 
   scope :enabled, -> { where(enabled: true) }
-  scope :featured, -> { where(featured: true) }
+  scope :featured, -> { where("featured IS NOT NULL AND featured > 0") }
 
   def should_generate_new_friendly_id?
     name_changed?
