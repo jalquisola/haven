@@ -16,155 +16,46 @@
     "Shore 2 Residences - Lap Pool": "https://d1zl0xo8jrwl7x.cloudfront.net/images/SHORE-2-RESIDENCES-Lap-Pool.jpg"
     "Shore 2 Residences - Grand Lobby 1": "https://d1zl0xo8jrwl7x.cloudfront.net/images/SHORE-2-RESIDENCES-Grand-Lobby-1.jpg"
     "Shore 2 Residences - Grand Lobby 2": "https://d1zl0xo8jrwl7x.cloudfront.net/images/SHORE-2-RESIDENCES-Grand-Lobby-2.jpg"
-"Berkeley Residences":
+"Fame Residences":
   images:
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/amenity_area.jpg"
-    "Amenity Area 2": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/amenity_area2.jpg"
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/grand_lobby.jpg"
-    "Pool": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/pool.jpg"
-  floor_plans:
-    "1 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/floor_plans/1-Bedroom-Unit.jpg"
-    "2 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/floor_plans/2-Bedroom-Unit.jpg"
-    "Unit Distribution": "https://s3-us-west-2.amazonaws.com/property.images/berkeley/floor_plans/UnitDistribution.jpg"
-"Blue Residences":
+    "Fame Residences - Building Facade": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Building-Facade.jpg"
+    "Fame Residences - Pool Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Pool-Area.jpg"
+    "Fame Residences - Walk of Fame": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Walk-of-Fame.jpg"
+    "Fame Residences - Grand Lobby 2": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Grand-Lobby-2.jpg"
+    "Fame Residences - Grand Lobby 2": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Grand-Lobby-2.jpg"
+    "Fame Residences - Garden Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Garden-Area.jpg"
+    "Fame Residences - Children's Play Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Childrens-Play-Area.jpg"
+    "Fame Residences - Lap Pool": "https://d1zl0xo8jrwl7x.cloudfront.net/images/FAME-RESIDENCES-Lap-Pool.jpg"
+"Breeze Residences":
   images:
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/amenity_area.jpg"
-    "Amenity Area 2": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/amenity_area_2.jpg"
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/grand_lobby.jpg"
-    "Pool": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/pool_area.jpg"
-  floor_plans:
-    "1 Bedroom deluxe unit": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/floor_plans/1-Bedroom-Deluxe-Unit.jpg"
-    "1 Bedroom deluxe unit with garden": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/floor_plans/1-Bedroom-deluxe-unit-with-garden.jpg"
-    "1 Bedroom unit": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/floor_plans/1-bedroom-unit.jpg"
-    "Studio Unit": "https://s3-us-west-2.amazonaws.com/property.images/blue+residences/floor_plans/Studio-unit.jpg"
-"Chateau Elysee":
+    "Breeze Residences - Building Facade": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Building-Facade.jpg"
+    "Breeze Residences - Lounge Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Lounge-Area.jpg"
+    "Breeze Residences - Lounge Area at Night": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Lounge-Area-at-Night.jpg"
+    "Breeze Residences - Grand Lobby": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Grand-Lobby.jpg"
+    "Breeze Residences - Balcony View": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Balcony-View.jpg"
+    "Breeze Residences - Pool Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-Pool-Area.jpg"
+    "Breeze Residences - 1 Bedroom Unit": "https://d1zl0xo8jrwl7x.cloudfront.net/images/BREEZE-RESIDENCES-1-Bedroom-Unit.jpg"
+"Jazz Residences":
   images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/chateau-elysee/grand-lobby.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/chateau-elysee/amenity-area.jpg"
-    "Pool Area Night": "https://s3-us-west-2.amazonaws.com/property.images/chateau-elysee/pool-area.jpg"
-    "Pool Area Day": "https://s3-us-west-2.amazonaws.com/property.images/chateau-elysee/pool-area-day.jpg"
-"Field Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/field_residences/grand-lobby.jpg"
-    "Grand Looby 2": "https://s3-us-west-2.amazonaws.com/property.images/field_residences/grand_lobby2.jpg"
-    "Amenity Area Night": "https://s3-us-west-2.amazonaws.com/property.images/field_residences/amenity_area_night.jpg"
-    "Pool Area": "https://s3-us-west-2.amazonaws.com/property.images/field_residences/pool_area.jpg"
-    "Pool Area 2": "https://s3-us-west-2.amazonaws.com/property.images/field_residences/pool_area_2.jpg"
-"Grace Residences":
-  images:
-    "Overview": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/overview.jpg"
-    "Amenity Area Perspective": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/amenity_area.jpg"
-    "Model Unit 1": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/model_unit.jpg"
-    "Model Unit 2": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/model_unit2.jpg"
-  floor_plans:
-    "Site Development Plan": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/floor_plans/site_plan.jpg"
-    "1 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/floor_plans/1-bedroom-unit.jpg"
-    "1 Bedroom Unit 27.76": "https://s3-us-west-2.amazonaws.com/property.images/grace_residences/floor_plans/1-bedroom-unit_27.76.jpg"
-"Grass Residences":
-  images: 
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/grand_lobby.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/amenity_area.jpg"
-    "1 Bedroom Model Unit": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/1_bedroom_model_unit.jpg"
-    "Gym Area": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/gym_area.jpg"
-    "Basketball Court": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/basketball_court.jpg"
-  floor_plans:
-    "Site Development Plan": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/floor_plans/site_plan.jpg"
-    "1 Bedroom Unit Plan": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/floor_plans/1_bedroom_with_balcony.jpg"
-    "2 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/grass-residences/floor_plans/2-bedroom-unit.jpg"
-"Green Residences":
-  images:
-    "Building Facade": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/building-facade.jpg"
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/grand-lobby.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/amenity-area.jpg"
-    "Amenity Area 2": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/amenity-area-2.jpg"
-  floor_plans:
-    "Studio Unit": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/floor_plans/studio-unit.jpg"
-    "1 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/green-residences/floor_plans/1-bedroom-unit.jpg"
+    "Jazz Residences - Building Perspective": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Building-Perspective.jpg"
+    "Jazz Residences - Grand Lobby": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Grand-Lobby.jpg"
+    "Jazz Residences - Lobby": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Lobby.jpg"
+    "Jazz Residences - Function Room": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Function-Room.jpg"
+    "Jazz Residences - Gym Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Gym-Area.jpg"
+    "Jazz Residences - Amenity Area Actual Photo": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Amenity-Area-Actual-Photo.jpg"
+    "Jazz Residences - Amenity Area Overview": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Amenity-Area-Overview.jpg"
+    "Jazz Residences - Jazz Mall Actual Photo": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Jazz-Mall-Actual-Photo.jpg"
+    "Jazz Residences - Hypermarket": "https://d1zl0xo8jrwl7x.cloudfront.net/images/JAZZ-RESIDENCES-Hypermarket.jpg"
 "Light Residences":
   images:
-    "Building Facade": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/building-facade.jpg"
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/grand-lobby.jpg"
-    "Pool Area": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/pool-area.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/amenity-area.jpg"
-  floor_plans:
-    "Studio Unit": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/floor-plans/smdc-light-residences-studio-unit.jpg"
-    "1 Bedroom Unit Deluxe": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/floor-plans/1-bedroom-deluxe-unit.jpg"
-    "2 Bedroom Unit with balcony": "https://s3-us-west-2.amazonaws.com/property.images/light-residences/floor-plans/smdc-light-residences-2-Bedroom-unit-with-balcony.jpg"
-"Mezza Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/grand-lobby.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/amenity-area.jpg"
-    "Pool Area": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/pool-area.jpg"
-    "Model Unit": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/model-unit.jpg"
-  floor_plans:
-    "1 Bedroom unit": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/floor-plans/1-bedroom-unit.jpg"
-    "2 Bedroom unit": "https://s3-us-west-2.amazonaws.com/property.images/mezza-residences/floor-plans/2-bedroom-unit.jpg"
-"M Place":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/m-place/grand-lobby.jpg"
-    "Grand Lobby 2": "https://s3-us-west-2.amazonaws.com/property.images/m-place/grand-lobby-2.jpg"
-    "Pool Area": "https://s3-us-west-2.amazonaws.com/property.images/m-place/amenity-area.jpg"
-    "Pool Area Night": "https://s3-us-west-2.amazonaws.com/property.images/m-place/amenity-area-2.jpg"
-    "Model Unit": "https://s3-us-west-2.amazonaws.com/property.images/m-place/model-unit.jpg"
-"Princeton Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/princeton-residences/grand-lobby.jpg"
-    "Grand Lobby 2": "https://s3-us-west-2.amazonaws.com/property.images/princeton-residences/grand-lobby-2.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/princeton-residences/amenity-area.jpg"
-    "Amenity Area 2": "https://s3-us-west-2.amazonaws.com/property.images/princeton-residences/amenity-area-1.jpg"
-  floor_plans:
-    "Overview": "https://s3-us-west-2.amazonaws.com/property.images/princeton-residences/floor-plans/overview.jpg"
-"Sea Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/grand-lobby.jpg"
-    "Grand Lobby 2": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/grand-lobby-2.jpg"
-    "Amenity View": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/amenity-view.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/amenity-area.jpg"
-    "Pool Area": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/pool-area.jpg"
-  floor_plans:
-    "Overview": "https://s3-us-west-2.amazonaws.com/property.images/sea-residences/floor-plans/overview.jpg"
-"Shell Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/grand-lobby.jpg"
-    "Model Unit": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/model-unit.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/amenity-area.jpg"
-    "Amenity Area Perspective": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/amenity-area-artists-perspective.jpg"
-  floor_plans:
-    "1 Bedroom Unit": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/floor-plans/1-bedroom-unit.png"
-    "1 Bedroom Unit with balcony": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/floor-plans/1-bedroom-unit-with-balcony.png"
-    "2 Bedroom Unit with balcony": "https://s3-us-west-2.amazonaws.com/property.images/shell-residences/floor-plans/2-bedroom-unit-with-balcony.png"
-"Shine Residences":
-  images:
-    "Grand Lobby": "https://s3-us-west-2.amazonaws.com/property.images/shine-residences/grand-lobby.jpg"
-    "Function Room": "https://s3-us-west-2.amazonaws.com/property.images/shine-residences/function-room.jpg"
-    "Lobby": "https://s3-us-west-2.amazonaws.com/property.images/shine-residences/lobby.jpg"
-    "Amenity Area": "https://s3-us-west-2.amazonaws.com/property.images/shine-residences/amenity-area.jpg"
-  floor_plans:
-    "Overview": "https://s3-us-west-2.amazonaws.com/property.images/shine-residences/floor-plans/overview.jpg"
-"Sun Residences":
-  images: 
-    "Grand Lobby": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/grand-lobby.jpg"
-    "Pool Area": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/pool-area.jpg"
-    "Amenity Area": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/amenity-area.jpg"
-    "Grand Lobby 2": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/grand-lobby-area.jpg"
-    "Mall Area": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/mall-area.jpg"
-  floor_plans:
-    "Unit Layout": "https://s3.amazonaws.com/mybesthaven.com/smdc/sun-residences/floor-plans/unit-layout.jpg"
-"Trees Residences":
-  images:
-    "Building Facade": "https://s3.amazonaws.com/mybesthaven.com/smdc/trees-residences/building-facade.jpg"
-    "Grand Lobby Perspective": "https://s3.amazonaws.com/mybesthaven.com/smdc/trees-residences/grand-lobby-perspective.jpg"
-    "Pool Area Perspective": "https://s3.amazonaws.com/mybesthaven.com/smdc/trees-residences/pool-area-perspective.jpg"
-    "Amenity Area Perspective": "https://s3.amazonaws.com/mybesthaven.com/smdc/trees-residences/amenity-area-perspective.jpg"
-"Cool Residences":
-  images:
-    "Building Facade": "https://s3.amazonaws.com/mybesthaven.com/smdc/cool-residences/building-facade.jpg"
-    "Grand Lobby Perspective": "https://s3.amazonaws.com/mybesthaven.com/smdc/cool-residences/grand-lobby-perspective.jpg"
-    "Grand Lobby Perspective 2": "https://s3.amazonaws.com/mybesthaven.com/smdc/cool-residences/grand-lobby-perspective-2.jpg"
-    "Model Unit": "https://s3.amazonaws.com/mybesthaven.com/smdc/cool-residences/model-unit.jpg"
-  floor_plans:
-    "Tower Layout": "https://s3.amazonaws.com/mybesthaven.com/smdc/cool-residences/floor-plans/tower-layout.jpg"
-
+    "Light Residences - Actual Building": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Actual-Building.jpg"
+    "Light Residences - Building Facade": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Building-Facade.jpg"
+    "Light Residences - Grand Lobby": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Grand-Lobby.jpg"
+    "Light Residences - Theater Room": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Theater-Room.jpg"
+    "Light Residences - Swimming Pool": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Swimming-Pool.jpg"
+    "Light Residences - Commercial Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Commercial-Area.jpg"
+    "Light Residences - Commercial Area": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-Commercial-Area.jpg"
+    "Light Residences - 1 Bedroom Model Unit": "https://d1zl0xo8jrwl7x.cloudfront.net/images/LIGHT-RESIDENCES-1-Bedroom-Model-Unit.jpg"
 
 
 

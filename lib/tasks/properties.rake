@@ -3,7 +3,7 @@ namespace :properties do
     properties = YAML.load_file(Rails.root.join('db', 'seeds', 'properties.yml'))
     fields = %w(location short_address latitude longitude unit_price 
                 monthly_amort min_area max_area property_type status
-                video_url agent_id
+                video_url agent_id enabled featured turnover rating
                )
     properties.each do |property_data|
       property = Property.where(name: property_data['name']).first
