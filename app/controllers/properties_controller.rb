@@ -57,6 +57,8 @@ class PropertiesController < ApplicationController
     def property_params
       params.require(:property).
             permit(:name, :location, :latitude, :longitude, :agent_id,
+                   :turnover, :rating, :enabled, :featured, :status, :property_type,
+                   :min_area, :max_area, :unit_price, :monthly_amort,
                    amenity_ids: [])
     end
 end
