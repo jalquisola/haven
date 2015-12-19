@@ -52,7 +52,7 @@ section id="sidebar"
   aside id="featured-properties"
     header
       h3 Featured Properties
-      - Property.includes(:images).limit(3).each do |property|
+      - Property.featured.where("id != ?", @property.id).includes(:images).each do |property|
         - image = property.images.first
         div class="property small"
           a href=realestate_url(id: property.slug)
@@ -63,3 +63,8 @@ section id="sidebar"
               h4 =property.name
             figure =property.short_address
             div class="tag price"=property_price_label(property.unit_price)
+  aside id="featured-properties"
+    header
+      div class='property small'
+        a href="http://61396d7adv5x9u9mvdposxvn9l.hop.clickbank.net/" target="_top"
+          img src="https://d1zl0xo8jrwl7x.cloudfront.net/images/shedplans_1462.GIF"
