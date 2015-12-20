@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
   private
   def set_properties
-    @properties = Property.includes(:unit_types, :images).all
+    @properties = Property.featured.enabled.includes(:unit_types, :images)
   end
 
   def set_images

@@ -6,7 +6,7 @@ div class="home-wrapper"
         div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
           a href=realestate_url(property) class="propWidget-2"
             div class="fig"
-              - image = @images[property.id].first
+              - image = @images[property.id].first rescue nil
               - unit_type = property.unit_types.first
               - if image
                 img src=image.url alt=property.name
