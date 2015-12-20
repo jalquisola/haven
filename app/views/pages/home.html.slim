@@ -14,7 +14,7 @@ div class="home-wrapper"
               div class="opac"
               div class="priceCap osLight"
                 span ="#{number_to_currency(property.monthly_amort, unit: 'Php')}++"
-              div class="figType" PRE-SELLING
+              div class="figType" =property.property_type.titleize
               h3 class="osLight" =property.name
               div class="address" =property.location
               ul class="rating"
