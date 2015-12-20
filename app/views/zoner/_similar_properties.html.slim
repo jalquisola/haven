@@ -1,0 +1,29 @@
+section id="similar-properties"
+  header
+    h2 class="no-border" Similar Properties
+  div class="row"
+    - Property.includes(:images, :unit_types).limit(3).each do |property|
+      - image = property.images.first
+      - unit_type = property.unit_types.first
+      div class="col-md-4 col-sm-6"
+        div class="property"
+          a href=realestate_url(property)
+            div class="property-image"
+              img alt=image.name title=image.name class='preload-image' data-src=image.url
+            div class="overlay"
+              div class="info"
+                div class="tag price"=property_price_label(property.unit_price)
+                h3 =property.name
+                figure = property.location
+              ul class="additional-info"
+                li
+                  header Area:
+                  figure
+                    | #{property.min_area}-#{property.max_area} m
+                    sup 2
+                li
+                   header Beds:
+                   figure 1 or 2
+                li
+                   header Baths:
+                   figure 1 or 2

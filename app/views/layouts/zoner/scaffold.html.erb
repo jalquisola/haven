@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag    'zoner/application', media: 'all'%>
+    <%= csrf_meta_tags %>
+    <%= yield :meta%>
+</head>
+
+<body class="page-sub-page page-property-detail" id="page-top">
+    <%= flash_messages %>
+    <%= yield %>
+
+<!--[if gt IE 8]>
+<script type="text/javascript" src="assets/js/ie.js"></script>
+<![endif]-->
+<%= javascript_include_tag 'zoner/application'%>
+<%= yield :script%>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

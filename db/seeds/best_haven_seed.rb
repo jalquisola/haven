@@ -115,7 +115,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
-    video_url: "https://www.youtube.com/2q7DujqEj3w",
+    video_url: "https://www.youtube.com/embed/2q7DujqEj3w",
     description: {
       title: "Fame Residences",
       subtitle: "Have a glimpse of the life lived in glitz and glamour, with gold curtain walls that surround this lumiscent development.",
@@ -626,7 +626,7 @@ properties = [
     status: :pre_selling,
     rating: 5,
     turnover: 2020,
-    video_url: "https://www.youtube.com/G_izDEpCfDQ",
+    video_url: "https://www.youtube.com/embed/G_izDEpCfDQ",
     description: {
       title: "Amani Grand Resort Residences",
       subtitle: "Amani Grand Resort Residences",

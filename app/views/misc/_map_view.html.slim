@@ -1,16 +1,17 @@
 ruby:
   map_data = []
   properties = @properties.present? ? @properties : Property.all
-  images = @images.present? ? @images : Image.where(property_id: properties.map(&:id), position: 0).index_by(property_id)
+  images = @images.present? ? @images : Image.where(property_id: properties.map(&:id), position: 0).index_by(&:property_id)
   properties.each do |property|
-    image = images[property.id].first
+    image = images[property.id].first rescue nil
+    next unless image
     unit_type= property.unit_types.first
     obj = {
       id: property.id,
       title: property.name,
       image:  image.url,
       type: property.property_type,
-      price: price_label(property.unit_price),
+      price: property_price_label(property.unit_price),
       address: property.short_address,
       bedrooms: 2,
       bathrooms: 1,

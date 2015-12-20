@@ -1,0 +1,24 @@
+section id="quick-summary" class="clearfix"
+  header
+    h2 Quick Summary
+    h3 =property.name
+  dl
+    dt Total Selling Price
+    dd
+      span class="tag price" =property_price_label(property.unit_price)
+    dt Monthly Amortization
+    dd
+      span class="tag price" =property_price_label(property.monthly_amort)
+    dt Property Type:
+    dd =property.property_type.titleize
+    dt Status:
+    dd =property.status.titleize
+    dt Area:
+    dd
+      | #{property.min_area} - #{property.max_area} m
+      sup 2
+    dt Turnover:
+    dd =property.turnover
+    dt Rating:
+    dd
+      div class="rating rating-overall" data-score=property.rating

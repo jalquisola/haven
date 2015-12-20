@@ -36,12 +36,12 @@
             <div id="content" class="mob-max">
               <%= flash_messages %>
                 <div class="singleTop">
-                    <%= render partial: "misc/carousel"%>
                     <%= render partial: "properties/summary", locals: {unit_types: @unit_types}%>
                 </div>
                 <div class="clearfix"></div>
                 <%= render partial: "pages/single/description", locals: {unit_types: @unit_types, description: @description }%>
                 <%= render partial: "pages/single/amenities"%>
+                <%= render partial: "misc/carousel"%>
                 <%= render partial: "pages/single/similar"%>
                 <%= render partial: "pages/single/comments"%>
             </div>
@@ -50,7 +50,6 @@
         </div>
 
         <%= render partial: "misc/contact_agent"%>
-        <%= render partial: "misc/subscriber_popup" unless user_signed_in? %>
 
         <script type='text/javascript'>
             window.active_property = <%= @property.to_json.html_safe%>;

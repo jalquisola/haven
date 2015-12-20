@@ -1,0 +1,299 @@
+- name: Berkeley Residences
+  location: Katipunan Ave., Quezon City
+  short_address: Quezon City
+  latitude: 14.64
+  longitude: 121.07
+  unit_price: 2_100_000
+  monthly_amort:
+  min_area: 19.6
+  max_area: 63.9
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url: 'https://www.youtube.com/embed/Rskbq3cTP2A'
+  agent_id: 1
+  description: "Live it up right where everything is happening. A high-rise residential condominium development with top-drawer amenities for hip and modern living. Earn your degree in comfortable living at Berkeley Residences, in the heart of Quezon City’s prestigious university belt – located along Katipunan Avenue, right across Miriam College and Ateneo De Manila University. It’s only a hop away from restaurants, shopping centers and the LRT 2. With one of the most enviable locations and priced as one of the most affordable in its class, Berkeley Residences is a perfect investment. Find a unit that’s just right for your needs. Our cozy one-bedroom, two-bedroom and studio units are ideal for students or young families."
+- name: Blue Residences
+  location: Loyola Height, Quezon City
+  short_address: Quezon City
+  latitude: 14.63
+  longitude: 121.07
+  unit_price: 2_200_000
+  monthly_amort:
+  min_area: 21.5
+  max_area: 46.3
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url: 'https://www.youtube.com/embed/b12_fDZBtl4'
+  agent_id: 1
+  description: "Developed for the five-star student, Blue Residences is a 4,235-square meter property nestled at the corner of Katipunan Avenue and Aurora Boulevard. It is also close to the premiere colleges and universities of Metro Manila such as Ateneo De Manila University, University of the Philippines, and Miriam College."
+- name: Chateau Elysee
+  location: Bicutan, Paranaque City
+  short_address: Paranaque City
+  latitude: 14.49
+  longitude: 121.02
+  unit_price: 1_000_000
+  monthly_amort:
+  min_area: 18.0
+  max_area: 56.0
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url: 
+  turonver: RFO
+  agent_id: 1
+  description: "Designed with charming French Mediterranean influences, wake up everyday in your dream home here at Chateau Elysée, your very own sanctuary of privacy and ease. Chateau Elysée sprawls on 4.7 hectares of prime land, with more than half of the property devoted to amenities and breathing space and a clubhouse with complete facilities. The relaxed, mid-rise condominium is located in the heart of Bicutan, Parañaque City, just 20 minutes away from the Makati Business District, 15 minutes away from the International Airport and with SM Bicutan’s shopping, dining and entertainment just 10 minutes away."
+- name: Field Residences
+  location: Sucat, Paranaque City
+  short_address: Paranaque City
+  latitude: 14.48
+  longitude: 120.99
+  unit_price: 1_800_000
+  monthly_amort:
+  min_area: 24.0
+  max_area: 83.0
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url: 
+  turonver: 2016
+  agent_id: 1
+  description: "Field Residences has been developed with generous open spaces complemented with a vast offering of amenities for families to enjoy. Field Residences, brings in both value and a high standard of living with its themed gardens, a large selection of sports facilities, and its own clubhouse among its many features. Families also enjoy the conveniences of living next to SM City Sucat. It is also a short ride away from SM Mall of Asia and the Entertainment City. And because it is in Parañaque, the airport is in close vicinity. With the elements of convenience and space composing a well-balanced lifestyle, experience an urban sanctuary at Field Residences."
+- name: Grace Residences
+  location: Levi Mariano Avenue, Brgy. Osusan, Taguig City
+  short_address: Taguig City
+  latitude: 14.53
+  longitude: 121.06
+  unit_price: 1_700_000
+  monthly_amort:
+  min_area: 22.0
+  max_area: 47.0
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url: 
+  turonver: 2018
+  agent_id: 1
+  description: "Situated near SM malls and prime locations in Metro Manila, SMDC Residences highlights its developments with hotel like features and subdued elegance. A new project from SMDC, Grace Residence is a four tower building. The new project is 26,247 square meters property located along C-5, or also known as E-Rodriguez Avenue. This prime location is five minutes away from the Bonifacio Global City, eleven minutes away from Makati Center Business District and is thirteen minutes away from Ortigas Center Business District. Specially made for empowered singles and early to full nesters, Grace Residences is the newest suburban sanctuary in the city. 
+  "
+- name: Grass Residences
+  location: Nueva Viscaya Street, Quezon City
+  short_address: Quezon City
+  latitude: 14.66
+  longitude: 121.03
+  unit_price: 2_200_000
+  monthly_amort:
+  min_area: 21.0
+  max_area: 69.0
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2017
+  agent_id: 1
+  description: "Grass Residences, considered the SMDC Gateway of North Luzon, is located in the north side of Quezon City. It is a 5-tower development that is literally a hop, skip and bridgeway from SM North EDSA making your shopping and running errands at the mall a breeze. Getting to Makati and Ortigas business districts is also easy via MRT. The clubhouse and other amenities can help you unwind after a busy day – a country club-like living for a truly cosmopolitan lifestyle."
+- name: Green Residences
+  location: Taft Avenue, Manila
+  short_address: Manila
+  latitude: 14.66
+  longitude: 121.03
+  unit_price: 1_900_000
+  monthly_amort:
+  min_area: 15.65
+  max_area: 48.85
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2016
+  agent_id: 1
+  description: "Green Residences beside De La Salle University, Manila. Located along Taft Avenue, adjacent to Bro. Andres Gonzales Hall of DLSU right beside one of the country's premier universities. The project is a one-tower, 50-storey condominium development with 42 residential floors and sky lounge. Prospective residents can choose among Studio Suites to a 1-Bedroom Deluxe. Residents can readily enjoy the convenient access of Green Residences to the different parts fo the metro, and an easy commute bacause of its major part of the MRT-LRT loop."
+- name: Light Residences
+  location: EDSA cor. Madison St., Mandaluyong City
+  short_address: Mandaluyong City
+  latitude: 14.57
+  longitude: 121.05
+  unit_price: 2_200_000
+  monthly_amort: 30_000
+  min_area: 20.00
+  max_area: 44.00
+  rating: 5
+  enabled: true
+  property_type: condo
+  status: sale
+  video_url: "https://www.youtube.com/embed/XSGOGCykNPI"
+  turonver: RFO
+  agent_id: 1
+  description: "Located at the heart of the bustling city, Light Residences is a three tower residential condominium. Perfectly situated in Boni, Mandaluyong City, this new location is convenient for people who live an active lifestyle. The condominium is boasted with first class amenities with its own mall and conveniently linked to the Boni-EDSA MRT Station – just minutes away from anywhere you want to go. With forty floors in each tower, Light Residences carries bedroom suite and one bedroom units ranging to a minimum of 20 square meters to a maximum of 44 square meters. Tower one with the view of EDSA, is carries the recreational deck which contains function rooms, a fitness gym and a grand lobby. Tower one also carries 20 square meter one suite bedroom units, 23 square meter one bedroom units and a few 32 square meter one bedroom deluxe units.  Tower two has the view of Ortigas Skyline while Tower three has the view of the skylines of Makati and Bonifacio Global City. These towers carry one bedroom units which are 23 square meters in size. Moreover, located at the penthouse, Light Residences also carries a limited number of two bedroom balcony which are 43 square meters. "
+- name: Mezza Residences
+  location: Sta. Mesa, Quezon City
+  short_address: Quezon City
+  latitude: 14.61
+  longitude: 121.02
+  unit_price: 1_700_000
+  monthly_amort:
+  min_area: 21.00
+  max_area: 134.00
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: RFO
+  agent_id: 1
+  description: "Situated near SM malls and prime locations in Metro Manila, SMDC Residences highlights its developments with hotel like features and subdued elegance. A new project from SMDC, Mezza One Residences is a 38-storey building with four towers located at Aurora Boulevard corner Araneta Avenue, Quezon City. This location is situated at the heart of Sta. Mesa. Mezza One Residences is close to EDSA MRT Cubao, Manila and San Juan. It is also in close proximity from popular establishments such as SM City Sta. Mesa, University of the East Ramon Magsaysay, Central Colleges of the Philippines, the Immaculate Heart of Mary College, the UERM Hospital, the UERM Memorial Medical Center, the LRT 2 Sta. Mesa Station, and Cubao Araneta Center. Mezza One Residences is best suited for young professionals, students or young families, residents can value their time every day by being conveniently close to school, work and shopping location. "
+- name: M Place
+  location: Panay Avenue, South Triangle, Quezon City
+  short_address: Quezon City
+  latitude: 14.61
+  longitude: 121.02
+  unit_price: 1_600_000
+  monthly_amort:
+  min_area: 16.00
+  max_area: 40.00
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: RFO
+  agent_id: 1
+  description: "SMDC M Place South Triangle is a new prime location at the heart of Quezon City's bustling location.  
+  With four towers and 23 floor, this new residence carries an approximately 3,437 units. The 
+  condominium especially caters to the young market and is a new location to complement individuals 
+  who are rising in their careers to a path of independent living. The residential building is located along 
+  Panay Avenue corner Mother Ignacia, South Triangle in Quezon City. M Place is also in close proximity to 
+  schools such as St. Paul, St Mary's College; hospitals such as St. Luke Medical City; and broadcasting 
+  networks such as ABS-CBN Broadcasting Network and GMA 7 Network. At the heart of South Triangle 
+  the area gives occupants easy access to premier dining places, bars, entertainment centers near Timog 
+  Avenue. "
+- name: Princeton Residences
+  location: New Manila, Quezon City
+  short_address: Quezon City
+  latitude: 14.613
+  longitude: 121.034
+  unit_price: 2_100_000
+  monthly_amort:
+  min_area: 23.00
+  max_area: 47.00
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: RFO
+  agent_id: 1
+  description: "In the upscale and premier location of New Manila rise an SMDC's condominium project called the Princeton Residences. Escalating at 40 storeys high, the residential condominium is a top-notch property that offers a comfortable and luxurious living at an affordable price. Princeton Residences is exactly located at the intersection of Aurora Boulevard and Gilmore Avenue. This location is conveniently accessible to the metro's Light Rail Transit (LRT) Line 2 Gilmore Station and the LRT Line 1 through the Recto Station. It's near to the major establishments and university institutions such as St. Paul University, University of the Philippines, Ateneo De Manila; shopping centers such as Greenhills Shopping Center, Araneta Shopping Center; and major dining and entertainment centers such as Timog and Tomas Morato. "
+- name: Sea Residences
+  location: SM Mall of Asia, Pasay City
+  short_address: Pasay City
+  latitude: 14.534
+  longitude: 120.986
+  unit_price: 2_700_000
+  monthly_amort:
+  min_area: 24.00
+  max_area: 94.00
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: RFO
+  agent_id: 1
+  description: "SM Development Corporation (SMDC) give residences options that complement to the luxurious and stylish lifestyle Filipinos aspire for. A new project from SMDC, Sea Residences is 15 storey project located in Pasay City. This new address is strategically located at Lot 4 SM Business Park, Diokno Boulevard at the hub of SM Mall of Asia Business Complex. Sea Residences is located right across the SM Mall of Asia and minutes away from the dining, shopping, entertainment and other popular establishments in Pasay City. For instances, residences can quickly stroll around the famous San Miguel by the Bay. Also accessible to convenient transportation, the complex is near the Metro Rail Train and the Light Rail Train. It is also near major education institutions such as De La Salle University - Taft, UP Manila, and St. Paul College Manila."
+- name: Shell Residences
+  location: SM Mall of Asia, Pasay City
+  short_address: Pasay City
+  latitude: 14.5366
+  longitude: 120.9865
+  unit_price: 2_500_000
+  monthly_amort:
+  min_area: 23.00
+  max_area: 244.64
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2015
+  agent_id: 1
+  description: "This modern topical building complete is a 2.2 hectare property with same convenience as Sea Residences – a few steps away from 600 shops and entertainment hubs. This new address is exactly located at EDSA corner Road 11, Mall of Asia Complex, Pasay city. Strategically situated, the complex is two kilometers away from the South Luzon Express Way, three kilometers away from National Airport and six kilometers away from Makati Center Business District. With four building complex ad 16 floors, its units range from a minimum of 26 square meters to a maximum of 85.4 square meters. The residents can choose from a variety of unit types: one bedroom units, one bedroom units with a balcony, two bedroom units with a balcony. Also available, it has a limited number of one bedroom end units with a balcony, two bedroom end units with a balcony. These units are either facing the Amenity area, the Manila Bay, the Makati Skyline, and the Cavite horizon.  "
+- name: Shine Residences
+  location: Meralco Avenue, Barrio Ugong, Pasig City
+  short_address: Pasig City
+  latitude: 14.5822
+  longitude: 121.0654
+  unit_price: 1_900_000
+  monthly_amort:
+  min_area: 20.00
+  max_area: 31.51
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2015
+  agent_id: 1
+  description: "Shine Residences is one of the prime locations that capture the new renaissance blood. Located at the Renaissance Complex along Meralco Avenue, Pasig City, Shine Residences are for people who want to be ahead of their game by living right in the middle of Ortigas Center of Business District. This prime location is ten minutes away from major commercial institutions such as SM Megamall, Shangri-La Plaza Mall, The Podium, Robinson's Galleria, Metrowalk and Ortigas Home Depot; and financial institutions such as the Asian Development Bank and the Philippine Stock Exchange. It is also near schools and universities such as the University Of Asia and the Pacific (UA&amp;P), Ateneo de Manila School of Medicine &amp; Public Health, La Salle Greenhills, Saint Pedro Poveda College,  Lourdes School of Mandaluyong, St. Paul's College  Pasig. And lastly, this location is also accessible to medical institutions such as the Medical City and Cardinal Santos. "
+- name: Sun Residences
+  location: Mayon Street, Quezon City
+  short_address: Quezon City
+  latitude: 14.6182
+  longitude: 121.0006
+  unit_price: 1_800_000
+  monthly_amort:
+  min_area: 20.00
+  max_area: 47.00
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: RFO
+  agent_id: 1
+  description: "Experience the vibrant warmth of living right in the heart of the metropolis. SMDC Sun Residences is located along España Boulevard corner Mayon Avenue, Manila – more famously known as Welcome Rotonda. Enjoy accessibility to schools, medical institutions, and commercial establishments from SMDC Sun Residences. The two 43-storey tower offers a studio, 1 bedroom or 2 bedroom units to make life more comfortable for would-be residents. Indeed, at SMDC Sun Residences, life meets luxury at the gateway between Quezon City and Manila."
+- name: Trees Residences
+  location: Barangay Pasong Putik, Novaliches, Quezon City
+  short_address: Quezon City
+  latitude: 14.7358
+  longitude: 121.0632
+  unit_price: 1_100_000
+  monthly_amort:
+  min_area: 19.73
+  max_area: 31.40
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2016
+  agent_id: 1
+  description: "Trees Residences, located near SM City Fairview launches its 2nd Phase. It caters to both families and independent individuals. More unit options are now made available for families and individuals who are seeking independence and looking for a place offering safety and convenience. Trees Residences offers amenities that truly complement your active and leisure lifestyle. Function rooms are perfect for special family gatherings. Run around or play games in the basketball court. Take a dip into the pool for a refreshing break and enjoy the development’s linear parks in between the buildings. The commercial area will cater to you and your family’s needs. With its construction in full swing and some towers near completion, Trees Residences is ready to be your home soon. A complete development that provides security, convenience and accessibility, Trees Residences is the BEST DEAL in town."
+- name: Cool Residences
+  location: Along Aguinaldo Highway, Tagaytay City
+  short_address: Tagaytay City
+  latitude: 14.1240
+  longitude: 120.9593
+  unit_price: 1_900_000
+  monthly_amort:
+  min_area: 20.00
+  max_area: 23.78
+  rating: 5
+  enabled: false
+  property_type: condo
+  status: sale
+  video_url:
+  turonver: 2017
+  agent_id: 1
+  description: "Cool Suites is the newest garden complex in the flourishing Wind Residences estate. Nestled inside the complex is an array of lush foliage and greenery that serve as a private retreat where you can relax and recover from the busy work week. With SMDC’s signature 5-star amenities, it is a perfect holiday home for those who enjoy the cool wind of Tagaytay."
+
+
+

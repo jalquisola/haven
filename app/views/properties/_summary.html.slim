@@ -1,3 +1,6 @@
+- if @property.video_url
+  div id='video' class='description' data-url=@property.video_url
+
 div class="summary"
   div class="row"
     div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"
@@ -23,26 +26,15 @@ div class="summary"
               span class="icon-bubble"=@property.comments_count
         div class="clearfix"
         ul class="features"
-          - studio = unit_types.first
-          - room = unit_types.last
           li
             span class="fa fa-moon-o"
-            - if studio.bedrooms == room.bedrooms
-              div = "#{studio.bedrooms} Bedroom"
-            - else
-              div = "#{studio.bedrooms}-#{room.bedrooms} Bedrooms"
+            div = "1 or 2 Bedrooms"
           li
             span class="icon-drop"
-            - if studio.bathrooms == room.bathrooms
-              div = "#{studio.bathrooms} Bathroom"
-            - else
-              div = "#{studio.bathrooms}-#{room.bathrooms} Bathrooms"
+            div = "1 or 2 Bathrooms"
           li
             span class="icon-frame"
-            div = "#{studio.floor_area_min}-#{room.floor_area_max} sqm"
-          /- unit_types.each_with_index do |unit_type, index|
-          /  li class="#{index == 0 ? 'active' : ''}"
-          /    a href="#unit-type-#{unit_type.id}" role='tab' data-toggle='tab'= unit_type.name
+            div = "#{@property.min_area}-#{@property.max_area} sqm"
 
         div class="clearfix"
     div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"

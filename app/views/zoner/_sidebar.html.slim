@@ -1,0 +1,70 @@
+section id="sidebar"
+  aside id="edit-search"
+    header
+      h3 Search Properties
+    = form_tag(realestates_url, {method: :get,role: 'form', id: 'form-sidebar', class:'form-search'}) do
+      div class="form-group"
+        select name="status"
+          option value="" Status
+          - Property.statuses.each do |status, index|
+            - if params[:status].present? && params[:status].to_i== index
+              option value=index selected='selected' =status.titleize
+            - else
+              option value=index =status.titleize
+      div class="form-group"
+        select name="country"
+          option value="" Philippines
+      /div class="form-group"
+        select name="province"
+          option value='' Province
+          - ['Metro Manila', 'Cebu', 'Cavite'].each do |province|
+            - if params[:province] && params[:province] == province
+              option value=province selected='selected' =province
+            - else
+              option value=province =province
+      div class="form-group"
+        select name="city"
+          option value="" City
+          - ['Pasay City', 'Makati City', 'Tagaytay City', 'Cebu City'].each do |city|
+            - if params[:city] && params[:city] == city
+              option value=city selected='selected' =city
+            - else
+              option value=city =city
+      div class="form-group"
+        select name="property_type"
+          option value="" Property Type
+          - Property.property_types.each do |type, index|
+            - if params[:property_type].present? && params[:property_type].to_i == index
+              option value=index selected='selected' =type.titleize
+            - else
+              option value=index =type.titleize
+      div class="form-group"
+        div class="price-range"
+          - if params[:price].present?
+            - price_range = params[:price].match(';') ? params[:price] : "#{params[:price]}000000;25000000"
+            input id="price-input" type="text" name="price" value=price_range
+          - else
+            input id="price-input" type="text" name="price" value="1000000;25000000"
+
+      div class="form-group"
+        button type="submit" class="btn btn-default" Search Now
+
+  aside id="featured-properties"
+    header
+      h3 Featured Properties
+      - Property.featured.order(featured: :asc).includes(:images).each do |property|
+        - image = property.images.first
+        div class="property small"
+          a href=realestate_url(id: property.slug)
+            div class="property-image"
+              img alt=image.url title=image.url class='preload-image' data-src=image.url
+          div class="info"
+            a href=realestate_url(id: property.slug)
+              h4 =property.name
+            figure =property.short_address
+            div class="tag price"=property_price_label(property.unit_price)
+  aside id="featured-properties"
+    header
+      div class='property small'
+        a href="http://61396d7adv5x9u9mvdposxvn9l.hop.clickbank.net/" target="_top"
+          img src="https://d1zl0xo8jrwl7x.cloudfront.net/images/shedplans_1462.GIF"

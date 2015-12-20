@@ -1,0 +1,45 @@
+div class="search-box-wrapper"
+  div class="search-box-inner"
+    div class="container"
+      div class="search-box map"
+        = form_tag(realestates_url, {method: :get,role: 'form', id: 'form-map-sale', class:'form-map form-search clearfix'}) do
+
+          div class="row"
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                select name="status"
+                  option value='' Status
+                  - Property.statuses.each do |label, index|
+                    option value=index =label.titleize
+
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                select name="province"
+                  option value='' Province
+                  - ['Metro Manila', 'Cebu', 'Cavite'].each do |city|
+                    option value=city =city
+
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                select name="city"
+                  option value='' City
+                  - ['Pasay City', 'Makati City', 'Tagaytay City', 'Cebu City'].each do |city|
+                    option value=city =city
+
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                select name="property_type"
+                  option value="" Property Type
+                  - Property.property_types.each do |type, index|
+                    option value=index =type.titleize
+
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                select name="price"
+                  option value="" Price
+                  -(2..5).each do |val|
+                    option value=val ="Php #{val}M+"
+
+            div class="col-md-2 col-sm-4"
+              div class="form-group"
+                button type="submit" class="btn btn-default" Search Now

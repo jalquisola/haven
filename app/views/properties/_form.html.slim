@@ -43,6 +43,21 @@
     = f.label :video_url
     = f.text_field :video_url
   .field
+    = f.label :turnover
+    = f.text_field :turnover
+  .field
+    = f.label :rating
+    = f.text_field :rating
+  .field
+    = f.label :enabled
+    = f.text_field :enabled
+  .field
+    = f.label :featured
+    = f.text_field :featured
+  .field
+    = f.label :status
+    = f.select :status, Property.statuses.keys
+  .field
     = f.label :agent_id
     = f.select :agent_id, Agent.all.collect{|a| [a.name, a.id]}
   .field

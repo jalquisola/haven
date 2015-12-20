@@ -9,6 +9,9 @@ p
 p
   strong Url:
   = @image.url
+p
+  strong Position:
+  = @image.position
 
 = link_to 'Edit', edit_property_image_path(id: @image.id, property_id: @property.id)
 '|

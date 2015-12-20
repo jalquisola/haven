@@ -1,0 +1,27 @@
+h1 Listing property_features
+
+table
+  thead
+    tr
+      th Property
+      th Property Name
+      th Feature
+      th Feature Name
+      th
+      th
+      th
+
+  tbody
+    - @property_features.each do |property_feature|
+      tr
+        td = property_feature.property_id
+        td = @properties[property_feature.property_id].try(:name)
+        td = property_feature.feature_id
+        td = @features[property_feature.feature_id].try(:name)
+        td = link_to 'Show', property_feature
+        td = link_to 'Edit', edit_property_feature_path(property_feature)
+        td = link_to 'Destroy', property_feature, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Property feature', new_property_feature_path

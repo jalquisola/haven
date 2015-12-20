@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :authorize_admin
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  layout 'scaffold'
+  layout 'zoner/scaffold'
 
   # GET /properties
   def index
@@ -56,9 +56,9 @@ class PropertiesController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def property_params
       params.require(:property).
-            permit(:name, :location, :latitude, :longitude, :agent_id, :short_address,
-                   :unit_price, :monthly_amort, :min_area, :max_area, :property_type,
-                   :status, :turnover, :video_url,
+            permit(:name, :location, :latitude, :longitude, :agent_id,
+                   :turnover, :rating, :enabled, :featured, :status, :property_type,
+                   :min_area, :max_area, :unit_price, :monthly_amort,
                    amenity_ids: [])
     end
 end

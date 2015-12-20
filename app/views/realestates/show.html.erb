@@ -1,0 +1,119 @@
+    <!-- Page Content -->
+    <%= render partial: 'pages/meta', locals: {property: @property}%>
+    <div id="page-content">
+        <!-- Breadcrumb -->
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href='<%=root_path%>'>Home</a></li>
+                <li class="active">Property Detail</li>
+            </ol>
+        </div>
+        <!-- end Breadcrumb -->
+        <div class="container">
+            <div class="row">
+                <!-- Property Detail Content -->
+                <div class="col-md-9 col-sm-9">
+                    <section id="property-detail">
+                        <header class="property-title">
+                            <h1><%= @property.name%></h1>
+                            <figure><%= @property.location%></figure>
+                            <span class="actions">
+                                <!--<a href="#" class="fa fa-print"></a>-->
+                                <!--<a href="#" class="bookmark" data-bookmark-state="empty"><span class="title-add">Add to bookmark</span><span class="title-added">Added</span></a>
+                                -->
+                            </span>
+                        </header>
+                        <% if @property.youtube_video_id.present?%>
+                        <section id="video-presentation">
+                            <div class="youtube-container">
+                              <div class="youtube-player" data-id="<%= @property.youtube_video_id%>"></div>
+                            </div>
+                        </section>
+                        <% end %>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <%= render partial: 'zoner/quick_summary', locals: {property: @property}%>
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-8 col-sm-12">
+                                <section id="description">
+                                    <header><h2><%= @property.name%>: Description</h2></header>
+                                    <p>
+                                        <%= @description.info.html_safe %>
+                                    </p>
+                                </section><!-- /#description -->
+                                <% if @property.features.any?%>
+                                <section id="property-features">
+                                    <header><h2><%= @property.name%>: Features</h2></header>
+                                    <ul class="list-unstyled property-features-list">
+                                        <%- @property.features.each do |feature|%>
+                                            <li><%= feature.info%></li>
+                                        <% end%>
+                                    </ul>
+                                </section><!-- /#property-features -->
+                                <% end %>
+                                <section id="property-features">
+                                    <header><h2><%= @property.name%>: Amenities</h2></header>
+                                    <ul class="list-unstyled property-features-list">
+                                        <%- @property.amenities.each do |amenity|%>
+                                            <li><%= amenity.name%></li>
+                                        <% end%>
+                                    </ul>
+                                </section><!-- /#property-features -->
+                                <section id="property-map">
+                                    <header><h2><%= @property.name%>: Location</h2></header>
+                                    <div class="property-detail-map-wrapper">
+                                        <div class="property-detail-map" id="property-detail-map"></div>
+                                    </div>
+                                </section><!-- /#property-map -->
+                                <section id="property-gallery">
+                                    <header><h2><%= @property.name%>: Gallery</h2></header>
+                                    <div class="owl-carousel property-carousel">
+                                        <%- @property.images.each do |image|%>
+                                        <div class="property-slide">
+                                            <a href='<%=image.url%>' class="image-popup">
+                                                <div class="overlay"><h3>Front View</h3></div>
+                                                <%- if image.position == 1%>
+                                                  <img alt='<%=image.name%>' title='<%=image.name%>' src='<%= image.url%>'>
+                                                <%else%>
+                                                  <img alt='<%=image.name%>' title='<%=image.name%>' class='preload-image' data-src='<%= image.url%>'>
+                                                <%end%>
+                                            </a>
+                                        </div>
+                                        <% end %>
+                                    </div>
+                                </section>
+                            </div><!-- /.col-md-8 -->
+                            <div class="col-md-12 col-sm-12">
+                                <%= render partial: 'zoner/contact_agent', locals: {agent: @agent} %>
+                                <hr class="thick">
+                                <%= render partial: 'zoner/similar_properties'%>
+                                <hr class="thick">
+                            </div><!-- /.col-md-12 -->
+                        </div><!-- /.row -->
+                    </section><!-- /#property-detail -->
+                </div><!-- /.col-md-9 -->
+                <!-- end Property Detail Content -->
+                <!-- sidebar -->
+                <div class="col-md-3 col-sm-3">
+                    <%= render partial: 'zoner/sidebar'%>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div>
+
+<%- content_for :script do%>
+<script type="text/javascript">
+    $(window).load(function(){
+      var property = {
+          longitude: "<%= @property.longitude%>",
+          latitude: "<%= @property.latitude%>",
+          video_url: "<%= @property.video_url%>"
+      };
+
+      initializeOwl(false);
+      google.maps.event.addDomListener(window, 'load', initMap(property));
+
+      $('div.video').append("<iframe src='" + property.video_url +"' width=500 height=281 frameborder=0 allowfullscreen></iframe>");
+    });
+</script>
+<%- end %>

@@ -1,6 +1,6 @@
 div class="comments"
   h3
-    span = "#{@comments.count} Comments"
+    span = "#{@property.name}: #{@comments.count} Comments"
 
   - @comments.each do |comment|
     - commenter = comment.user

@@ -1,4 +1,5 @@
-= form_for :image, {url: property_images_path({id: @image.id, property_id: @property.id})} do |f|
+- url = @image.id? ? property_image_path({id: @image.id, property_id: @property.id}) : property_images_path(property_id: @property.id)
+= form_for :image, url: url, method: @image.id? ? :patch : :post do |f|
   - if @image.errors.any?
     #error_explanation
       h2 = "#{pluralize(@image.errors.count, "error")} prohibited this image from being saved:"
@@ -9,8 +10,11 @@
   h2 = @property.name
   .field
     = f.label :name
-    = f.text_field :name
+    = f.text_area :name
   .field
     = f.label :url
-    = f.text_field :url
+    = f.text_area :url
+  .field
+    = f.label :position
+    = f.text_field :position
   .actions = f.submit

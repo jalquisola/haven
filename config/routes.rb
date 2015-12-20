@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   resources :subscribers, only: [:create]
+  resources :property_features
+  resources :features
+  resources :features
   resources :realestates, only: [:index, :show]
 
   resources :enquiries
@@ -8,6 +11,7 @@ Rails.application.routes.draw do
     resources :images
     resources :comments
     resources :amenities
+    resources :descriptions
   end
 
   resources :banners

@@ -17,7 +17,7 @@ module ApplicationHelper
     nil
   end
 
-  def price_label(price)
+  def property_price_label(price)
     number_to_human(price, format: "Php %n %u+")
   end
 
@@ -27,5 +27,12 @@ module ApplicationHelper
     else
       "#{property.name} is located at #{property.location}.Own a unit in #{property.name} for as low as Php #{property.monthly_amort}++ per month."
     end
+  end
+
+  def page_title(property)
+    str = "#{ENV['WEBSITE_TITLE']}"
+    str << ": #{property.name}" if property.present?
+
+    str
   end
 end

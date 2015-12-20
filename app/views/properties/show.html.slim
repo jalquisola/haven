@@ -28,6 +28,15 @@ p
   strong Maximum Area:
   = @property.max_area
 p
+  strong Featured?:
+  = @property.featured
+p
+  strong Rating:
+  = @property.rating
+p
+  strong Enabled:
+  = @property.enabled
+p
   strong Property Type:
   = @property.property_type
 p
@@ -44,12 +53,44 @@ p
   = @property.agent.name
 
 ul
+  p
+    strong Amenities:
   - @property.amenities.each do |amenity|
     li
       = amenity.name
 
-= link_to 'Edit', edit_property_path(@property)
+ul
+  p
+    strong Features:
+  - @property.features.each do |feature|
+    li
+      = feature.name
+
+h1 Description
+- description = @property.description
+p
+  strong Title
+  = description.title
+p
+  strong Subtitle
+  = description.subtitle
+p
+  strong Info
+  = description.info
+
+h1 Images
+- @property.images.each do |image|
+  img src=image.url alt=image.name width=140 height=140 class='img-thumbnail'
+
+br
+br
+= link_to 'Edit Description', edit_property_description_path(@property, description), class: "btn btn-primary btn-lg", type: "button"
 '|
-= link_to 'Back', properties_path
+= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary btn-lg", type: "button"
+
 '|
-= link_to 'Add Images', new_property_image_path(@property)
+= link_to 'Back', properties_path, class: "btn btn-primary btn-lg", type: "button"
+
+'|
+= link_to 'Add Images', new_property_image_path(@property), class: "btn btn-primary btn-lg", type: "button"
+

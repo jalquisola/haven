@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126140811) do
+ActiveRecord::Schema.define(version: 20151213011817) do
 
   create_table "agents", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -92,6 +92,13 @@ ActiveRecord::Schema.define(version: 20151126140811) do
     t.string   "subject",    limit: 255
   end
 
+  create_table "features", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "info",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "floor_plans", force: :cascade do |t|
     t.string  "name",        limit: 255
     t.string  "image_url",   limit: 255
@@ -136,34 +143,42 @@ ActiveRecord::Schema.define(version: 20151126140811) do
   add_index "images", ["property_id", "position"], name: "index_images_on_property_id_and_position", using: :btree
 
   create_table "properties", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "location",        limit: 255
-    t.datetime "created_at",                                                          null: false
-    t.datetime "updated_at",                                                          null: false
-    t.string   "latitude",        limit: 255
-    t.string   "longitude",       limit: 255
-    t.integer  "unit_price",      limit: 4
-    t.integer  "monthly_amort",   limit: 4
-    t.integer  "agent_id",        limit: 4
-    t.integer  "view_count",      limit: 4,                           default: 0
-    t.integer  "favourite_count", limit: 4,                           default: 0
-    t.integer  "comments_count",  limit: 4,                           default: 0
-    t.decimal  "min_area",                    precision: 6, scale: 2
-    t.decimal  "max_area",                    precision: 6, scale: 2
-    t.integer  "property_type",   limit: 4
-    t.integer  "status",          limit: 4
-    t.integer  "turnover",        limit: 4
-    t.integer  "rating",          limit: 4
-    t.string   "video_url",       limit: 255
-    t.string   "short_address",   limit: 255
-    t.string   "slug",            limit: 255
-    t.boolean  "enabled",         limit: 1,                           default: false
-    t.integer  "featured",        limit: 4,                           default: 0
+    t.string   "name",             limit: 255
+    t.string   "location",         limit: 255
+    t.datetime "created_at",                                                           null: false
+    t.datetime "updated_at",                                                           null: false
+    t.string   "latitude",         limit: 255
+    t.string   "longitude",        limit: 255
+    t.integer  "unit_price",       limit: 4
+    t.integer  "monthly_amort",    limit: 4
+    t.integer  "agent_id",         limit: 4
+    t.integer  "view_count",       limit: 4,                           default: 0
+    t.integer  "favourite_count",  limit: 4,                           default: 0
+    t.integer  "comments_count",   limit: 4,                           default: 0
+    t.decimal  "min_area",                     precision: 6, scale: 2
+    t.decimal  "max_area",                     precision: 6, scale: 2
+    t.integer  "property_type",    limit: 4
+    t.integer  "status",           limit: 4
+    t.integer  "turnover",         limit: 4
+    t.integer  "rating",           limit: 4
+    t.string   "video_url",        limit: 255
+    t.string   "short_address",    limit: 255
+    t.string   "slug",             limit: 255
+    t.boolean  "enabled",          limit: 1,                           default: false
+    t.integer  "featured",         limit: 4,                           default: 0
+    t.string   "youtube_video_id", limit: 255
   end
 
   add_index "properties", ["enabled"], name: "index_properties_on_enabled", using: :btree
   add_index "properties", ["featured"], name: "index_properties_on_featured", using: :btree
   add_index "properties", ["slug"], name: "index_properties_on_slug", unique: true, using: :btree
+
+  create_table "property_features", force: :cascade do |t|
+    t.integer  "property_id", limit: 4
+    t.integer  "feature_id",  limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "subscribers", force: :cascade do |t|
     t.string   "email",      limit: 255
