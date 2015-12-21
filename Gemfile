@@ -20,6 +20,8 @@ gem 'rollbar', '~> 2.4.0'
 gem 'oj', '~> 2.12.14'
 gem 'friendly_id', '~> 5.1.0'
 
+gem 'aws-sdk'
+gem 'sitemap_generator', '5.0.0'
 gem 'country_select', github: 'stefanpenner/country_select'
 
 gem 'slim-rails'
