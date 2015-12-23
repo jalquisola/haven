@@ -7,7 +7,7 @@ footer id="page-footer"
           div class="offset-md-3 offset-sm-3 col-md-3 col-sm-3"
             article
               h3 Recent Properties
-              - Property.enabled.includes(:images).order(id: :desc).limit(2).each do |property|
+              - Property.enabled.featured.includes(:images).order(id: :desc).limit(2).each do |property|
                 div class="property small"
                   a href=realestate_url(id: property.slug)
                     div class="property-image"

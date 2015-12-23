@@ -26,7 +26,7 @@ div id="page-content"
                         figure class='tag status' =property.status.titleize
                         a href=realestate_url(id: property.slug)
                           div class='property-image'
-                            -image = @images[property.id]
+                            - image = @images[property.id]
                             img alt=image.name title=image.name src=image.url
                           div class='overlay'
                             div class='info'
