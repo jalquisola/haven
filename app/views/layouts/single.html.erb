@@ -15,7 +15,7 @@
         <meta name='description' content='<%= description_label(@property)%>' />
         <meta property="og:title" content='<%= @property.name%>' />
         <meta property="og:site_name" content='<%= ENV['WEBSITE_TITLE']%>' />
-        <meta property="og:url" content='<%= realestates_url(property_id: @property.slug)%>' />
+        <meta property="og:url" content='<%= realestate_url(id: @property.slug)%>' />
         <meta property="og:description" content='<%= description_label(@property)%>' />
         <meta property="og:image" content='<%= @property.images.first.url%>' />
         <meta property="og:type" content='article' />
