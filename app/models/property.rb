@@ -1,9 +1,10 @@
 class Property < ActiveRecord::Base
-  include FriendlyId
+  extend FriendlyId
   enum status: [:pre_selling, :sale, :rent]
   enum property_type: [:condo, :landed, :office, :condo_hotel ]
 
-  friendly_id :name, use: :slugged
+  #friendly_id :name, use: :slugged
+  friendly_id :slugged_candidates, use: :slugged
 
   validates_presence_of :name
 
@@ -22,7 +23,19 @@ class Property < ActiveRecord::Base
   scope :featured, -> { where("featured IS NOT NULL AND featured > 0") }
   default_scope{ where(enabled: true) }
 
+  def slugged_candidates
+    [
+      :name,
+      [:name, :short_address],
+      [:name, :short_address, :id],
+    ]
+  end
+
   def should_generate_new_friendly_id?
-    name_changed?
+    if !slug? || name_changed?
+      true
+    else
+      false
+    end
   end
 end

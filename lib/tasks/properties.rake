@@ -14,8 +14,8 @@ namespace :properties do
       end
 
       if property.save!
-        desc = property.description
-        desc = property.description.new unless desc
+        desc = Description.where(property_id: property.id).first
+        desc = Description.new(property_id: property.id) unless desc
         desc.info = property_data['description']
         desc.subtitle = property_data['description']
         desc.save!
