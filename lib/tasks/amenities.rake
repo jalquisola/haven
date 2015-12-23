@@ -6,16 +6,11 @@ namespace :amenities do
       property = Property.where(name: property_name).first
       next if property.blank?
 
-      property_amenities_db = property.amenities.map(&:id)
-      puts property_amenities_db.inspect
+      Amenity.connection.execute("DELETE from amenities_properties where property_id = #{property.id}")
       property_amenities.each do |amenity_name|
         amenity = Amenity.where(name: amenity_name).first
         amenity = Amenity.create(name: amenity_name, code: amenity_name.tableize) unless amenity
-        puts amenity.id
-        puts property_amenities_db.include?(amenity.id)
-        unless property_amenities_db.include?(amenity.id)
-          ActiveRecord::Base.connection.execute("INSERT INTO amenities_properties (property_id, amenity_id) VALUES(#{property.id}, #{amenity.id});")
-        end
+        ActiveRecord::Base.connection.execute("INSERT INTO amenities_properties (property_id, amenity_id) VALUES(#{property.id}, #{amenity.id});")
       end
     end
   end

@@ -14,7 +14,11 @@ namespace :properties do
       end
 
       if property.save!
-        Description.create!(property_id: property.id, info: property_data['description'])
+        desc = property.description
+        desc = property.description.new unless desc
+        desc.info = property_data['description']
+        desc.subtitle = property_data['description']
+        desc.save!
       end
     end
   end

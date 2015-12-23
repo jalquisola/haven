@@ -14,6 +14,31 @@
   - "Landscaped Garden"
   - "Function Rooms"
   - "Fitness Area"
+"Wind Residences":
+  - "Swimming Pools"
+  - "Clubhouse"
+  - "Function Rooms"
+  - "Children's Play Area"
+  - "Recreational Area"
+  - "Garden/Lawn"
+  - "Basketball Court"
+  - "Tennis Court"
+  - "Badminton Court"
+  - "Jogging Path"
+"Berkeley Residences":
+  - "Kiddie Pool"
+  - "Adult Pool"
+  - "Function Rooms"
+  - "Children's Play Area"
+  - "Student Lounge"
+"Blue Residences":
+  - "Amenity Lounge"
+  - "Kiddie Pool"
+  - "Adult Pool"
+  - "Function Rooms"
+  - "Children's Play Area"
+  - "Student Lounge"
+  - "Roof Deck Lounge"
 'Chateau Elysee':
   - "Clubhouse with function halls"
   - Fitness Gym
@@ -25,14 +50,13 @@
   - Tennis Court
 "Field Residences":
   - "Children's Play Area"
-  - "25-meter Lap Swimming Pool"
-  - "Kiddie Pool and Wading Pool"
+  - "Swimming Pools"
   - "Open Playfield"
   - Function Rooms
   - Poolside Event Area
   - Picnic Area
   - Basketball Court
-  - Badminton Court
+  - Badminton Courts
   - Jogging Trail
 "Grace Residences":
   - Swimming Pools
@@ -108,6 +132,7 @@
 "Shell Residences":
   - Adult Pools
   - Kiddie Pools
+  - Gazebos
   - "Children's Play Area"
   - Grand Lobbies
   - Jogging Trail
@@ -135,7 +160,7 @@
   - Swimming Pools
   - Multi-purpose court
   - Covered Walkways
-"Cool Residences":
+"Cool Suites":
   - Pocket Gardens
   - Lawn
   - Pathway with Trellis
@@ -149,5 +174,6 @@
   - Basketball Court
   - Tennis Court
   - Badminton Court
+  - Garden/Lawn
 
 
