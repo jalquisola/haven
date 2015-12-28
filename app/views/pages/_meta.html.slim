@@ -1,7 +1,13 @@
 - content_for :meta do
+  - image_url = property.images.first.url
+  - property_description = property.description.subtitle
   meta property="og:url" content=realestate_url(id: property.slug)
   meta property="og:description"   content=property.description.subtitle
-  meta property="og:image" content=property.images.first.url
-  meta name='description'  content=property.description.subtitle
+  meta property="og:image" content=image_url
+  meta name='description'  content=property_description
+
   meta name='twitter:card' content='summary_large_image'
   meta name='twitter:site' content=ENV['TWITTER_SITE']
+  meta name='twitter:title' content="#{ENV['WEBSITE_TITLE']}: #{property.name}"
+  meta name='twitter:description'  content=property_description
+  meta name="twitter:image" content=image_url
