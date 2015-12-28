@@ -2,14 +2,19 @@
     var v = document.getElementsByClassName("youtube-player");
     for (var n = 0; n < v.length; n++) {
         var p = document.createElement("div");
-        p.innerHTML = labnolThumb(v[n].dataset.id);
+        p.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.image);
         p.onclick = labnolIframe;
         v[n].appendChild(p);
     }
 })();
 
-function labnolThumb(id) {
-    return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+function labnolThumb(id, image) {
+    var img = "<img class='youtube-thumb' src='//i.ytimg.com/vi/" + id + "/hqdefault.jpg'>";
+    if(image){
+        img = "<img class='youtube-thumb' src='" + image + "'>"
+    }
+
+    return  img + '<div class="play-button"></div>';
 }
 
 function labnolIframe() {
