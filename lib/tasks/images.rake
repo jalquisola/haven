@@ -3,7 +3,7 @@ namespace :images do
     images = YAML.load_file(Rails.root.join('db', 'seeds', 'images.yml'))
 
     images.each do |property_name, data|
-      property = Property.where(name: property_name).first
+      property = Property.unscoped.where(name: property_name).first
       next if property.blank?
       index = 1
       data['images'].each do |name, url|

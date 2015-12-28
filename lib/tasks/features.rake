@@ -3,7 +3,7 @@ namespace :features do
     features = YAML.load_file(Rails.root.join('db', 'seeds', 'features.yml'))
 
     features.each do |property_name, property_features|
-      property = Property.where(name: property_name).first
+      property = Property.unscoped.where(name: property_name).first
       next if property.blank?
 
       property_features_db = property.features.map(&:id)

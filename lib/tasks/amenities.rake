@@ -3,7 +3,7 @@ namespace :amenities do
     amenities = YAML.load_file(Rails.root.join('db', 'seeds', 'amenities.yml'))
 
     amenities.each do |property_name, property_amenities|
-      property = Property.where(name: property_name).first
+      property = Property.unscoped.where(name: property_name).first
       next if property.blank?
 
       Amenity.connection.execute("DELETE from amenities_properties where property_id = #{property.id}")

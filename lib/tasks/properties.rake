@@ -6,7 +6,7 @@ namespace :properties do
                 video_url agent_id enabled featured turnover rating
                )
     properties.each do |property_data|
-      property = Property.where(name: property_data['name']).first
+      property = Property.unscoped.where(name: property_data['name']).first
       property = Property.new(name: property_data['name']) unless property
 
       fields.each do |field|
@@ -26,7 +26,7 @@ namespace :properties do
   task set_youtube_video: :environment do
     videos = YAML.load_file(Rails.root.join('db', 'seeds', 'youtube_videos.yml'))
     videos.each do |property_name, video_id|
-      property = Property.where(name: property_name).first
+      property = Property.unscoped.where(name: property_name).first
       next if property.blank?
       property.youtube_video_id = video_id
       property.save
