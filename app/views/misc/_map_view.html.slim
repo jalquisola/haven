@@ -1,11 +1,10 @@
 ruby:
   map_data = []
-  properties = @properties.present? ? @properties : Property.all
+  properties = @properties.present? ? @properties : Property.enabled
   images = @images.present? ? @images : Image.where(property_id: properties.map(&:id), position: 0).index_by(&:property_id)
   properties.each do |property|
     image = images[property.id].first rescue nil
     next unless image
-    unit_type= property.unit_types.first
     obj = {
       id: property.id,
       title: property.name,
