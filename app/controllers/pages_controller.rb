@@ -7,6 +7,7 @@ class PagesController < ApplicationController
       return redirect_to realestates_path
     end
     @banners = Banner.all
+    @properties = Property.featured.includes(:images)
   end
 
   def dashboard

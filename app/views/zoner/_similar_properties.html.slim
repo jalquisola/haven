@@ -2,7 +2,7 @@ section id="similar-properties"
   header
     h2 class="no-border" Similar Properties
   div class="row"
-    - Property.includes(:images, :unit_types).limit(3).each do |property|
+    - Property.where("id <> ?", @property.id).includes(:images, :unit_types).sample(3).each do |property|
       - image = property.images.first
       - unit_type = property.unit_types.first
       div class="col-md-4 col-sm-6"
