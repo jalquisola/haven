@@ -23,4 +23,6 @@ function labnolIframe() {
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("id", "youtube-iframe");
     this.parentNode.replaceChild(iframe, this);
+    ga('send', 'event', 'Videos', 'play', window.location.pathname);
 }
+
