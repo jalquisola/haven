@@ -1,0 +1,34 @@
+//= require ./readable/main.css
+
+italic{
+    font-style: italic;
+}
+
+.btn-whatsapp {
+    color: #fff;
+    border: 1px solid #00FF38;
+    background: -webkit-gradient(linear,left top,left bottom,from(#00FF38),to(#4dc247));
+    background: -webkit-linear-gradient(top,#00FF38,#4dc247);
+    background: linear-gradient(to bottom,#00FF38,#4dc247)
+}
+
+.btn-whatsapp:hover {
+    color: #fff;
+    background: #4dc247;
+    border: 1px solid #4dc247;
+}
+
+.btn-facebook {
+    color: #fff;
+    border: 1px solid #3b5998;
+    background: -webkit-gradient(linear,left top,left bottom,from(#3b5998),to(#355088));
+    background: -webkit-linear-gradient(top,#3b5998,#355088);
+    background: linear-gradient(to bottom,#3b5998,#355088)
+}
+
+.btn-facebook:hover {
+    color: #fff;
+    background: #355088;
+    border: 1px solid #355088;
+}
+
