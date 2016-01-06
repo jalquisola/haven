@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%
+  description = "An investment opportunity you do not want to miss! A FREE seminar about property investment options in Philippines. Limited SEATS ONLY. RESERVE YOUR SEATS NOW!!!"
+%>
+<meta name="description" content="<%= description %>">
+<meta name="author" content="MyBestHaven">
+
+<meta property="og:type"  content="website" />
+<meta property="og:title" content='<%= @title %>' />
+<meta property="og:url" content="http://mybesthaven.com/events/discover-grand-cebu"/>
+<meta property="og:description"   content="<%= description %>"/>
+<meta property="og:image" content="<%= @image_url%>"/>
+
+<meta name='twitter:card' content='summary_large_image'/>
+<meta name='twitter:site' content='<%= ENV['TWITTER_SITE']%>' />
+<meta name='twitter:title' content="<%= @title%>" />
+<meta name='twitter:description'  content="<%= description%>" />
+<meta name="twitter:image" content="<%=@image_url%>"/>
+
+<title><%= @title %></title>
+<%= stylesheet_link_tag  'events'%>
+
+<!-- Facebook Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<%=ENV['FACEBOOK_PIXEL']%>&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<!-- Google Fonts -->
+<script type="text/javascript">WebFontConfig={google:{families:['Open+Sans:300,400,700:latin','Lato:700,900:latin']}};(function(){var wf=document.createElement('script');wf.src=('https:'==document.location.protocol?'https':'http')+'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+</head>
+<body>
+<!-- header -->
+<header class="header  push-down-45">
+<div class="container">
+  <div class="logo  pull-left">
+    <a href="<%= realestates_url%>">
+      <img src="https://d1zl0xo8jrwl7x.cloudfront.net/images/logo.png" alt="Logo" width="352" height="120">
+    </a>
+   </div>
+<!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#readable-navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+  </div>
+  <nav class="navbar  navbar-default" role="navigation">
+</nav>
+</div>
+</header>
+<div class="container">
+<div class="boxed  push-down-60">
+<!-- Featured image and meta start -->
+<div class="meta">
+<img class="wp-post-image" src="https://d1zl0xo8jrwl7x.cloudfront.net/images/discover-grand-cebu.jpg" alt="Discover Grand Cebu" width="1138" height="493">
+</div>
+<div class="row">
+<div class="col-xs-10  col-xs-offset-1  col-md-8  col-md-offset-2  push-down-60">
+<div class="post-content">
+<h1>
+<a href="<%= events_discover_grand_cebu_path %>">Discover Grand CEBU</a>
+</h1>
+<h3>A Philippine Real Estate Investment Talk</h3>
+<p>
+    <strong>Grand Land Incorporated</strong> will host their first real estate investment talk for the year 2016 on
+            <strong>16th of January</strong>, <italic>Saturday</italic>
+            at <italic>2PM-4PM and 4PM-6PM</italic>
+            at <strong>YMCA, One Orchard Road, Singapore.</strong>
+</p>
+<h2>Limited Seats Only. An investment opportunity you do not want to miss!</h2>
+<p>
+   Contact Angel Alquisola to reserve your seats through email
+   <a href="mailto:mrsalquisola@gmail.com?subject=Reservation%20Discover%20Grand%20Cebu%Talk&body=Hi%2C%20I'm%20interested%20to%20attend%20the%20Discover%20Grand%20Cebu%20Seminar">
+     <button class='btn btn-info'>FREE REGISTRATION</button>
+   </a>
+   or send a message through 
+   <a href='sms:+6597220400;body=SET%20YOUR%20COMPLETE%20NAME%2C%20EMAIL%20ADDRESS%2C%20and%20send%20to%20%2B6597220400'
+   <button class='btn btn-whatsapp'>SMS ME</button>
+   </a>
+   /
+   <!--
+   <a href='viber://forward?text=SET%20YOUR%20COMPLETE%20NAME%2C%20EMAIL%20ADDRESS%2C%20and%20send%20to%20%2B6597220400'
+   <button class='btn btn-alternative'>VIBER ME</button>
+   </a>
+   /
+   <a href='whatsapp://send?text=SET%20YOUR%20COMPLETE%20NAME%2C%20EMAIL%20ADDRESS%2C%20and%20send%20to%20%2B6597220400'>
+   <button class='btn btn-whatsapp'>WHATSAPP ME</button>
+   </a>
+   /
+   -->
+   <a href='fb-messenger://user-thread/username'>
+     <button class='btn btn-facebook'>FACEBOOK ME</button>
+   </a>
+   .
+<p>
+
+<blockquote class="blockquote__alternative">
+Real estate cannot be lost or stolen, nor can it be taken away. Purchased with common sense, paid for in full, and managed with reasonable care, it's the safest investment in the world.
+<p>
+<br>- Franklin D. Roosevelt</p>
+</blockquote>
+</div>
+<!-- End of the content -->
+<!--
+<div class="row">
+  <div class="col-xs-12  col-sm-6">
+  <div class="social-icons">
+    <a href="#" class="social-icons__container"> <span class="zocial-facebook"></span> </a>
+    <a href="#" class="social-icons__container"> <span class="zocial-twitter"></span> </a>
+    <a href="#" class="social-icons__container"> <span class="zocial-email"></span> </a>
+  </div>
+  </div>
+</div>
+-->
+<div class="row">
+<div class="col-xs-12  col-sm-12">
+<!-- Start of post author -->
+<div class="post-author">
+<h6>About the author</h6>
+<hr>
+<img src="https://d1zl0xo8jrwl7x.cloudfront.net/images/angel.png" alt="Post author" width="90" height="90">
+<h5>
+    <a href="<%= realestates_path%>">Angel Alquisola</a>
+</h5>
+<span class="post-author__text">Real Estate Investor, International Property Specialist, Co-Founder of MyBestHaven</span>
+</div>
+<!-- End of post author -->
+</div>
+<div class="col-xs-12  col-sm-12">
+</div>
+</div>
+</div>
+</div>
+<!-- End of the blogpost -->
+</div>
+</div>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', "<%= ENV['FACEBOOK_PIXEL']%>");
+fbq('track', "PageView");
+</script>
+<%= javascript_include_tag 'events'%>
+<script>
+  $(document).ready(function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', "<%= ENV['GOOGLE_ANALYTICS_TRACKING_ID']%>", 'auto');
+    ga('send', 'pageview');
+   });
+</script>
+</body>
+</html>
