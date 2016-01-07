@@ -77,7 +77,7 @@
     <div id="slider" class="loading has-parallax">
         <div id="loading-icon"><i class="fa fa-cog fa-spin"></i></div>
         <div class="owl-carousel homepage-slider carousel-full-width">
-            <% @properties.each do |property|%>
+            <% @properties.sample(5).each do |property|%>
               <div class="slide">
                   <div class="container">
                       <div class="overlay">
