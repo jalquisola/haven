@@ -30,9 +30,10 @@ module ApplicationHelper
   end
 
   def page_title(property)
-    str = "#{ENV['WEBSITE_TITLE']}"
-    str << ": #{property.name}" if property.present?
-
-    str
+    if property.present?
+      "#{property.name} - #{ENV['WEBSITE_TITLE']}"
+    else
+      "#{ENV['WEBSITE_TITLE']}"
+    end
   end
 end
