@@ -1,0 +1,52 @@
+h1 Listing agents
+
+table class='table-bordered'
+  thead
+    tr
+      th Name
+      th Email
+      th Avatar
+      th Facebook
+      th Google
+      th Twitter
+      th LinkedIN
+      th Contact No
+      th Viber
+      th Whatsapp
+      th Skype
+      th Action
+
+  tbody
+    - @agents.each do |agent|
+      tr 
+        td
+          = best_in_place agent, :name
+        td
+          = best_in_place agent, :email
+        td
+          = best_in_place agent, :avatar_url
+          br
+          img src=agent.avatar_url width=50 height=50
+        td
+          = best_in_place agent, :facebook_url
+        td
+          = best_in_place agent, :google_plus_url
+        td
+          = best_in_place agent, :twitter_url
+        td
+          = best_in_place agent, :linked_in_url
+        td
+          = best_in_place agent, :contact_no
+        td
+          = best_in_place agent, :viber
+        td
+          = best_in_place agent, :whatsapp
+        td
+          = best_in_place agent, :skype
+        td
+          = link_to 'Destroy', agent, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Agent', new_agent_path
+

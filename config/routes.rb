@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :agents
   resources :subscribers, only: [:create]
   resources :property_features
   resources :features
@@ -31,9 +32,11 @@ Rails.application.routes.draw do
       get :explore
       get :single
       get :dashboard
-      get :sellers
     end
   end
+
+  get 'sellers' => 'pages#sellers'
+
   root 'pages#home'
 
 

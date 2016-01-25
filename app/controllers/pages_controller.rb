@@ -15,7 +15,6 @@ class PagesController < ApplicationController
   end
 
   def sellers
-    render :sellers, layout: 'sellers'
   end
 
   def explore

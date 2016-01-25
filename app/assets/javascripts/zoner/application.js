@@ -34,3 +34,9 @@
 //= require zoner/custom.js
 //= require views/realestates/show.js
 //= require jquery_ujs
+//= require best_in_place
+//= require best_in_place.jquery-ui
+//
+$(function(){
+    $('.best_in_place').best_in_place();
+});
