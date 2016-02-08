@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :features
   resources :features
   resources :realestates, only: [:index, :show]
+  resources :lp, only: [:show]
 
   resources :enquiries
   resources :properties do
@@ -32,6 +33,7 @@ Rails.application.routes.draw do
       get :single
       get :dashboard
       get :sellers
+      get :thanks
     end
   end
   root 'pages#home'

@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     @properties = Property.featured.includes(:images).sample(8)
   end
 
+  def thanks
+    render :thanks, layout: 'zoner/lp'
+  end
+
   def dashboard
     render :dashboard, layout: 'dashboard'
   end

@@ -27,11 +27,10 @@ class EnquiriesController < ApplicationController
     @property = Property.friendly.find(params[:property_id])
 
     respond_to do |format|
-      is_recaptcha_verified = verify_recaptcha(:model => @post, :message => "Oh! It's error with reCAPTCHA!")
-      if is_recaptcha_verified && @enquiry.save
+      if @enquiry.save
         EnquiryMailer.send_email(params[:property_id], @enquiry.id).deliver_now
         format.html do
-          redirect_to realestate_path(@property), notice: 'Enquiry was successfully created.'
+          redirect_to  thanks_pages_path
         end
         format.json do
           render json: @enquiry, status: :created

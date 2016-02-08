@@ -1,0 +1,40 @@
+section id="contact-agent"
+  header
+    h2 Contact Property Specialist
+  div class="row"
+    section class="agent-form"
+      div class="col-md-7 col-sm-12"
+        aside class="agent-info clearfix"
+          figure
+            a href="#"
+              img alt="" src=agent.avatar_url
+          div class="agent-contact-info"
+            h3
+              a href=agent.linked_in_url target='_blank' =agent.name
+            p
+             | Hi, I'm #{agent.name.split(' ').first} your property specialist and fellow property
+             |  investor. I'm very pleased to assist you in finding right property
+             |  investments in the Philippines. If you need market analysis and sample computations,
+             |  feel free to send me an email or chat me in skype. I would love
+             |  to hear from you about property investments.
+            dl
+              dt Email:
+              dd
+                a class='btn btn-default' href="mailto:#{agent.email}" Email Me!
+              - if agent.skype.present?
+                dt Skype:
+                dd
+                  a class='btn btn-info' href="skype:#{agent.skype}?chat" target='_blank' Skype Me!
+            hr
+      div class="col-md-5 col-sm-12"
+        div class="agent-form"
+          = form_for Enquiry.new, html: { id: 'form-contact-agent', class:'clearfix', role: 'form' } do |f|
+            = hidden_field_tag :property_id, @property.id
+            div class="form-group"
+              label for="form-contact-agent-email"
+                | Your Email
+                em *
+              = f.text_field :email, {type: 'email', class: 'form-control', id: 'form-contact-agent-email'}
+            div class="form-group"
+              button type="submit" class="btn btn-warning" style='font-size:20px' id="form-contact-agent-submit" GET SAMPLE COMPUTATION
+            div id="form-contact-agent-status"
