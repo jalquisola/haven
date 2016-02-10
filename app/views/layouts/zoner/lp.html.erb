@@ -32,26 +32,6 @@
 <!-- Wrapper -->
 <div class="wrapper">
     <div class="navigation">
-        <div class="secondary-navigation">
-            <div class="container">
-                <div class="contact">
-                    <figure><strong>Phone:</strong>+65 97919534</figure>
-                </div>
-                <div class="user-area">
-                    <div class="actions">
-                        <%- if user_signed_in? %>
-                          <a href="<%= destroy_user_session_url%>" data-method='delete' rel='nofollow'>
-                              Sign Out
-                          </a>
-                        <%- else%>
-                          <a href="<%= new_user_registration_url %>" class="promoted"><strong>Register</strong></a>
-                          <a href="<%= new_user_session_url%>">Sign In</a>
-                        <%- end%>
-
-                    </div>
-                </div>
-            </div>
-        </div>
         <%= render partial: 'zoner/navigation'%>
     </div><!-- /.navigation -->
 
