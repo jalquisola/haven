@@ -24,9 +24,9 @@
             <div class="row">
                 <!-- Property Detail Content -->
                 <div class="col-md-12 col-sm-12">
-                    <section id="property-detail">
+                    <section itemscope itemtype='http://schema.org/Product' id="property-detail">
                         <header class="property-title">
-                            <h1><%= @property.name%></h1>
+                            <h1 itemprop='name'><%= @property.name%></h1>
                             <figure><%= @property.location%></figure>
                             <span class="actions">
                             </span>
@@ -39,13 +39,6 @@
                         </section>
                         <% end %>
                         <div class="row">
-                          <% if @property == 3%>
-                          <div class="col-md-12 col-sm-12">
-                              <h2 class='sale'>
-                                  <strong>Php 50,000</strong> DISCOUNT on all Shore 2 Residences units until February 2016. <strong>Hurry, ENQUIRE NOW!!!</strong>
-                              </h2>
-                          </div>
-                          <% end %>
                             <div class="col-md-4 col-sm-12">
                                 <%= render partial: 'zoner/quick_summary', locals: {property: @property}%>
                             </div><!-- /.col-md-4 -->
@@ -88,7 +81,7 @@
                                             <a href='<%=image.url%>' class="image-popup">
                                                 <div class="overlay"><h3>Front View</h3></div>
                                                 <%- if image.position == 1%>
-                                                  <img alt='<%=image.name%>' title='<%=image.name%>' src='<%= image.url%>'>
+                                                  <img alt='<%=image.name%>' itemprop='image' title='<%=image.name%>' src='<%= image.url%>'>
                                                 <%else%>
                                                   <img alt='<%=image.name%>' title='<%=image.name%>' class='preload-image' data-src='<%= image.url%>'>
                                                 <%end%>
@@ -109,6 +102,30 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "<%= @property.name%>",
+  "image": "<%= @image_url %>",
+  "description": "<%= @description.info%>",
+  "brand": {
+    "@type": "Thing",
+    "name": "SMDC"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "89"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "PHP",
+    "price": "<%= number_to_human(@property.unit_price)%>"
+  }
+}
+</script>
 
 <%- content_for :script do%>
 <script type="text/javascript">
