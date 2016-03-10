@@ -39,6 +39,13 @@
                         </section>
                         <% end %>
                         <div class="row">
+                           <% if @property.id == 3%>
+                           <div class="col-md-12 col-sm-12">
+                               <h2 class='sale'>
+                                   <strong>Php 50,000</strong> DISCOUNT on all Shore 2 Residences units until March 2016. <strong>Hurry, ENQUIRE NOW!!!</strong>
+                               </h2>
+                           </div>
+                           <% end %>
                             <div class="col-md-4 col-sm-12">
                                 <%= render partial: 'zoner/quick_summary', locals: {property: @property}%>
                             </div><!-- /.col-md-4 -->

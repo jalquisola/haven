@@ -38,5 +38,12 @@ div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -
 .sale{
     background-color: red;
     color: yellow;
-    padding: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
+
+.rounded{
+    border-radius: 5px;
+}
+

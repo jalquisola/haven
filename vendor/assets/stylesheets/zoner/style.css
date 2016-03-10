@@ -1255,6 +1255,7 @@ ul.list-links li a:hover {
 }
 .agent-form .agent-info figure img {
   width: 120px;
+  border-radius: 5px;
 }
 
 .animate-loading {

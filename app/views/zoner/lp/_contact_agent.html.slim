@@ -20,11 +20,11 @@ section id="contact-agent"
             dl
               dt Email:
               dd
-                a class='btn btn-default' href="mailto:#{agent.email}" Email Me!
+                a class='btn btn-default rounded' href="mailto:#{agent.email}" Email Me!
               - if agent.skype.present?
                 dt Skype:
                 dd
-                  a class='btn btn-info' href="skype:#{agent.skype}?chat" target='_blank' Skype Me!
+                  a class='btn btn-info rounded' href="skype:#{agent.skype}?chat" target='_blank' Skype Me!
             hr
       div class="col-md-5 col-sm-12"
         div class="agent-form"
@@ -36,5 +36,5 @@ section id="contact-agent"
                 em *
               = f.text_field :email, {type: 'email', class: 'form-control', id: 'form-contact-agent-email'}
             div class="form-group"
-              button type="submit" class="btn btn-warning" style='font-size:20px' id="form-contact-agent-submit" GET SAMPLE COMPUTATION
+              button type="submit" class="btn btn-warning rounded" style='font-size:20px' id="form-contact-agent-submit" GET SAMPLE COMPUTATION
             div id="form-contact-agent-status"
